@@ -404,19 +404,19 @@
 			<div>
 				<ul>
 					<li class="border-b border-gray-500 my-1 py-2">
-						<a class="text-lg font-medium text-red-600 hover:text-red-700 advisory-links" href="#">EMERGENCY POWER INTERRUPTION</a>
+						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">EMERGENCY POWER INTERRUPTION</a>
 						<p class="text-sm">May 29, 2024 - 5:13pm</p>
 					</li>
 					<li class="border-b border-gray-500 my-1 py-2">
-						<a class="text-lg font-medium text-red-600 hover:text-red-700 advisory-links" href="#">CANCELLED POWER INTERRUPTION</a>
+						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">CANCELLED POWER INTERRUPTION</a>
 						<p class="text-sm">May 29, 2024 - 5:13pm</p>
 					</li>
 					<li class="border-b border-gray-500 my-1 py-2">
-						<a class="text-lg font-medium text-red-600 hover:text-red-700 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
+						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
 						<p class="text-sm">May 27, 2024 - 5:13pm</p>
 					</li>
 					<li class="border-b border-gray-500 my-1 py-2">
-						<a class="text-lg font-medium text-red-600 hover:text-red-700 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
+						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
 						<p class="text-sm">May 26, 2024 - 5:13pm</p>
 					</li>
 				  </ul>
