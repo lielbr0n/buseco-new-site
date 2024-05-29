@@ -1,15 +1,14 @@
 <x-home-layout>
-<header class="bg-white">
+<header class="bg-white" x-data="{ open: false }">
     <nav class="mx-auto flex max-w-7xl items-center justify-between py-2 px-6 lg:px-8" aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          {{-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""> --}}
-		  <img class="h-12 w-auto" src="{{url('/images/buseco.png')}}" alt="buseco" />
+          <span class="sr-only">BUSECO</span>
+		  <a href="/"><img class="h-12 w-auto" src="{{url('/images/buseco.png')}}" alt="buseco" /></a>
 		</a>
       </div>
       <div class="flex lg:hidden">
-        <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <button type="button" @click="open = true" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -133,28 +132,28 @@
       {{-- <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
       </div> --}}
-		<div class="hidden lg:flex lg:gap-x-7 lg:justify-end inline-block">
-			<a href="#" class="text-sm font-semibold leading-6 text-gray-900">HOME</a>
-			<a href="#" class="text-sm font-semibold leading-6 text-gray-900">ARTICLES</a>
-			<a href="#" class="text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a>
-			<a href="#" class="text-sm font-semibold leading-6 text-gray-900">RATES</a>
-			<a href="#" class="text-sm font-semibold leading-6 text-gray-900">ONLINE SERVICES</a>
-			<a href="#" class="text-sm font-semibold leading-6 text-gray-900">BOD</a>
-			<a href="#" class="text-sm font-semibold leading-6 text-gray-900">CONTACT US</a>
+		<div class="hidden lg:flex lg:gap-x-7 lg:items-center lg:justify-end">
+			<a href="/" class="nav-link text-sm font-semibold leading-6 text-gray-900">HOME</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ARTICLES</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">RATES</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ONLINE SERVICES</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">BOD</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">CONTACT US</a>
 			<a href="/my-account" class="account-button">MY ACCOUNT</a>
 		</div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
-    <div class="lg:hidden" role="dialog" aria-modal="true">
+    <div class="lg:hidden" x-show="open" role="dialog" aria-modal="true" >
       <!-- Background backdrop, show/hide based on slide-over state. -->
       <div class="fixed inset-0 z-10"></div>
-      <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+      <div @click.away="open = false" class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
 			<a href="#" class="-m-1.5 p-1.5">
 				<span class="sr-only">Your Company</span>
 				<img class="h-12 w-auto" src="{{url('/images/buseco.png')}}" alt="buseco" />
 			</a>
-			<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+			<button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="open = false">
 				<span class="sr-only">Close menu</span>
 				<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
 				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -164,20 +163,29 @@
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              {{-- <div class="-mx-3">
-                <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
+              {{-- <div class="-mx-3" x-data="{ isOpen: false }">
+                <button type="button" @click="isOpen = !isOpen" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
                   Product
                   <!--
                     Expand/collapse icon, toggle classes based on menu open state.
   
                     Open: "rotate-180", Closed: ""
                   -->
-                  <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" :class="{ 'rotate-180': isOpen }">
                     <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                   </svg>
                 </button>
                 <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                <div class="mt-2 space-y-2" id="disclosure-1">
+                <div  
+					x-show="isOpen" 
+					class="mt-2 space-y-2" id="disclosure-1"
+					x-transition:enter="transition ease-out duration-100 transform"
+					x-transition:enter-start="opacity-0 scale-95"
+					x-transition:enter-end="opacity-100 scale-100"
+					x-transition:leave="transition ease-in duration-75 transform"
+					x-transition:leave-start="opacity-100 scale-100"
+					x-transition:leave-end="opacity-0 scale-95"
+				>
                   <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Analytics</a>
                   <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Engagement</a>
                   <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Security</a>
@@ -186,16 +194,17 @@
                   <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Watch demo</a>
                   <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact sales</a>
                 </div> 
-              </div> --}}
-				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">HOME</a>
-				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ARTICLES</a>
-				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PUBLICATION</a>
-				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">RATES</a>
-				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ONLINE SERVICES</a>
-				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">BOD</a>
-				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">CONTACT US</a>
-				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">MY ACCOUNT</a>
-            </div>
+              </div>
+            </div> --}}
+
+			<a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">HOME</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ARTICLES</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PUBLICATION</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">RATES</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ONLINE SERVICES</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">BOD</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">CONTACT US</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">MY ACCOUNT</a>
             {{-- <div class="py-6">
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
             </div> --}}
@@ -209,52 +218,48 @@
 		<img src="{{url('/images/buseco-cover-main-office.png')}}" alt="buseco" />
 	</div>
 
-	<div class="services mt-5" id="services">
+	<div class="services py-5" id="services">
 		<div class="grid grid-cols-3 gap-4">
-			<a href="#">
-				<div class="text-center">
+			<div class="text-center">
+				<a href="#" class="services-link">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#007f00" class="size-20 services-icons-display">
 						<path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd" />
 					</svg>
-					  
 					
-					<h1 class="services-title">Online Services</h1>
-				</div>
-			</a>
-			<a href="#">
-				<div class="text-center">
+					<h2 class="services-title">Online Services</h2>
+				</a>
+			</div>
+			<div class="text-center">
+				<a href="#" class="services-link">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#007f00" class="size-20 services-icons-display">
 						<path fill-rule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 0 0-.584.859 6.753 6.753 0 0 0 6.138 5.6 6.73 6.73 0 0 0 2.743 1.346A6.707 6.707 0 0 1 9.279 15H8.54c-1.036 0-1.875.84-1.875 1.875V19.5h-.75a2.25 2.25 0 0 0-2.25 2.25c0 .414.336.75.75.75h15a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-2.25-2.25h-.75v-2.625c0-1.036-.84-1.875-1.875-1.875h-.739a6.706 6.706 0 0 1-1.112-3.173 6.73 6.73 0 0 0 2.743-1.347 6.753 6.753 0 0 0 6.139-5.6.75.75 0 0 0-.585-.858 47.077 47.077 0 0 0-3.07-.543V2.62a.75.75 0 0 0-.658-.744 49.22 49.22 0 0 0-6.093-.377c-2.063 0-4.096.128-6.093.377a.75.75 0 0 0-.657.744Zm0 2.629c0 1.196.312 2.32.857 3.294A5.266 5.266 0 0 1 3.16 5.337a45.6 45.6 0 0 1 2.006-.343v.256Zm13.5 0v-.256c.674.1 1.343.214 2.006.343a5.265 5.265 0 0 1-2.863 3.207 6.72 6.72 0 0 0 .857-3.294Z" clip-rule="evenodd" />
 					</svg>
-					  
-					<h1 class="services-title">Bids and Awards</h1>
-				</div>
-			</a>
-			<a href="#">
-				<div class="text-center">
+						
+					<h2 class="services-title">Bids and Awards</h2>
+				</a>
+			</div>
+			<div class="text-center">
+				<a href="#" class="services-link">	
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#007f00" class="size-20 services-icons-display">
 						<path fill-rule="evenodd" d="M12 6.75a5.25 5.25 0 0 1 6.775-5.025.75.75 0 0 1 .313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 0 1 1.248.313 5.25 5.25 0 0 1-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 1 1 2.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0 1 12 6.75ZM4.117 19.125a.75.75 0 0 1 .75-.75h.008a.75.75 0 0 1 .75.75v.008a.75.75 0 0 1-.75.75h-.008a.75.75 0 0 1-.75-.75v-.008Z" clip-rule="evenodd" />
 						<path d="m10.076 8.64-2.201-2.2V4.874a.75.75 0 0 0-.364-.643l-3.75-2.25a.75.75 0 0 0-.916.113l-.75.75a.75.75 0 0 0-.113.916l2.25 3.75a.75.75 0 0 0 .643.364h1.564l2.062 2.062 1.575-1.297Z" />
 						<path fill-rule="evenodd" d="m12.556 17.329 4.183 4.182a3.375 3.375 0 0 0 4.773-4.773l-3.306-3.305a6.803 6.803 0 0 1-1.53.043c-.394-.034-.682-.006-.867.042a.589.589 0 0 0-.167.063l-3.086 3.748Zm3.414-1.36a.75.75 0 0 1 1.06 0l1.875 1.876a.75.75 0 1 1-1.06 1.06L15.97 17.03a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-					  </svg>
-					  
-					  
-					  
+					</svg>
 					
-					<h1 class="services-title">Maintenance Schedule</h1>
-				</div>
-			</a>
+					<h2 class="services-title">Maintenance Schedule</h2>
+				</a>
+			</div>
 		</div>
 	</div>
 
-	<div class="blog mt-10" id="blog">
+	<div class="blog mt-20" id="blog">
 		<h1 class="blog-title-section text-center">News and Updates</h1>
 
 		<div class="grid grid-cols-3 gap-4 mx-2 mt-5">
 			<div class="">
 				<a href="#"><img src="{{url('/images/tower.jpg')}}"></a>
 				<div class="blog-date mt-1">March 27, 2024</div>
-				<a href="#"><div class="blog-title mt-2">News Update 1</div></a>
+				<div class="blog-title mt-2"><a href="#">News Update 1</a></div>
 				<div class="blog-description text-justify">
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</div>
@@ -262,7 +267,7 @@
 			<div class="">
 				<a href="#"><img src="{{url('/images/tower.jpg')}}"></a>
 				<div class="blog-date mt-1">March 25, 2024</div>
-				<a href="#"><div class="blog-title mt-2">News Update 2</div></a>
+				<div class="blog-title mt-2"><a href="#">News Update 2</a></div>
 				<div class="blog-description text-justify">
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</div>
@@ -270,7 +275,7 @@
 			<div class="">
 				<a href="#"><img src="{{url('/images/tower.jpg')}}"></a>
 				<div class="blog-date mt-1">March 24, 2024</div>
-				<a href="#"><div class="blog-title mt-2">News Update 3</div></a>
+				<div class="blog-title mt-2"><a href="#">News Update 3</a></div>
 				<div class="blog-description text-justify">
 					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 				</div>
@@ -281,33 +286,39 @@
 	<div class="about-us mt-20 text-center" id="about-us">
 		<h1 class="about-us-title">About Us</h1>
 
-		<div class="grid grid-cols-2 gap-4 px-2 mt-5 about-us-bg-color">
-			<div class="mt-16">
+		<div class="grid grid-cols-2 gap-4 px-2 mt-5 h-72 about-us-bg-color">
+			<div class="my-auto">
 				<p class="vision-title text-white">Vision</p>	
-				<p class="text-justify text-white">A reliable, viable and efficient electric distribution utility operated and managed by competent, honest and responsive human resources towards satisfied consumers.</p>
+				<p class="text-justify text-white px-5">A reliable, viable and efficient electric distribution utility operated and managed by competent, honest and responsive human resources towards satisfied consumers.</p>
 			</div>
-			<div class="flex justify-center">
-				<img class="h-64 w-auto" src="{{url('/images/vision-logo.png')}}"  />
+			<div class="flex justify-center my-auto">
+				<img class="h-64 w-auto" src="{{url('/images/vision-logo-2.png')}}"  />
 			</div>
 		</div>
 
-		<div class="grid grid-cols-2 gap-4 mx-2 mt-5">
-			<div class="flex justify-center">
-				<img class="h-64 w-auto" src="{{url('/images/commit.png')}}"  />
+		<div class="grid grid-cols-2 gap-4 px-2 h-72">
+			<div class="flex justify-center my-auto">
+				<img class="h-64 w-auto" src="{{url('/images/commit-6.png')}}"  />
 			</div>
-			<div class="mt-16">
+			<div class="my-auto">
 				<p class="vision-title">Commitment</p>	
-				<p class="text-justify">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<p class="text-justify px-5">
+					I commit to BUSECO, as a distribution utility, business enterprise, social development agency, and people's movement and world class organization, its corporate culture, flagship programs and further pledge to pursue the paradigm shift necessary in EPIRA environment.
+					<br />
+					"So help me God"
+				</p>
 			</div>
 		</div>
 
-		<div class="grid grid-cols-2 gap-4 px-2 mt-5 about-us-bg-color h-60">
-			<div class="mt-16">
+		<div class="grid grid-cols-2 gap-4 px-2 h-72 about-us-bg-color">
+			<div class="my-auto">
 				<p class="vision-title text-white">Battle Cry</p>	
-				<p class="text-justify text-white">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				<p class="text-justify text-white px-5">
+					Thou shall protect the rights and promote the interest of all the cooperative members with your Whole Hear, Absolute Honesty, Maximum Efficiency, and Total Solidarity.
+				</p>
 			</div>
-			<div class="flex justify-center mt-5">
-				<img class="h-44 w-auto" src="{{url('/images/battlecry.png')}}"  />
+			<div class="flex justify-center my-auto">
+				<img class="h-44 w-auto" src="{{url('/images/battlecry-2.png')}}"  />
 			</div>
 		</div>
 	</div>
@@ -377,19 +388,19 @@
 			</form>
 	</div>
 
-	<div class="footer-siteinfo mt-20" id="footer-siteinfo">
+	<footer class="footer-siteinfo mt-20" id="footer-siteinfo">
 		<div class="grid mx-auto max-w-7xl grid-cols-3 gap-4 mx-2 py-10">
-			<div class="items-center">
-				<img class="h-20 w-auto mx-auto" src="{{url('/images/buseco.png')}}" alt="buseco" />
+			<div class="my-auto">
+				<a href="{{ url('/') }}"><img class="h-20 w-auto mx-auto" src="{{url('/images/buseco.png')}}" alt="buseco" /></a>
 				<br />
 				<div class="flex gap-3 justify-center">
 					<a href="https://www.facebook.com/BUSECOKasanagMCOs">
-						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0866ff" class="bi bi-facebook" viewBox="0 0 16 16">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0866ff" class="bi bi-facebook fb-svg" viewBox="0 0 16 16">
 							<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
 						</svg>
 					</a>
 					<a href="#">
-						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#249ef0" class="bi bi-twitter" viewBox="0 0 16 16">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#249ef0" class="bi bi-twitter twitter-svg" viewBox="0 0 16 16">
 							<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
 						</svg>
 					</a>
@@ -415,13 +426,14 @@
 			<div class="links-info pr-1">
 				<h2 class="footer-title mb-6 border-b w-11/12">LINKS</h2>
 
-				<a href="#" class="link-list">Membership Application</a><br />
-				<a href="#" class="link-list">My Account</a><br />
-				<a href="#" class="link-list">News and Updates</a><br />
-				<a href="#" class="link-list">Terms and Condition</a><br />
+				<a href="#" class="link-footer">Membership Application</a><br />
+				<a href="#" class="link-footer">My Account</a><br />
+				<a href="#" class="link-footer">News and Updates</a><br />
+				<a href="#" class="link-footer">Terms and Condition</a><br />
 			</div>
 		</div>
-	</div>
+		<div class="all-rights-reserved py-4"><p class="all-rights-text text-center">&copy; 2024 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
+	</footer>
 </x-home-layout>
   
   
