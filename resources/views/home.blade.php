@@ -248,7 +248,7 @@
 	</div>
 
 	<div class="blog mt-10" id="blog">
-		<h1 class="blog-title-section text-center">Blog</h1>
+		<h1 class="blog-title-section text-center">News and Updates</h1>
 
 		<div class="grid grid-cols-3 gap-4 mx-2 mt-5">
 			<div class="">
@@ -370,25 +370,57 @@
 					<textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
 				</div>
 				</div>
-				{{-- <div class="flex gap-x-4 sm:col-span-2">
-				<div class="flex h-6 items-center">
-					<!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
-					<button type="button" class="bg-gray-200 flex w-8 flex-none cursor-pointer rounded-full p-px ring-1 ring-inset ring-gray-900/5 transition-colors duration-200 ease-in-out focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" role="switch" aria-checked="false" aria-labelledby="switch-1-label">
-					<span class="sr-only">Agree to policies</span>
-					<!-- Enabled: "translate-x-3.5", Not Enabled: "translate-x-0" -->
-					<span aria-hidden="true" class="translate-x-0 h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"></span>
-					</button>
-				</div>
-				<label class="text-sm leading-6 text-gray-600" id="switch-1-label">
-					By selecting this, you agree to our
-					<a href="#" class="font-semibold text-indigo-600">privacy&nbsp;policy</a>.
-				</label>
-				</div> --}}
 			</div>
 			<div class="mt-10">
 				<button type="submit" class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Send Message</button>
 			</div>
 			</form>
+	</div>
+
+	<div class="footer-siteinfo mt-20" id="footer-siteinfo">
+		<div class="grid mx-auto max-w-7xl grid-cols-3 gap-4 mx-2 py-10">
+			<div class="items-center">
+				<img class="h-20 w-auto mx-auto" src="{{url('/images/buseco.png')}}" alt="buseco" />
+				<br />
+				<div class="flex gap-3 justify-center">
+					<a href="https://www.facebook.com/BUSECOKasanagMCOs">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#0866ff" class="bi bi-facebook" viewBox="0 0 16 16">
+							<path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+						</svg>
+					</a>
+					<a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#249ef0" class="bi bi-twitter" viewBox="0 0 16 16">
+							<path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+
+			<div class="branch-info">
+				<h2 class="footer-title mb-6 border-b w-11/12">CONTACT INFO</h2>
+
+				<h2 class="branch-title">Manolo Fortich Branch</h2>
+
+				<p><b>Address:</b> Tankulan, Manolo Fortich, Bukidnon</p>
+				<p><b>Smart:</b> 0998-843-8334</p>
+				<p><b>Globe:</b> 0935-144-3095</p>
+				<br />
+
+				<h2 class="branch-title">Malaybalay Branch</h2>
+				<p><b>Address:</b> Casisang, Malaybalay City, Bukidnon</p>
+				<p><b>Smart:</b> 0998-843-8335</p>
+				<p><b>Globe:</b> 0935-144-2484</p>
+			</div>
+
+			<div class="links-info pr-1">
+				<h2 class="footer-title mb-6 border-b w-11/12">LINKS</h2>
+
+				<a href="#" class="link-list">Membership Application</a><br />
+				<a href="#" class="link-list">My Account</a><br />
+				<a href="#" class="link-list">News and Updates</a><br />
+				<a href="#" class="link-list">Terms and Condition</a><br />
+			</div>
+		</div>
 	</div>
 </x-home-layout>
   
