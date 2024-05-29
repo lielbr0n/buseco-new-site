@@ -46,7 +46,28 @@
     border-radius: 0.25rem;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+.footer-siteinfo{
+    background-color: #01440d;
+
+    .footer-title{
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .branch-info{
+        color: white;
+    }
+
+    .links-info{
+        color: white;
+
+        .link-list{
+            text-decoration: underline;
+        }
+    }
+}
   
 
 
