@@ -1,6 +1,6 @@
 <x-home-layout>
-<header class="bg-white" x-data="{ open: false }">
-    <nav class="mx-auto flex max-w-7xl items-center justify-between py-2 px-6 lg:px-8" aria-label="Global">
+<header class="bg-white sticky top-0 z-50 shadow-md" x-data="{ open: false }">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between py-2 px-6 lg:px-8 " aria-label="Global">
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">BUSECO</span>
@@ -253,7 +253,7 @@
 	</div>
 
 	<div class="blog mt-20" id="blog">
-		<h1 class="blog-title-section text-center">News and Updates</h1>
+		<h1 class="text-5xl font-bold blog-title-section text-center">News and Updates</h1>
 
 		<div class="grid grid-cols-3 gap-4 mx-2 mt-5">
 			<div class="">
@@ -281,10 +281,17 @@
 				</div>
 			</div>
 		</div>
+		
+		<a href="#" class="flex justify-center items-center more-news-btn mt-4 text-lg font-semibold">
+			More News Here
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+				<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+			</svg>
+		</a>	
 	</div>
 
 	<div class="about-us mt-20 text-center" id="about-us">
-		<h1 class="about-us-title">About Us</h1>
+		<h1 class="text-5xl font-bold about-us-title">About Us</h1>
 
 		<div class="grid grid-cols-2 gap-4 px-2 mt-5 h-72 about-us-bg-color">
 			<div class="my-auto">
@@ -324,7 +331,7 @@
 	</div>
 
 	<div class="about-us mt-20 mb-20 text-center" id="contact-us">
-		<h1 class="about-us-title">Contact Us</h1>
+		<h1 class="text-5xl font-bold">Contact Us</h1>
 
 		<form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-10">
 			<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
@@ -388,7 +395,47 @@
 			</form>
 	</div>
 
-	<footer class="footer-siteinfo mt-20" id="footer-siteinfo">
+	<div class="advisories py-16 px-5" id="advisories">
+		<div class="grid grid-cols-2 gap-4">
+			<div class="flex justify-center items-center">
+				<h2 class="text-5xl font-bold">Advisory</h2>
+				<a href="/"><img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" /></a>
+			</div>
+			<div>
+				<ul>
+					<li class="border-b border-gray-500 my-1 py-2">
+						<a class="text-lg font-medium text-red-600 hover:text-red-700 advisory-links" href="#">EMERGENCY POWER INTERRUPTION</a>
+						<p class="text-sm">May 29, 2024 - 5:13pm</p>
+					</li>
+					<li class="border-b border-gray-500 my-1 py-2">
+						<a class="text-lg font-medium text-red-600 hover:text-red-700 advisory-links" href="#">CANCELLED POWER INTERRUPTION</a>
+						<p class="text-sm">May 29, 2024 - 5:13pm</p>
+					</li>
+					<li class="border-b border-gray-500 my-1 py-2">
+						<a class="text-lg font-medium text-red-600 hover:text-red-700 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
+						<p class="text-sm">May 27, 2024 - 5:13pm</p>
+					</li>
+					<li class="border-b border-gray-500 my-1 py-2">
+						<a class="text-lg font-medium text-red-600 hover:text-red-700 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
+						<p class="text-sm">May 26, 2024 - 5:13pm</p>
+					</li>
+				  </ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="corporate-partners" id="corporate-partners">
+		<div class="flex gap-4 justify-center p-5">
+			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/NEA-LOGO-150.png')}}" alt="" /></a>
+			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/doe_logo-150.jpg')}}" alt="" /></a>
+			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/ngc-150.png')}}" alt="" /></a>
+			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/ERC-150.jpg')}}" alt="" /></a>
+			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/transco-150.jpg')}}" alt="" /></a>
+			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
+		</div>
+	</div>
+
+	<footer class="footer-siteinfo" id="footer-siteinfo">
 		<div class="grid mx-auto max-w-7xl grid-cols-3 gap-4 mx-2 py-10">
 			<div class="my-auto">
 				<a href="{{ url('/') }}"><img class="h-20 w-auto mx-auto" src="{{url('/images/buseco.png')}}" alt="buseco" /></a>
@@ -429,7 +476,7 @@
 				<a href="#" class="link-footer">Membership Application</a><br />
 				<a href="#" class="link-footer">My Account</a><br />
 				<a href="#" class="link-footer">News and Updates</a><br />
-				<a href="#" class="link-footer">Terms and Condition</a><br />
+				<a href="#" class="link-footer">Privacy</a><br />
 			</div>
 		</div>
 		<div class="all-rights-reserved py-4"><p class="all-rights-text text-center">&copy; 2024 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
