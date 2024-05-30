@@ -136,9 +136,9 @@
 			<a href="/" class="nav-link text-sm font-semibold leading-6 text-gray-900">HOME</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ARTICLES</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">RATES</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">LATEST NEWS & UPDATES</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ONLINE SERVICES</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">BOD</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ABOUT BUSECO</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">CONTACT US</a>
 			<a href="/my-account" class="account-button">MY ACCOUNT</a>
 		</div>
@@ -202,9 +202,10 @@
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PUBLICATION</a>
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">RATES</a>
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ONLINE SERVICES</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">BOD</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ABOUT BUSECO</a>
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">CONTACT US</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">MY ACCOUNT</a>
+			<br>
+			<a href="/my-account" class="account-button">MY ACCOUNT</a>
             {{-- <div class="py-6">
               <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
             </div> --}}
@@ -398,7 +399,7 @@
 	<div class="advisories py-16 px-5" id="advisories">
 		<div class="grid grid-cols-2 gap-4">
 			<div class="flex justify-center items-center">
-				<h2 class="text-5xl font-bold">Advisory</h2>
+				<h2 class="text-5xl font-bold">BUSECO Advisory</h2>
 				<a href="/"><img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" /></a>
 			</div>
 			<div>
@@ -426,12 +427,12 @@
 
 	<div class="corporate-partners" id="corporate-partners">
 		<div class="flex gap-4 justify-center p-5">
-			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/NEA-LOGO-150.png')}}" alt="" /></a>
-			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/doe_logo-150.jpg')}}" alt="" /></a>
-			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/ngc-150.png')}}" alt="" /></a>
-			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/ERC-150.jpg')}}" alt="" /></a>
-			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/transco-150.jpg')}}" alt="" /></a>
-			<a href="#" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
+			<a href="https://www.nea.gov.ph/ao39/" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/NEA-LOGO-150.png')}}" alt="" /></a>
+			<a href="https://doe.gov.ph/" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/doe_logo-150.jpg')}}" alt="" /></a>
+			<a href="https://www.ngcp.ph/" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/ngc-150.png')}}" alt="" /></a>
+			<a href="https://www.erc.gov.ph/" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/ERC-150.jpg')}}" alt="" /></a>
+			<a href="https://www.transco.ph/" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/transco-150.jpg')}}" alt="" /></a>
+			<a href="https://www.napocor.gov.ph/" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
 		</div>
 	</div>
 
