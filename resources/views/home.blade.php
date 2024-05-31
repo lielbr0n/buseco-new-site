@@ -134,7 +134,7 @@
       </div> --}}
 		<div class="hidden lg:flex lg:gap-x-7 lg:items-center lg:justify-end">
 			<a href="/" class="nav-link text-sm font-semibold leading-6 text-gray-900">HOME</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ARTICLES</a>
+			<!--<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ARTICLES</a>-->
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">LATEST NEWS & UPDATES</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ONLINE SERVICES</a>
@@ -198,7 +198,7 @@
             </div> --}}
 
 			<a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">HOME</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ARTICLES</a>
+			<!--<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ARTICLES</a>-->
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PUBLICATION</a>
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">RATES</a>
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ONLINE SERVICES</a>
@@ -217,6 +217,17 @@
 
   	<div class="banner" id="banner">
 		<img src="{{url('/images/buseco-cover-main-office.png')}}" alt="buseco" />
+	</div>
+	
+    <div class="busecoprofile py-5" id="busecoprofile">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-lg-12 col-xl-12 col-xx
+					l-12 text-center">
+					<h1 class="buseco-title">Buseco</h1>
+					<h2 class="buseco-subtitle">The best way to manage your business</h2>
+						
+					
 	</div>
 
 	<div class="services py-5" id="services">
