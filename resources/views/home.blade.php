@@ -136,7 +136,7 @@
 			<a href="/" class="nav-link text-sm font-semibold leading-6 text-gray-900">HOME</a>
 			<!--<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ARTICLES</a>-->
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">LATEST NEWS & UPDATES</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">NEWS & UPDATES</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ONLINE SERVICES</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ABOUT BUSECO</a>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">CONTACT US</a>
@@ -200,7 +200,7 @@
 			<a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">HOME</a>
 			<!--<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ARTICLES</a>-->
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PUBLICATION</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">RATES</a>
+			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">NEWS & UPDATES</a>
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ONLINE SERVICES</a>
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ABOUT BUSECO</a>
 			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">CONTACT US</a>
@@ -219,16 +219,15 @@
 		<img src="{{url('/images/buseco-cover-main-office.png')}}" alt="buseco" />
 	</div>
 	
-    <div class="busecoprofile py-5" id="busecoprofile">
+    <!--<div class="busecoprofile py-5" id="busecoprofile">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12 col-lg-12 col-xl-12 col-xx
 					l-12 text-center">
 					<h1 class="buseco-title">Buseco</h1>
-					<h2 class="buseco-subtitle">The best way to manage your business</h2>
-						
-					
-	</div>
+					<h2 class="buseco-subtitle">The best way to manage your business</
+					h2>
+	</div>-->
 
 	<div class="services py-5" id="services">
 		<div class="grid grid-cols-3 gap-4">
@@ -492,6 +491,7 @@
 			</div>
 		</div>
 		<div class="all-rights-reserved py-4"><p class="all-rights-text text-center">&copy; 2024 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
+		<div class="madewithlove"><p class="all-rights-text text-center">catscanc0de&trade;</p><br></div>
 	</footer>
 </x-home-layout>
   
