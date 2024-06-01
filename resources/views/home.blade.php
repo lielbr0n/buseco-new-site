@@ -577,19 +577,6 @@
 		<div class="all-rights-reserved py-4"><p class="all-rights-text text-center">&copy; 2024 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
 		<div class="madewithlove"><p class="all-rights-text text-center">catscanc0de&trade;</p><br></div>
 	</footer>
-
-	<div class="mt-16 flex justify-center">
-		<p class="text-lg">
-		  Hover the link to see the
-		  <a
-			id="my-tooltip"
-			href="#"
-			class="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
-			title="Hi! I'm tooltip"
-			>tooltip</a
-		  >
-		</p>
-	  </div>
 </x-home-layout>
   
   
