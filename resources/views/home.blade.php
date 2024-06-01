@@ -277,34 +277,55 @@
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1">STEP 1: COMPLETE THE APPLICATION</h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6">Applicants will be required to submit application.</p>
-					<a href="#" class="block text-center border-2 border-[#2C8D0A] p-1 w-6/12 mx-auto mt-5 font-normal hover:bg-[#2C8D0A] hover:text-[#ffffff]" role="button">READ MORE</a>
+					<a href="#" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-medium hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-2.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1">STEP 2: PAYMENT</h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to pay.</p>
-					<a href="#" class="block text-center border-2 border-[#2C8D0A] p-1 w-6/12 mx-auto mt-5 font-normal hover:bg-[#2C8D0A] hover:text-[#ffffff]" role="button">READ MORE</a>
+					<a href="#" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-medium hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-3.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1">STEP 3: TAKE THE ONLINE EXAM</h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to attend the online PMES and take the exam. </p>
-					<a href="#" class="block text-center border-2 border-[#2C8D0A] p-1 w-6/12 mx-auto mt-5 font-normal hover:bg-[#2C8D0A] hover:text-[#ffffff]" role="button">READ MORE</a>
+					<a href="#" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-medium hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-4.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1">STEP 4: SUBMIT REQUIREMENTS</h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">All applicants will be required to process and submit necessary requirements to the Buseco Office.</p>
-					<a href="#" class="block text-center border-2 border-[#2C8D0A] p-1 w-6/12 mx-auto mt-5 font-normal hover:bg-[#2C8D0A] hover:text-[#ffffff]" role="button">READ MORE</a>
+					<a href="#" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-medium hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="blog mt-20" id="blog">
+	<div class="faqa pl-6 pr-6 pb-6" id="faqa">
+		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
+			<div class="grid grid-cols-2 p-14 gap-4">
+				<div>
+					<h2 class="font-medium text-4xl mb-8">
+						FREQUENTLY ASK QUESTION <br />
+						(FAQS)
+					</h2>
+					<div class="w-[115px] border-b-2 border-[#2C8D0A]"></div> <!-- border line -->
+					<p class="font-medium text-3xl mt-14">Where can I pay my bills?</p>
+					<a href="#" class="block text-center border-2 text-[#ffffff] border-[#0dcaf0] p-1 w-6/12 bg-[#0dcaf0] mt-5 font-medium hover:bg-[#3dd6f5] hover:border-[#3dd6f5]" role="button">READ MORE</a>
+				</div>
+				<div class="my-auto mx-auto">
+					<img src="{{url('/images/faq-img.jpeg')}}" class="w-full h-auto " />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	{{-- <div class="blog mt-20" id="blog"> --}}
+	<div class="blog pl-6 pr-6 pb-6" id="blog">
+		<div class="mx-auto max-w-screen-xl border-2 px-4 py-7 border-[#2C8D0A]">
 		<h1 class="text-5xl font-bold blog-title-section text-center">News and Updates</h1>
 
 		<div class="grid grid-cols-3 gap-4 mx-2 mt-5">
@@ -340,7 +361,9 @@
 				<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
 			</svg>
 		</a>	
+		</div>
 	</div>
+	{{-- </div> --}}
 
 	{{-- <div class="about-us mt-20 text-center" id="about-us">
 		<h1 class="about-us-title">About Us</h1>
@@ -382,7 +405,7 @@
 		</div>
 	</div> --}}
 
-	<div class="about-us mt-20 mb-20 text-center" id="contact-us">
+	{{-- <div class="about-us mt-20 mb-20 text-center" id="contact-us">
 		<h1 class="text-5xl font-bold">Contact Us</h1>
 
 		<form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-10">
@@ -399,35 +422,13 @@
 					<input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 				</div>
 				</div>
-				{{-- <div class="sm:col-span-2">
-				<label for="company" class="block text-sm font-semibold leading-6 text-gray-900">Company</label>
-				<div class="mt-2.5">
-					<input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-				</div> 
-				</div> --}}
+				
 				<div class="sm:col-span-2">
 				<label for="email" class="text-start block text-sm font-semibold leading-6 text-gray-900">Email</label>
 				<div class="mt-2.5">
 					<input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
 				</div>
 				</div>
-				{{--<div class="sm:col-span-2">
-				 <label for="phone-number" class="block text-sm font-semibold leading-6 text-gray-900">Phone number</label>
-				<div class="relative mt-2.5">
-					<div class="absolute inset-y-0 left-0 flex items-center">
-					<label for="country" class="sr-only">Country</label>
-					<select id="country" name="country" class="h-full rounded-md border-0 bg-transparent bg-none py-0 pl-4 pr-9 text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm">
-						<option>US</option>
-						<option>CA</option>
-						<option>EU</option>
-					</select>
-					<svg class="pointer-events-none absolute right-3 top-0 h-full w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-						<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-					</svg>
-					</div>
-					<input type="tel" name="phone-number" id="phone-number" autocomplete="tel" class="block w-full rounded-md border-0 px-3.5 py-2 pl-20 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-				</div> 
-				</div> --}}
 				<div class="sm:col-span-2">
 					<label for="company" class="text-start block text-sm font-semibold leading-6 text-gray-900">Subject</label>
 					<div class="mt-2.5">
@@ -445,7 +446,7 @@
 				<button type="submit" class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Send Message</button>
 			</div>
 			</form>
-	</div>
+	</div> --}}
 
 	<div class="advisories py-16 px-5" id="advisories">
 		<div class="grid grid-cols-2 gap-4">
@@ -486,7 +487,7 @@
 			<a href="https://www.napocor.gov.ph/" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
 		</div>
 	</div>
-
+	
 	<footer class="footer-siteinfo" id="footer-siteinfo">
 		<div class="grid mx-auto max-w-7xl grid-cols-3 gap-4 mx-2 py-10">
 			<div class="my-auto">
