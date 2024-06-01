@@ -134,11 +134,56 @@
       </div> --}}
 		<div class="hidden lg:flex lg:gap-x-7 lg:items-center lg:justify-end">
 			<a href="/" class="nav-link text-sm font-semibold leading-6 text-gray-900">HOME</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">NEWS & UPDATES</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ONLINE SERVICES</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">ABOUT BUSECO</a>
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">CONTACT US</a>
+			{{-- <a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a> --}}
+
+			<a
+				class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+				href="#"
+				type="button"
+				id="dropdownMenuButton2"
+				data-twe-dropdown-toggle-ref
+				aria-expanded="false"
+				data-twe-ripple-init
+				data-twe-ripple-color="light">
+					PUBLICATION
+				<span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 20 20"
+					fill="currentColor">
+					<path
+					fill-rule="evenodd"
+					d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+					clip-rule="evenodd" />
+				</svg>
+				</span>
+		  	</a>
+			<ul
+				class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+				aria-labelledby="dropdownMenuButton2"
+				data-twe-dropdown-menu-ref>
+				<li>
+				<a
+					class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+					href="#"
+					data-twe-dropdown-item-ref
+					>BIDS & AWARDS</a
+				>
+				</li>
+				<li>
+				<a
+					class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] hover:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+					href="#"
+					data-twe-dropdown-item-ref
+					>ERC</a
+				>
+				</li>
+			</ul>
+
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">NEWS & UPDATES</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">ONLINE SERVICES</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">ABOUT BUSECO</a>
+			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
 			<a href="/my-account" class="account-button">MY ACCOUNT</a>
 		</div>
     </nav>
@@ -160,55 +205,52 @@
 			</button>
         </div>
         <div class="mt-6 flow-root">
-          <div class="-my-6 divide-y divide-gray-500/10">
-            <div class="space-y-2 py-6">
-              {{-- <div class="-mx-3" x-data="{ isOpen: false }">
-                <button type="button" @click="isOpen = !isOpen" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50" aria-controls="disclosure-1" aria-expanded="false">
-                  Product
-                  <!--
-                    Expand/collapse icon, toggle classes based on menu open state.
-  
-                    Open: "rotate-180", Closed: ""
-                  -->
-                  <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" :class="{ 'rotate-180': isOpen }">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                  </svg>
-                </button>
-                <!-- 'Product' sub-menu, show/hide based on menu state. -->
-                <div  
-					x-show="isOpen" 
-					class="mt-2 space-y-2" id="disclosure-1"
-					x-transition:enter="transition ease-out duration-100 transform"
-					x-transition:enter-start="opacity-0 scale-95"
-					x-transition:enter-end="opacity-100 scale-100"
-					x-transition:leave="transition ease-in duration-75 transform"
-					x-transition:leave-start="opacity-100 scale-100"
-					x-transition:leave-end="opacity-0 scale-95"
-				>
-                  <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Analytics</a>
-                  <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Engagement</a>
-                  <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Security</a>
-                  <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Integrations</a>
-                  <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Automations</a>
-                  <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Watch demo</a>
-                  <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contact sales</a>
-                </div> 
-              </div>
-            </div> --}}
+			{{-- <div class="-my-6 divide-y divide-gray-500/10"> --}}
+			<div class="-my-6">
+				
 
-			<a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">HOME</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">PUBLICATION</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">NEWS & UPDATES</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ONLINE SERVICES</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ABOUT BUSECO</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">ABOUT BUSECO</a>
-			<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">CONTACT US</a>
-			<br>
-			<a href="/my-account" class="account-button">MY ACCOUNT</a>
-            {{-- <div class="py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
-            </div> --}}
-          </div>
+				<a href="/" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">HOME</a>
+				
+				<div>
+					<div class="-mx-3" x-data="{ isOpen: false }">
+						<button type="button" @click="isOpen = !isOpen" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-[#2C8D0A] active:bg-[#2C8D0A] active:text-[#ffffff]  focus:text-[#ffffff] " aria-controls="disclosure-1" aria-expanded="false">
+						PUBLICATION
+						<!--
+							Expand/collapse icon, toggle classes based on menu open state.
+		
+							Open: "rotate-180", Closed: ""
+						-->
+						<svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" :class="{ 'rotate-180': isOpen }">
+							<path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+						</svg>
+						</button>
+						<!-- 'Product' sub-menu, show/hide based on menu state. -->
+						<div  
+							x-show="isOpen" 
+							class="mt-2 space-y-2" id="disclosure-1"
+							x-transition:enter="transition ease-out duration-100 transform"
+							x-transition:enter-start="opacity-0 scale-95"
+							x-transition:enter-end="opacity-100 scale-100"
+							x-transition:leave="transition ease-in duration-75 transform"
+							x-transition:leave-start="opacity-100 scale-100"
+							x-transition:leave-end="opacity-0 scale-95"
+						>
+							<a href="#" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">BIDS & AWARDS</a>
+							<a href="#" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">ERC</a>
+						</div> 
+					</div>
+				</div>
+				
+				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">NEWS & UPDATES</a>
+				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">ONLINE SERVICES</a>
+				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">ABOUT BUSECO</a>
+				<a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">CONTACT US</a>
+				<br>
+				<a href="/my-account" class="account-button">MY ACCOUNT</a>
+				{{-- <div class="py-6">
+				<a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
+				</div> --}}
+			{{-- </div> --}}
         </div>
       </div>
     </div>
@@ -487,7 +529,7 @@
 			<a href="https://www.napocor.gov.ph/" class="hover:scale-110"><img class="h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
 		</div>
 	</div>
-	
+ 
 	<footer class="footer-siteinfo" id="footer-siteinfo">
 		<div class="grid mx-auto max-w-7xl grid-cols-3 gap-4 mx-2 py-10">
 			<div class="my-auto">
@@ -535,6 +577,19 @@
 		<div class="all-rights-reserved py-4"><p class="all-rights-text text-center">&copy; 2024 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
 		<div class="madewithlove"><p class="all-rights-text text-center">catscanc0de&trade;</p><br></div>
 	</footer>
+
+	<div class="mt-16 flex justify-center">
+		<p class="text-lg">
+		  Hover the link to see the
+		  <a
+			id="my-tooltip"
+			href="#"
+			class="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+			title="Hi! I'm tooltip"
+			>tooltip</a
+		  >
+		</p>
+	  </div>
 </x-home-layout>
   
   
