@@ -13,5 +13,4 @@ window.Alpine = Alpine;
 Alpine.start();
 
 //init here the imported TW elements
-const myTooltip = new Tooltip(document.getElementById('my-tooltip'));
 initTWE({ Dropdown });
