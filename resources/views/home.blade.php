@@ -276,7 +276,53 @@
 				</li>
 			  </ul>
 				
-			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">ABOUT BUSECO</a>
+			<a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+				href="#"
+				type="button"
+				id="dropdownMenuButton2"
+				data-twe-dropdown-toggle-ref
+				aria-expanded="false"
+				data-twe-ripple-init
+				data-twe-ripple-color="light">
+			ABOUT BUSECO
+			<span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 20 20"
+					fill="currentColor">
+					<path
+					fill-rule="evenodd"
+					d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+					clip-rule="evenodd" />
+				</svg>
+				</span>
+		  	</a>
+			<ul
+				class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+				aria-labelledby="dropdownMenuButton2"
+				data-twe-dropdown-menu-ref>
+				<li>
+				<a
+					class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+					href="#"
+					data-twe-dropdown-item-ref
+					>BUSECO PROFILE</a>
+				</li>
+				<li>
+				<a
+					class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+					href="#"
+					data-twe-dropdown-item-ref
+					>BOARD OF DIRECTORS</a>
+				</li>
+				<li>
+				<a
+					class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+					href="#"
+					data-twe-dropdown-item-ref
+					>THE MANAGEMENT</a>
+				</li>
+	 		 </ul>
 			<a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
 			<a href="/my-account" class="account-button">MY ACCOUNT</a>
 		</div>
