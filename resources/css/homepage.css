@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 
+.img-banner {
+    width: 100%;
+    height: 100vh; /* or a fixed height, e.g. 300px */
+    object-fit: cover;
+    object-position: center;
+}
+
 .services{
     background-color: #f2f2f2;
 
@@ -94,7 +101,7 @@ header{
         &:hover{
             color: #0a961d;
             background-color: #ffffff;
-            border: 1px solid #0a961d;
+            border: 1px solid #0a961d; 
         }
     }
 }
