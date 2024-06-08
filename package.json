@@ -16,6 +16,7 @@
     },
     "type": "module",
     "dependencies": {
+        "tinymce": "^7.1.2",
         "tw-elements": "^2.0.0"
     }
 }
