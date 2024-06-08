@@ -1,8 +1,6 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\PageController;
-
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,22 +28,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//admin page
-Route::middleware('auth')->controller(PageController::class)->group(function () {
-    Route::get('/page', 'index')->name('page.index');
-    Route::get('/page/add-page', 'createPageForm')->name('page.add');
-    Route::post('/page/create', 'createPage')->name('page.create');
-    Route::get('/page/edit/{pageId}', 'editPage')->name('page.edit');
-});
-
-
 require __DIR__.'/auth.php';
-
-Route::controller(PageController::class)->group(function () {
-    //Route::get('/board-of-directors', 'BOD')->name('page.bod');
-
-    Route::get('{pageName}', 'viewPage')->name('page.view'); //put the slug in {pageName}
-});
-
-
-

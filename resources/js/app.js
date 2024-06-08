@@ -14,5 +14,3 @@ Alpine.start();
 
 //init here the imported TW elements
 initTWE({ Dropdown });
-
-
