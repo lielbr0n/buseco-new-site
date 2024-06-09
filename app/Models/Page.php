@@ -29,7 +29,10 @@ class Page extends Model
         'post_slug',
         'post_excerpt',
         'post_category',
-        'post_tags'
+        'post_tags',
+        'post_template',
+        'post_status',
+        'post_option'
     ];
 
     protected $primaryKey = 'post_id';

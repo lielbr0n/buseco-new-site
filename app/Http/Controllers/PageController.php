@@ -35,9 +35,30 @@ class PageController extends Controller
 
     public function editPage($pageId){
         $pageInfo = Page::findOrFail($pageId);
-        //dd($page);
 
         return view('admin.page.add-page-form', ['pageInfo' => $pageInfo]); 
+    }
+
+    public function updatePage(StorePageRequest $request, $pageId){
+        //find the post
+        $pageInfo = Page::findOrFail($pageId); 
+
+        //fill the Page Model from StorePageRequest
+        $pageInfo->fill($request->validated()); 
+        
+        //save the update
+        $pageInfo->save();
+
+        return view('admin.page.add-page-form', ['pageInfo' => $pageInfo]); 
+    }
+
+    public function deletePage($pageId){
+        //find the post
+        $pageInfo = Page::find($pageId); 
+
+        $pageInfo->delete();
+
+        return redirect(route('page.index')); 
     }
 
     public function BOD(){
@@ -49,8 +70,6 @@ class PageController extends Controller
             $pageInfo = Page::where('post_slug', $pageName)->firstOrFail();
         
             return  view('pages.template-view-page', ['pageInfo' => $pageInfo]);
-            //return  view('pages.template-view-page', ['pageInfo' => $pageInfo]);
-           // return View::make('pages.template-view-page', array('pageInfo' => $pageInfo));
         }
     }
 }

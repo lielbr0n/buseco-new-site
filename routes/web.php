@@ -36,6 +36,12 @@ Route::middleware('auth')->controller(PageController::class)->group(function () 
     Route::get('/page/add-page', 'createPageForm')->name('page.add');
     Route::post('/page/create', 'createPage')->name('page.create');
     Route::get('/page/edit/{pageId}', 'editPage')->name('page.edit');
+    Route::patch('/page/update/{pageId}', 'updatePage')->name('page.update');
+    Route::get('/page/delete/{pageId}', 'deletePage')->name('page.delete');
+});
+
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
 
