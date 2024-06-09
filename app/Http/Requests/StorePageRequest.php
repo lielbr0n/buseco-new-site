@@ -2,7 +2,11 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Page;
+
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
 
 class StorePageRequest extends FormRequest
 {
@@ -21,18 +25,28 @@ class StorePageRequest extends FormRequest
      */
     public function rules(): array
     {
+    
+        $post_slug_validation = ['required', 'unique:post,post_slug', 'max:255']; //validation if create, no pageId
+
+        //validation if update, there is pageId
+        if(request()->pageId){
+            //if the post_slug field is not modified, then it will ignore this validation
+            $post_slug_validation = ['required', 'max:255', 'lowercase', 'string', Rule::unique(Page::class)->ignore(request()->pageId, 'post_id')];
+        }
+        
         return [
-            'post_title' => 'required|max:255',
-            'post_slug' => 'required|unique:post,post_slug|max:255',
-            'post_content' => 'required',
+            'post_title' => ['required','max:255'], 
+            'post_slug' =>  $post_slug_validation,
+            'post_content' => ['required'],
+            'post_template' => ['required'],
+            'post_status' => ['required']
         ];
     }
 
     public function validated($key = null, $default = null){
         $validated = parent::validated($key, $default);
-       
+        
         $user = $this->user();
-       // dd($validated);
 
         return array_merge($validated, [
             'post_title' => $this->post_title,
@@ -43,6 +57,9 @@ class StorePageRequest extends FormRequest
             'post_excerpt' => 'excerpt',
             'post_category' => 'page',
             'post_tags' => '',
+            'post_template' => $this->post_template,
+            'post_status' => $this->post_status,
+            'post_option' => $this->post_show_pagetitle
         ]);
     }
 }

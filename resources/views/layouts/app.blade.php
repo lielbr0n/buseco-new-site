@@ -14,7 +14,7 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-        {{-- <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/super-build/ckeditor.js"></script> --}}
+       
 
         <!-- Place the first <script> tag in your HTML's <head> -->
         {{-- <script src="https://cdn.tiny.cloud/1/euy7e4j293ht6y12rxbbjsjfou9u4uhk1cu1i61yjlxsmj52/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
@@ -51,46 +51,82 @@
         <!-- Settings for tinymce wysywyg -->
         <!-- docs: https://www.tiny.cloud/docs/tinymce/latest/laravel-composer-install/ -->
         <script>
-            tinymce.init({
-              selector: '#mytextarea',
-              plugins: 'code table lists codesample image wordcount media link anchor searchreplace help ',
-              menubar: 'file edit view insert format tools table help',
-              toolbar: 'undo redo |  blocks fontsizeinput fontinput  | bold italic underline strikethrough | alignleft aligncenter alignright | indent outdent | bullist numlist | table | link image media | code',
-              browser_spellcheck: true,
-              contextmenu: false,
-                // enable title field in the Image dialog
-                image_title: true, 
-                // enable automatic uploads of images represented by blob or data URIs
-                automatic_uploads: true,
-              license_key: 'gpl',
-
-              // add custom filepicker only to Image dialog
-              file_picker_types: 'image',
-                file_picker_callback: function(cb, value, meta) {
-                    var input = document.createElement('input');
-                    input.setAttribute('type', 'file');
-                    input.setAttribute('accept', 'image/*');
-
-                    input.onchange = function() {
-                    var file = this.files[0];
-                    var reader = new FileReader();
+                // tinymce.init({
+                // path_absolute: "/",
+                // selector: '#mytextarea',
+                // plugins: 'code table lists codesample image wordcount media link anchor searchreplace help ',
+                // menubar: 'file edit view insert format tools table help',
+                // toolbar: 'undo redo |  blocks fontsizeinput fontinput  | bold italic underline strikethrough | alignleft aligncenter alignright | indent outdent | bullist numlist | table | link image media | code',
+                // browser_spellcheck: true,
+                // contextmenu: false,
+                // license_key: 'gpl',
+                // relative_urls: false,
+                // file_picker_types: 'image',
+                // file_picker_callback : function(callback, value, meta) {
                     
-                    reader.onload = function () {
-                        var id = 'blobid' + (new Date()).getTime();
-                        var blobCache =  tinymce.activeEditor.editorUpload.blobCache;
-                        var base64 = reader.result.split(',')[1];
-                        var blobInfo = blobCache.create(id, file, base64);
-                        blobCache.add(blobInfo);
+                //     var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                //     var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
 
-                        // call the callback and populate the Title field with the file name
-                        cb(blobInfo.blobUri(), { title: file.name });
-                    };
-                    reader.readAsDataURL(file);
-                    };
+                //     var cmsURL = path_absolute + 'laravel-filemanager?editor=' + meta.fieldname;
+                //     if (meta.filetype == 'image') {
+                //         cmsURL = cmsURL + "&type=Images";
+                //     } else {
+                //         cmsURL = cmsURL + "&type=Files";
+                //     }
+
+                //     tinyMCE.activeEditor.windowManager.openUrl({
+                //         url : cmsURL,
+                //         title : 'Filemanager',
+                //         width : x * 0.8,
+                //         height : y * 0.8,
+                //         resizable : "yes",
+                //         close_previous : "no",
+                //         onMessage: (api, message) => {
+                //         callback(message.content);
+                //         }
+                //     });
+                //     }
+                // });
+
+                var editor_config = {
+                    path_absolute : "/",
+                    selector: '#mytextarea',
+                    relative_urls: false,
+                    plugins: [
+                        'code', 'table', 'lists', 'codesample', 'image', 'wordcount', 'media', 'link', 'anchor', 'searchreplace', 'help'
+                    ],
+                    menubar: 'file edit view insert format tools table help',
+                    toolbar: 'undo redo |  blocks fontsizeinput fontinput  | bold italic underline strikethrough | alignleft aligncenter alignright | indent outdent | bullist numlist | table | link image media | code',
+                    license_key: 'gpl',
+                    images_upload_base_path: '/',
+                    height: 500,
+
+                    file_picker_callback : function(callback, value, meta) {
+                    var x = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+                    var y = window.innerHeight|| document.documentElement.clientHeight|| document.getElementsByTagName('body')[0].clientHeight;
+
+                    var cmsURL = editor_config.path_absolute + 'laravel-filemanager?editor=' + meta.fieldname;
+                    if (meta.filetype == 'image') {
+                        cmsURL = cmsURL + "&type=Images";
+                    } else {
+                        cmsURL = cmsURL + "&type=Files";
+                    }
+
+                    tinyMCE.activeEditor.windowManager.openUrl({
+                        url : cmsURL,
+                        title : 'Filemanager',
+                        width : x * 0.8,
+                        height : y * 0.8,
+                        resizable : "yes",
+                        close_previous : "no",
+                        onMessage: (api, message) => {
+                        callback(message.content);
+                        }
+                    });
+                    }
                     
-                    input.click();
-                }
-            });
+                };
+                tinymce.init(editor_config);
         </script>
     </head>
     <body class="font-sans antialiased">

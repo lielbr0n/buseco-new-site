@@ -16,11 +16,16 @@ return new class extends Migration
             $table->integer('post_author_id');
             $table->string('post_author_name');
             $table->string('post_title');
-            $table->longtext('post_content');
+            $table->text('post_content');
             $table->string('post_slug')->unique();
-            $table->string('post_excerpt');
+            $table->string('post_excerpt')->nullable();
             $table->string('post_category');
-            $table->string('post_tags');
+            $table->string('post_tags')->nullable();
+            $table->string('post_status');
+            $table->string('post_template');
+            $table->string('post_option')->nullable();
+            $table->dateTime('post_schedule_date_start')->nullable();
+            $table->dateTime('post_schedule_date_end')->nullable();
             $table->timestamps();
         });
     }
