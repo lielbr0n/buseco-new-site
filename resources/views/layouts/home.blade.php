@@ -182,7 +182,7 @@
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/notices"
                             data-twe-dropdown-item-ref
                             >NOTICES</a>
                             
@@ -190,35 +190,35 @@
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/erc"
                             data-twe-dropdown-item-ref
                             >ERC</a>
                         </li>
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/coop-news"
                             data-twe-dropdown-item-ref
                             >COOP NEWS</a>
                           </li>
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/job-opportunities"
                             data-twe-dropdown-item-ref
                             >JOB OPPORTUNITIES</a>
                         </li>
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/institutional-advisories"
                             data-twe-dropdown-item-ref
                             >INSTITUTIONAL ADVISORIES</a>
                         </li>
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/services"
                             data-twe-dropdown-item-ref
                             >SERVICES</a>
                         </li>
@@ -252,21 +252,21 @@
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/scheduled-unbundled-rates"
                             data-twe-dropdown-item-ref
                             >SCHEDULED UNBUNDLED RATES</a>
                         </li>
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/monthly-generation-mix-under-oath"
                             data-twe-dropdown-item-ref
                             >MONTHLY GENERATION MIX UNDER OATH</a>
                         </li>
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/daily-supply-and-load-outlook"
                             data-twe-dropdown-item-ref
                             >DAILY SUPPLY AND LOAD OUTLOOK</a>
                         </li>
@@ -300,14 +300,14 @@
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="https://online.buseco.coop"
                             data-twe-dropdown-item-ref
                             >MEMBERSHIP APPLICATION</a>
                         </li>
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/download-forms"
                             data-twe-dropdown-item-ref
                             >DOWNLOAD FORMS</a>
                         </li>
@@ -321,7 +321,7 @@
                       </ul>
                         
                     <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-                        href="#"
+                        href="/faq"
                         type="button"
                         id="dropdownMenuButton2"
                         data-twe-dropdown-toggle-ref
@@ -348,7 +348,7 @@
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/buseco-profile"
                             data-twe-dropdown-item-ref
                             >BUSECO PROFILE</a>
                         </li>
@@ -362,13 +362,13 @@
                         <li>
                         <a
                             class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                            href="#"
+                            href="/the-management"
                             data-twe-dropdown-item-ref
                             >THE MANAGEMENT</a>
                         </li>
                       </ul>
-                    <a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
-                    <a href="/my-account" class="account-button">MY ACCOUNT</a>
+                    <a href="/contact-us" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
+                    <a href="https://buseco.coop/my-account-login/" class="account-button">MY ACCOUNT</a>
                 </div>
             </nav>
             <!-- Mobile menu, show/hide based on menu open state. -->
