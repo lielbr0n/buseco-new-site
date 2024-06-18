@@ -16,7 +16,7 @@ class PageController extends Controller
 {
     public function index(){
         $pages = Page::orderByDesc('created_at')
-        ->paginate(10);
+        ->paginate(50); //pagination of Page Table
 
         return view('admin.page.index', ['pages' => $pages]); 
     }
