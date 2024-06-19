@@ -105,7 +105,7 @@
                                 <button id="lfm1" data-name="inputName" data-input="thumbnail" data-preview="holder" type="button" class="w-1/4 px-2 rounded bg-[#198754] px-6 py-3 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-[#198754] hover:shadow-primary-2 focus:bg-[#198754] focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2">
                                     <i class="fa fa-picture-o"></i> {{ empty($postInfo->post_feature_image) ? 'Choose' : 'Change Image' }}
                                 </button>
-                                <input id="thumbnail" class="w-full ml-3" type="hidden" name="filepath" value="{{old('filepath')}}">
+                                <input id="thumbnail" class="w-full ml-3" type="hidden" name="filepath" value="{{old('filepath', $postInfo->post_feature_image ?? null)}}">
                                 <input id="inputName" class="w-full ml-3" type="text" name="filename" value="{{old('filename')}}">
                             </div>
                            

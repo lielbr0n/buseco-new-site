@@ -19,8 +19,15 @@ document.getElementById("post_title").onchange = function() {myFunction()};
     
 function myFunction() {
   let x = document.getElementById("post_title");
+  let postSLug = document.getElementById("post_slug").value;
   let toSlugVal= x.value.replaceAll(' ', '-').toLowerCase();
-  document.getElementById("post_slug").value = toSlugVal;
+
+  console.log(postSLug)
+
+  if(!postSLug){
+    
+    document.getElementById("post_slug").value = toSlugVal;
+  }
 }
 
 //Stand Alone JavaScript integration function of laravel file manager by unisharp
