@@ -8,7 +8,7 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
 
-class StorePageRequest extends FormRequest
+class PageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +26,7 @@ class StorePageRequest extends FormRequest
     public function rules(): array
     {
     
-        $post_slug_validation = ['required', 'unique:post,post_slug', 'max:255']; //validation if create, no pageId
+        $post_slug_validation = ['required', 'unique:post,post_slug', 'max:255']; //validation if create(insert data), no pageId
 
         //validation if update, there is pageId
         if(request()->pageId){
@@ -59,7 +59,8 @@ class StorePageRequest extends FormRequest
             'post_tags' => '',
             'post_template' => $this->post_template,
             'post_status' => $this->post_status,
-            'post_option' => $this->post_show_pagetitle
+            'post_option' => $this->post_show_pagetitle,
+            'post_type' => 'page'
         ]);
     }
 }

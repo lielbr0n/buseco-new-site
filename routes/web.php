@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -30,7 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-//admin page
+//admin page routes
 Route::middleware('auth')->controller(PageController::class)->group(function () {
     Route::get('/page', 'index')->name('page.index');
     Route::get('/page/add-page', 'createPageForm')->name('page.add');
@@ -38,6 +39,16 @@ Route::middleware('auth')->controller(PageController::class)->group(function () 
     Route::get('/page/edit/{pageId}', 'editPage')->name('page.edit');
     Route::patch('/page/update/{pageId}', 'updatePage')->name('page.update');
     Route::get('/page/delete/{pageId}', 'deletePage')->name('page.delete');
+});
+
+//admin page routes
+Route::middleware('auth')->controller(PostController::class)->group(function () {
+    Route::get('/post', 'index')->name('post.index');
+    Route::get('/post/add-post', 'createPostForm')->name('post.add');
+    Route::post('/post/create', 'createPost')->name('post.create');
+    Route::get('/post/edit/{postId}', 'editpost')->name('post.edit');
+    Route::patch('/post/update/{postId}', 'updatePost')->name('post.update');
+    Route::get('/post/delete/{postId}', 'deletePost')->name('post.delete');
 });
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
@@ -48,8 +59,6 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 require __DIR__.'/auth.php';
 
 Route::controller(PageController::class)->group(function () {
-    //Route::get('/board-of-directors', 'BOD')->name('page.bod');
-
     Route::get('{pageName}', 'viewPage')->name('page.view'); //put the slug in {pageName}
 });
 

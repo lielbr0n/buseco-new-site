@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
-Use App\Http\Requests\StorePageRequest;
+Use App\Http\Requests\PageRequest;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -15,8 +15,7 @@ use App\Models\Page;
 class PageController extends Controller
 {
     public function index(){
-        $pages = Page::orderByDesc('created_at')
-        ->paginate(50); //pagination of Page Table
+        $pages = Page::getPages();
 
         return view('admin.page.index', ['pages' => $pages]); 
     }
@@ -25,7 +24,7 @@ class PageController extends Controller
         return view('admin.page.add-page-form'); 
     }
 
-    public function createPage(StorePageRequest $request){
+    public function createPage(PageRequest $request){
         if (Auth::check()) {
             $membershipApp = Page::create($request->validated());
             
@@ -39,14 +38,14 @@ class PageController extends Controller
         return view('admin.page.add-page-form', ['pageInfo' => $pageInfo]); 
     }
 
-    public function updatePage(StorePageRequest $request, $pageId){
+    public function updatePage(PageRequest $request, $pageId){
         //find the post
         $pageInfo = Page::findOrFail($pageId); 
 
-        //fill the Page Model from StorePageRequest
+        //fill the Page Model Data from PageRequest
         $pageInfo->fill($request->validated()); 
         
-        //save the update
+        //save the updated data
         $pageInfo->save();
 
         return view('admin.page.add-page-form', ['pageInfo' => $pageInfo]); 

@@ -61,19 +61,19 @@
 
                         <div>
                             <x-input-label for="post_title" :value="__('Title')" />
-                            <x-text-input id="post_title" class="block mt-1 w-full py-2 px-4 border-2 border-gray-400" type="text" name="post_title" :value="old('post_title', $pageInfo->post_title ?? '')" placeholder='My First Post' required autofocus autocomplete="post_title" />
+                            <x-text-input id="post_title" class="block mt-1 w-full py-2 px-4 border-2 border-gray-400" type="text" name="post_title" :value="old('post_title', $pageInfo->post_title ?? '')" placeholder='My First Page' required autofocus autocomplete="post_title" />
                             <x-input-error :messages="$errors->get('post_title')" class="mt-2" />
                         </div>
 
                         <div class="mt-3 mb-3">
                             <x-input-label for="post_slug" :value="__('Slug')" />
-                            <x-text-input id="post_slug" class="block mt-1 w-full py-2 px-4 border-2 border-gray-400" type="text" name="post_slug" :value="old('post_slug', $pageInfo->post_slug ?? '')" placeholder='my-first-post' required autofocus autocomplete="post_slug" />
+                            <x-text-input id="post_slug" class="block mt-1 w-full py-2 px-4 border-2 border-gray-400" type="text" name="post_slug" :value="old('post_slug', $pageInfo->post_slug ?? '')" placeholder='my-first-page' required autofocus autocomplete="post_slug" />
                             <x-input-error :messages="$errors->get('post_slug')" class="mt-2" />
                         </div>
 
                         <div class="mt-3 mb-3">
-                            <x-input-label for="mytextarea" :value="__('Content')" />
-                            <textarea id="mytextarea" name="post_content">{!! old('post_content',  $pageInfo->post_content ?? '') !!}</textarea>
+                            <x-input-label for="textarea_pages" :value="__('Content')" />
+                            <textarea id="textarea_pages" class="post_content" name="post_content">{!! old('post_content',  $pageInfo->post_content ?? '') !!}</textarea>
                         </div>
 
                         <div class="mt-3 mb-3">
