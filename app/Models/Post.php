@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Page extends Model
+class Post extends Model
 {
     use HasFactory;
 
@@ -34,15 +34,17 @@ class Page extends Model
         'post_status',
         'post_option',
         'post_type',
+        'post_feature_image'
     ];
 
     protected $primaryKey = 'post_id';
 
-    public static function getPages(){
-        $pages = Post::orderByDesc('created_at')
-        ->where('post_type', 'page')
+    public static function getPost(){
+        $posts = Post::orderByDesc('created_at')
+        ->where('post_type', 'post')
         ->paginate(10);
 
-        return $pages;
+        return $posts;
+        
     }
 }
