@@ -21,8 +21,8 @@
                     @endif
                 </div>
                 <div class="pt-6 pr-6 pb-6">
-                    <div class="border-2 border-[#2C8D0A] ">
-                        blog contents
+                    <div class="border-2 border-[#2C8D0A] p-[6px]">
+                        @include('blog.sidebar-blog', ['latestPosts' => $latestPosts])
                     </div>
                 </div>
             </div>

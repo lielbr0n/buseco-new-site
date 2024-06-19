@@ -44,7 +44,7 @@
                                                 <tr class="border-b border-neutral-200 dark:border-white/10">
                                                     <td class="whitespace-nowrap px-2 py-1 font-medium text-center">{{$no++}}</td>
                                                     <td class="whitespace-nowrap px-2 py-1 text-center font-medium "><a href="{{route('post.edit', ['postId' => $post->post_id])}}" class="text-[#2C8D0A] hover:underline">{{ $post->post_title }}<a></td>
-                                                    <td class="whitespace-nowrap px-2 py-1 text-center font-medium"><a href="{{ '/'.$post->post_slug }}" class=" hover:underline" target="_blank">{{ '/'.$post->post_slug }}</a></td>
+                                                    <td class="whitespace-nowrap px-2 py-1 text-center font-medium"><a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}" class=" hover:underline" target="_blank">{{ '/'.$post->post_slug }}</a></td>
                                                     <td class="whitespace-nowrap px-2 py-1 text-center font-medium">{{ $post->post_author_name }}</td>
                                                     <td class="whitespace-nowrap px-2 py-1 text-center font-semibold">
                                                         <span @class([

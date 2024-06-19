@@ -45,6 +45,15 @@ class Post extends Model
         ->paginate(10);
 
         return $posts;
-        
+    }
+
+    public static function getLatestPost($limit = 4){
+        $latestPosts = Post::latest()
+        ->where('post_type', 'post')
+        ->where('post_status', 'publish')
+        ->limit($limit)
+        ->get();
+
+        return $latestPosts;
     }
 }

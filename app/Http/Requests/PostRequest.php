@@ -39,7 +39,7 @@ class PostRequest extends FormRequest
             'post_slug' =>  $post_slug_validation,
             'post_content' => ['required'],
             'post_category' => ['required', 'max:50'],
-            'post_excerpt' => ['max:90'],
+            'post_excerpt' => ['max:255'],
             'post_status' => ['required']
         ];
     }

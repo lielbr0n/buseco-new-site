@@ -112,35 +112,42 @@
 	<div class="blog pl-6 pr-6 pb-6" id="blog">
 		<div class="mx-auto max-w-screen-xl border-2 px-4 py-7 border-[#2C8D0A]">
 		<h1 class="text-4xl font-semibold blog-title-section text-center">NEWS AND UPDATES</h1>
-
 		<div class="grid grid-cols-3 gap-4 mx-2 mt-5">
-			<div class="">
-				<a href="#"><img src="{{url('/images/tower.jpg')}}"></a>
-				<div class="blog-date mt-1">March 27, 2024</div>
-				<div class="blog-title mt-2"><a href="#">News Update 1</a></div>
-				<div class="blog-description text-justify">
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+			@forelse($latestPosts as $post)
+				<div class="">
+					<div class="blog-img-container h-[200px]">
+						<a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">
+							<img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />
+						</a>
+					</div>
+					<div class="blog-date mt-1 flex items-center">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#007f00" class="size-6 mr-1">
+							<path d="M12.75 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM7.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM8.25 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM9.75 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM10.5 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM12.75 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM14.25 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 17.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 15.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM15 12.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM16.5 13.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z" />
+							<path fill-rule="evenodd" d="M6.75 2.25A.75.75 0 0 1 7.5 3v1.5h9V3A.75.75 0 0 1 18 3v1.5h.75a3 3 0 0 1 3 3v11.25a3 3 0 0 1-3 3H5.25a3 3 0 0 1-3-3V7.5a3 3 0 0 1 3-3H6V3a.75.75 0 0 1 .75-.75Zm13.5 9a1.5 1.5 0 0 0-1.5-1.5H5.25a1.5 1.5 0 0 0-1.5 1.5v7.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5v-7.5Z" clip-rule="evenodd" />
+						</svg>
+						<span class="text-sm">{{ date_format($post->created_at,"F d, Y h:i:s a") }}</span>
+					</div>
+					<div class="blog-author mt-1 flex items-center">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#007f00" class="size-6 mr-1">
+							<path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
+						</svg>
+						{{ $post->post_author_name }}
+					</div>
+					<div class="blog-title mt-2"><a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">{{ $post->post_title }}</a></div>
+					<div class="blog-description text-justify mt-1">
+						@if(empty($post->post_excerpt))
+							{!! Str::words($post->post_content, '50') !!}
+						@else
+							{{ $post->post_excerpt }}
+						@endif
+					</div>
 				</div>
-			</div>
-			<div class="">
-				<a href="#"><img src="{{url('/images/tower.jpg')}}"></a>
-				<div class="blog-date mt-1">March 25, 2024</div>
-				<div class="blog-title mt-2"><a href="#">News Update 2</a></div>
-				<div class="blog-description text-justify">
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</div>
-			</div>
-			<div class="">
-				<a href="#"><img src="{{url('/images/tower.jpg')}}"></a>
-				<div class="blog-date mt-1">March 24, 2024</div>
-				<div class="blog-title mt-2"><a href="#">News Update 3</a></div>
-				<div class="blog-description text-justify">
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-				</div>
-			</div>
+			@empty
+				<div>No Post Found!</div>
+			@endforelse
 		</div>
 		
-		<a href="/coop-news" class="flex justify-center items-center more-news-btn mt-4 text-lg font-semibold">
+		<a href="/coop-news" class="flex justify-center items-center more-news-btn mt-5 text-lg font-semibold">
 			More News Here
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
 				<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />

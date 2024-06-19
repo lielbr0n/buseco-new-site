@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\HomePageController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -17,8 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
+// Route::get('/', function () {
+//     return view('home');
+// });
+
+
+
+Route::controller(HomePageController::class)->group(function () {
+    Route::get('/', 'index')->name('home.index');
+    Route::get('/coop-news/{postSlug}', 'blogSinglePage')->name('blog.single');
 });
 
 Route::get('/dashboard', function () {
@@ -55,12 +63,15 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-
 require __DIR__.'/auth.php';
 
-Route::controller(PageController::class)->group(function () {
-    Route::get('{pageName}', 'viewPage')->name('page.view'); //put the slug in {pageName}
-});
+// Route::controller(PageController::class)->group(function () {
+//     Route::get('{pageName}', 'viewPage')->name('page.view'); //put the slug in {pageName}
+// });
+
+
+Route::get('{pageName}', [HomePageController::class, 'viewPage'])->name('page.view'); //put the slug in {pageName}
+
 
 
 
