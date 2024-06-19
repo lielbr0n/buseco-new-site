@@ -1,6 +1,6 @@
 <x-home-layout>
   	<div class="banner" id="banner">
-		<img src="{{url('/images/buseco-cover-main-office.png')}}" alt="buseco" class="img-banner"/>
+		<img src="{{url('/images/banner4.png')}}" alt="buseco" class="img-banner"/>
 	</div>
 
 	{{-- <div class="services py-5" id="services">
@@ -62,28 +62,28 @@
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 1: COMPLETE THE APPLICATION</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6">Applicants will be required to submit application.</p>
-					<a href="#" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/services" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-2.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 2: PAYMENT</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to pay.</p>
-					<a href="#" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/services" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-3.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 3: TAKE THE ONLINE EXAM</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to attend the online PMES and take the exam. </p>
-					<a href="#" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/services" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-4.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 4: SUBMIT REQUIREMENTS</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">All applicants will be required to process and submit necessary requirements to the Buseco Office.</p>
-					<a href="#" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/services" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 			</div>
 		</div>
@@ -99,7 +99,7 @@
 					</h2>
 					<div class="w-[115px] border-b-2 border-[#2C8D0A]"></div> <!-- border line -->
 					<p class="font-small text-3xl mt-14">Where can I pay my bills?</p>
-					<a href="#" class="block text-center border-2 text-[#ffffff] border-[#ffffff] p-1 w-3/12 bg-[#FF5722] mt-5 font-small hover:bg-[#2c8d0a] hover:border-[#256f0b]" role="button">READ MORE</a>
+					<a href="/faq" class="block text-center border-2 text-[#ffffff] border-[#ffffff] p-1 w-3/12 bg-[#FF5722] mt-5 font-small hover:bg-[#2c8d0a] hover:border-[#256f0b]" role="button">READ MORE</a>
 				</div>
 				<div class="my-auto mx-auto">
 					<img src="{{url('/images/faqq-img.png')}}" class="w-full h-auto " />
@@ -140,7 +140,7 @@
 			</div>
 		</div>
 		
-		<a href="#" class="flex justify-center items-center more-news-btn mt-4 text-lg font-semibold">
+		<a href="/coop-news" class="flex justify-center items-center more-news-btn mt-4 text-lg font-semibold">
 			More News Here
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
 				<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
