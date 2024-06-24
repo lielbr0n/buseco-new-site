@@ -32,6 +32,7 @@
                                             <th scope="col" class="px-6 py-4">Title</th>
                                             <th scope="col" class="px-6 py-4">Slug</th>
                                             <th scope="col" class="px-6 py-4">Author</th>
+                                            <th scope="col" class="px-6 py-4">Category</th>
                                             <th scope="col" class="px-6 py-4">Status</th>
                                             <th scope="col" class="px-6 py-4">Date Created</th>
                                             <th scope="col" class="px-6 py-4">Date Modified</th>
@@ -46,6 +47,14 @@
                                                     <td class="whitespace-nowrap px-2 py-1 text-center font-medium "><a href="{{route('post.edit', ['postId' => $post->post_id])}}" class="text-[#2C8D0A] hover:underline">{{ $post->post_title }}<a></td>
                                                     <td class="whitespace-nowrap px-2 py-1 text-center font-medium"><a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}" class=" hover:underline" target="_blank">{{ '/'.$post->post_slug }}</a></td>
                                                     <td class="whitespace-nowrap px-2 py-1 text-center font-medium">{{ $post->post_author_name }}</td>
+                                                    <td class="whitespace-nowrap px-2 py-1 text-center font-medium">
+                                                        <span @class([
+                                                            "text-danger" => $post->post_category === 'public-advisory'
+                                                            ])
+                                                        >
+                                                        {{ $post->post_category }}
+                                                        </span>
+                                                    </td>
                                                     <td class="whitespace-nowrap px-2 py-1 text-center font-semibold">
                                                         <span @class([
                                                             "p-1 text-white rounded-lg text-[14px]",

@@ -14,9 +14,10 @@ class HomePageController extends Controller
 {
 
     public function index(){
-        $latestPosts = Post::getLatestPost(3); //put 3 if display 3 post. 4 if 4 post and so on.
+        $getLatestPostNewsAndJobOpp = Post::getLatestPostNewsAndJobOpp(3); //put 3 if display 3 post. 4 if 4 post and so on.
+        $latestPublicAdvisories = Post::getPostAdvisories(4); //get post with public_advisory catergories
 
-        return view('home', ['latestPosts' => $latestPosts]); 
+        return view('home', ['getLatestPostNewsAndJobOpp' => $getLatestPostNewsAndJobOpp, 'latestPublicAdvisories' => $latestPublicAdvisories]); 
     }
 
     public function blogSinglePage($postSlug){
@@ -29,8 +30,11 @@ class HomePageController extends Controller
         return view('blog.single-blog-post', ['post' => $post, 'latestPosts' => $latestPosts]); 
     }
 
-    public function blogPage(){
-       //
+    public function blogListPage(){
+        $blogList = Post::getListPost();
+        $latestPosts = Post::getLatestPost(4);
+
+        return view('blog.list-blog-post', ['blogList' => $blogList, 'latestPosts' => $latestPosts]);
     }
 
     public function viewPage($pageName){
@@ -41,5 +45,9 @@ class HomePageController extends Controller
         
             return  view('pages.template-view-page', ['pageInfo' => $pageInfo, 'latestPosts' => $latestPosts]);
         }
+    }
+
+    public function contactUs(){
+        return  view('contact-us.index');
     }
 }

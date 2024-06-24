@@ -30,11 +30,6 @@
 }
 
 .blog{
-    .blog-title-section{
-        /* font-size: 42px;
-        font-weight: bold; */
-    }
-
     .blog-title{
         font-size: 25px;
         font-weight: bold;
@@ -49,12 +44,28 @@
         }
     }
 
+    .blog-description{
+        /* remove the image content on short description of blog homepage */
+        p img {
+            display:none; 
+        }
+    }
+
     .more-news-btn{
         color: #0a961d; 
 
         &:hover{
             color: #00cc00;
             text-decoration: underline;
+        }
+    }
+}
+
+#bloglist{
+    .blog-description{
+        /* remove the image content on short description of blog homepage */
+        p img {
+            display:none; 
         }
     }
 }

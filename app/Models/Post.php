@@ -47,6 +47,29 @@ class Post extends Model
         return $posts;
     }
 
+    public static function getLatestPostNewsAndJobOpp($limit = 4){
+        $latestPosts = Post::latest()
+        ->where('post_type', 'post')
+        ->where('post_category', 'news-articles')
+        ->orWhere('post_category', 'job-opportunities')
+        ->where('post_status', 'publish')
+        ->limit($limit)
+        ->get();
+
+        return $latestPosts;
+    }
+
+    public static function getListPost(){
+        $latestPosts = Post::orderByDesc('created_at')
+        ->where('post_type', 'post')
+        ->where('post_category', 'news-articles')
+        ->orWhere('post_category', 'job-opportunities')
+        ->where('post_status', 'publish')
+        ->paginate(10);
+
+        return $latestPosts;
+    }
+
     public static function getLatestPost($limit = 4){
         $latestPosts = Post::latest()
         ->where('post_type', 'post')
@@ -55,5 +78,16 @@ class Post extends Model
         ->get();
 
         return $latestPosts;
+    }
+
+    public static function getPostAdvisories($limit = 4){
+        $latestAdvisory = Post::latest()
+        ->where('post_type', 'post')
+        ->where('post_category', 'public-advisory')
+        ->where('post_status', 'publish')
+        ->limit($limit)
+        ->get();
+
+        return $latestAdvisory;
     }
 }
