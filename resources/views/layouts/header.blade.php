@@ -1,3 +1,8 @@
+<style>
+    .dropdown:hover > .dropdown-content {
+        display: block;
+    }
+    </style>
 <header class="bg-white sticky top-0 z-50 shadow-md" x-data="{ open: false }">
     <nav class="mx-auto flex max-w-7xl items-center justify-between py-2 px-6 lg:px-8 " aria-label="Global">
       <div class="flex lg:flex-1">
@@ -161,15 +166,24 @@
                 class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
                 aria-labelledby="dropdownMenuButton2"
                 data-twe-dropdown-menu-ref>
-                <li>
+                <li class="dropdown">
                 <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    class="flex items-center w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
                     href="/notices"
                     data-twe-dropdown-item-ref
-                    >NOTICES</a>
+                    >NOTICES
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 ml-2">
+                        <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                    </svg>   
+                </a>
+
+                <ul class="dropdown-content absolute hidden text-gray-700 pl-5 ml-24 -mt-10">
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">Bids & Awards</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">District Election</a>
+                </ul>
                     
                 </li>
-                <li>
+                
                 <a
                     class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
                     href="/erc"
@@ -349,7 +363,7 @@
                     >THE MANAGEMENT</a>
                 </li>
               </ul>
-            <a href="/contact-us" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
+            <a href="{{route('contactus')}}" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
             <a href="https://buseco.coop/my-account-login/" class="account-button">MY ACCOUNT</a>
         </div>
     </nav>

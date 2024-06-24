@@ -15,7 +15,10 @@ Alpine.start();
 //init here the imported TW elements
 initTWE({ Dropdown });
 
-document.getElementById("post_title").onchange = function() {myFunction()};
+let post_title = document.getElementById("post_title");
+if(post_title){
+  post_title.onchange = function() {myFunction()};
+}
     
 function myFunction() {
   let x = document.getElementById("post_title");
@@ -87,4 +90,16 @@ var lfm = function(id, type, options) {
 //To use the lfm function above
 lfm('lfm1', 'image');
 //End Here
+
+//Remove the <p> tag with &nbsp; on blog short description. Homepage and blog list
+let blogDescription = document.getElementById('blog-description');
+
+if(blogDescription){
+  const p = blogDescription.getElementsByTagName('p')
+  for (let index = 0; index < p.length; index++) {
+    p[index].innerHTML = p[index].innerHTML.replace(/\&nbsp;/g, '');
+  }
+}
+//End Here
+
 

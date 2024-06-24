@@ -113,7 +113,7 @@
 		<div class="mx-auto max-w-screen-xl border-2 px-4 py-7 border-[#2C8D0A]">
 		<h1 class="text-4xl font-semibold blog-title-section text-center">NEWS AND UPDATES</h1>
 		<div class="grid grid-cols-3 gap-4 mx-2 mt-5">
-			@forelse($latestPosts as $post)
+			@forelse($getLatestPostNewsAndJobOpp as $post)
 				<div class="">
 					<div class="blog-img-container h-[200px]">
 						<a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">
@@ -127,14 +127,14 @@
 						</svg>
 						<span class="text-sm">{{ date_format($post->created_at,"F d, Y h:i:s a") }}</span>
 					</div>
-					<div class="blog-author mt-1 flex items-center">
+					{{-- <div class="blog-author mt-1 flex items-center">
 						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#007f00" class="size-6 mr-1">
 							<path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0 0 21.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 0 0 3.065 7.097A9.716 9.716 0 0 0 12 21.75a9.716 9.716 0 0 0 6.685-2.653Zm-12.54-1.285A7.486 7.486 0 0 1 12 15a7.486 7.486 0 0 1 5.855 2.812A8.224 8.224 0 0 1 12 20.25a8.224 8.224 0 0 1-5.855-2.438ZM15.75 9a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" clip-rule="evenodd" />
 						</svg>
 						{{ $post->post_author_name }}
-					</div>
+					</div> --}}
 					<div class="blog-title mt-2"><a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">{{ $post->post_title }}</a></div>
-					<div class="blog-description text-justify mt-1">
+					<div class="blog-description text-justify mt-1" id="blog-description">
 						@if(empty($post->post_excerpt))
 							{!! Str::words($post->post_content, '50') !!}
 						@else
@@ -147,7 +147,7 @@
 			@endforelse
 		</div>
 		
-		<a href="/coop-news" class="flex justify-center items-center more-news-btn mt-5 text-lg font-semibold">
+		<a href="{{route('blog.list')}}" class="flex justify-center items-center more-news-btn mt-5 text-lg font-semibold">
 			More News Here
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
 				<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
@@ -244,15 +244,23 @@
 		<div class="grid grid-cols-2 gap-4">
 			<div class="flex justify-center items-center">
 				<h2 class="text-5xl font-bold">BUSECO Advisory</h2>
-				<a href="/"><img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" /></a>
+				<img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" />
 			</div>
-			<div>
-				<ul>
-					<li class="border-b border-gray-500 my-1 py-2">
-						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">EMERGENCY POWER INTERRUPTION</a>
-						<p class="text-sm">May 29, 2024 - 5:13pm</p>
-					</li>
-					<li class="border-b border-gray-500 my-1 py-2">
+			<div @class(['flex' => count($latestPublicAdvisories) === 0])>
+				<ul @class([
+					'mx-auto my-auto' => count($latestPublicAdvisories) === 0, //hidden if null
+				])>
+					@forelse($latestPublicAdvisories as $advisory)
+						<li class="border-b border-gray-500 my-1 py-2">
+							<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="{{route('blog.single', ['postSlug' => $advisory->post_slug] )}}">{{$advisory->post_title}}</a>
+							<p class="text-sm">{{ date_format($post->created_at,"F d, Y h:i:s a") }}</p>
+						</li> 
+					@empty
+						<li class="text-xl font-medium text-red-600">No advisory as of the moment.</li>
+					@endforelse
+				</ul>
+
+					{{-- <li class="border-b border-gray-500 my-1 py-2">
 						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">CANCELLED POWER INTERRUPTION</a>
 						<p class="text-sm">May 29, 2024 - 5:13pm</p>
 					</li>
@@ -263,8 +271,7 @@
 					<li class="border-b border-gray-500 my-1 py-2">
 						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
 						<p class="text-sm">May 26, 2024 - 5:13pm</p>
-					</li>
-				  </ul>
+					</li> --}}
 			</div>
 		</div>
 	</div>

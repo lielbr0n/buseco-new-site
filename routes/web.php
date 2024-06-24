@@ -27,6 +27,8 @@ use Illuminate\Support\Facades\Route;
 Route::controller(HomePageController::class)->group(function () {
     Route::get('/', 'index')->name('home.index');
     Route::get('/coop-news/{postSlug}', 'blogSinglePage')->name('blog.single');
+    Route::get('/coop-news', 'blogListPage')->name('blog.list');
+    Route::get('/contact-us', 'contactUs')->name('contactus');
 });
 
 Route::get('/dashboard', function () {
