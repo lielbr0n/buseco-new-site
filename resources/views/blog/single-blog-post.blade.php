@@ -27,7 +27,9 @@
                         @endif
 
                         <div @class(['page-contents p-3', 'mt-2' => $post->post_feature_image === null ])>
+                            <div class="revert-tailwind">
                             {!! $post->post_content !!}
+                            </div>
                         </div>
                     </div>
                 @else

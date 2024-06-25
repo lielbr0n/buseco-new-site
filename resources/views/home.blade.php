@@ -136,9 +136,9 @@
 					<div class="blog-title mt-2"><a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">{{ $post->post_title }}</a></div>
 					<div class="blog-description text-justify mt-1" id="blog-description">
 						@if(empty($post->post_excerpt))
-							{!! Str::words($post->post_content, '50') !!}
+							{{ Str::of($post->post_content)->words('50', '...')->stripTags()->replace('&nbsp;', '') }}
 						@else
-							{{ $post->post_excerpt }}
+							{{ Str::of($post->post_excerpt)->stripTags()->replace('&nbsp;', '') }}
 						@endif
 					</div>
 				</div>
