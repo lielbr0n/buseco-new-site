@@ -178,8 +178,9 @@
                 </a>
 
                 <ul class="dropdown-content absolute hidden text-gray-700 pl-5 ml-24 -mt-10">
-                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">Bids & Awards</a>
-                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">District Election</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/bids-&-awards">BIDS & AWARDS</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/district-election">DISTRICT ELECTION</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/agma">AGMA</a>
                 </ul>
                     
                 </li>
