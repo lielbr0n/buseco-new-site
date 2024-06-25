@@ -13,7 +13,9 @@
                             ])>{{ $pageInfo->post_title }}</h1>
                         
                             <div class="page-contents mt-2 p-3">
-                                {!! $pageInfo->post_content !!}
+                                <div class="revert-tailwind">
+                                    {!! $pageInfo->post_content !!}
+                                </div>
                             </div>
                         </div>
                     @else
@@ -37,7 +39,9 @@
                         ])>{{ $pageInfo->post_title }}</h1>
 
                         <div class="page-contents mt-2 p-3">
-                            {!! $pageInfo->post_content !!}
+                            <div class="revert-tailwind">
+                                {!! $pageInfo->post_content !!}
+                            </div>
                         </div>
                     </div>
                 </div>

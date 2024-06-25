@@ -180,11 +180,13 @@ footer{
 
 
 /* DIV or wrapper with this class will not be affected by Tailwind CSS  */ 
+/* The default html styling will be used if this class will be called   */ 
+/* by larp */
 
 /* .revert-tailwind{
     all: initial;
 } */
- 
+
 .revert-tailwind > * {
     all: revert;
 
