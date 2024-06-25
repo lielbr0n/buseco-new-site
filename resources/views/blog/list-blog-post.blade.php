@@ -27,9 +27,9 @@
                                 <div class="blog-title mt-2 text-xl font-bold hover:underline hover:text-[#0a961d]"><a href="{{route('blog.single', ['postSlug' => $blog->post_slug] )}}">{{ $blog->post_title }}</a></div>
                                 <div class="blog-description text-justify mt-1" id="blog-description">
                                     @if(empty($blog->post_excerpt))
-                                        {!! Str::words($blog->post_content, '50') !!}
+                                        {{ Str::of($blog->post_content)->words('50', '...')->stripTags()->replace('&nbsp;', '') }}
                                     @else
-                                        {{ $blog->post_excerpt }}
+                                        {{ Str::of($blog->post_excerpt)->stripTags()->replace('&nbsp;', '') }}
                                     @endif
                                 </div>
                             </div>
