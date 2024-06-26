@@ -2,13 +2,13 @@
 <div class="bg-[#e9e8e8] p-[8px] mt-[10px] first:mt-0">
     <ul>
         <li class="border-b border-gray-500 my-1 pt-2 pb-2 first:pt-0">
-            <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="#">News & Articles</a>
+            <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="/coop-news">News & Articles</a>
         </li>
         <li class="border-b border-gray-500 my-1 py-2">
-            <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="#">Career Opportunities</a>
+            <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="/job-opportunities">Career Opportunities</a>
         </li>
         <li class="border-b border-gray-500 my-1 py-2">
-            <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="#">Public Advisories</a>
+            <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="/notices">Public Advisories</a>
         </li>
     </ul>
 </div>
