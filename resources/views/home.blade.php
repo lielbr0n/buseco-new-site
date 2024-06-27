@@ -40,7 +40,7 @@
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<div class="grid grid-cols-3 px-6 py-8 gap-4">
 				<div class="col-span-2">
-					<img src="{{url('/images/buseco-profile.png')}}" class="w-full h-auto" />
+					<img src="{{url('/images/banner4.png')}}" class="w-full h-auto" />
 				</div>
 				<div class="my-auto pl-4">
 					<h2 class="text-2xl font-medium">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
@@ -48,6 +48,9 @@
 					<p class="text-justify">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
+				</div>
+				<div class="col-span-2">
+					<img src="{{url('/images/mco.png')}}" class="w-full h-auto" />
 				</div>
 			</div>
 		</div>
@@ -62,28 +65,28 @@
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 1: COMPLETE THE APPLICATION</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6">Applicants will be required to submit application.</p>
-					<a href="/services" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-2.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 2: PAYMENT</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to pay.</p>
-					<a href="/services" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-3.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 3: TAKE THE ONLINE EXAM</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to attend the online PMES and take the exam. </p>
-					<a href="/services" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-4.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 4: SUBMIT REQUIREMENTS</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">All applicants will be required to process and submit necessary requirements to the Buseco Office.</p>
-					<a href="/services" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 			</div>
 		</div>
@@ -155,6 +158,17 @@
 		</a>	
 		</div>
 	</div>
+	{{-- payment method --}}
+	<div class="profile p-6" id="profile">
+		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
+			<div class="grid grid-cols-3 px-6 py-8 gap-2">
+				<div class="col-span-3">
+					<img src="{{url('/images/payment-method.png')}}" class="w-full h-auto" />
+				</div>
+			</div>
+		</div>
+	</div>
+
 	{{-- </div> --}}
 
 	{{-- <div class="about-us mt-20 text-center" id="about-us">
