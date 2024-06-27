@@ -141,7 +141,9 @@
             {{-- <a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a> --}}
 
             <div x-data="{ show: false, menu: false, servicesMenu: false }">
-                <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none"
+                <a 
+                    
+                    class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none" 
                     x-on:click="show = ! show"
                     role="button"
                 >
@@ -158,7 +160,7 @@
                         </svg>
                     </span>
                 </a>
-                <div class="relative">
+                <div class="relative hidden" :class="{'hidden': !show }">
                     <div class="rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg min-w-[220px] top-1 w-full absolute z-10" x-show="show"
                         x-cloak
                         @click.away="show = false" x-transition:enter="transition ease-out duration-100"
@@ -175,11 +177,11 @@
                                     <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                                 </svg> 
                             </li>
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -bottom-4 hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
+                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -right-[185px] -top-[1px] bottom-[105px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/bids-&-awards" class="block w-full ">BIDS & AWARDS</a></li>
-                                <li><a href="/district-election" class="block w-full ">DISTRCIT ELECTION</a></li>
+                                <li><a href="/district-election" class="block w-full ">DISTRICT ELECTION</a></li>
                                 <li><a href="/agma" class="block w-full ">AGMA</a></li>
                             </div>
                             
@@ -197,7 +199,7 @@
                                     <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                                 </svg> 
                             </li> 
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -top-[39px] -right-[185px] -bottom-[40px] [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:text-white hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
+                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -top-[39px] -right-[185px] -top-[1px] -bottom-[78px] [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:text-white hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="servicesMenu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/applying-for-membership" class="block w-full ">APPLYING FOR MEMBERSHIP</a></li>
@@ -212,7 +214,6 @@
                     </div>
                 </div>
             </div>
-
 
             <div x-data="{ show: false, menu: false, servicesMenu: false }">
                 <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none"
@@ -232,7 +233,7 @@
                         </svg>
                     </span>
                 </a>
-                <div class="relative">
+                <div class="relative hidden" :class="{'hidden': !show }">
                     <div class="rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg min-w-[250px] top-1 w-full absolute z-10" x-show="show"
                         x-cloak
                         @click.away="show = false" x-transition:enter="transition ease-out duration-100"
@@ -249,11 +250,11 @@
                                     <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                                 </svg> 
                             </li>
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -bottom-4 hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
+                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -top-[1px] bottom-[58px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/rates-2024" class="block w-full ">2024</a></li>
-                                <li><a href="/rates-2023" class="block w-full ">2024</a></li>
+                                <li><a href="/rates-2023" class="block w-full ">2023</a></li>
                                 <li><a href="/rates-2022" class="block w-full ">2022</a></li>
                             </div>
                             
