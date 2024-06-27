@@ -11,6 +11,14 @@
     object-position: center;
 }
 
+.link-wrapper{
+    li:hover{
+        svg{
+            fill: white;
+        }
+    }
+}
+
 .services{
     background-color: #f2f2f2;
 
