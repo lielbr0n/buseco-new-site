@@ -2,8 +2,8 @@
     <div class="mx-auto max-w-screen-xl">
         <div class="grid grid-cols-1">
             <div class="p-6">
-                <div class="border-2 border-[#2C8D0A] bg-[#e9e8e8]">
-                    <h1  class='font-medium text-4xl p-3 text-center'>Contact Us</h1>
+                <div class="border-2 border-[#b4e8ac] bg-[#B4E8AC]">
+                    <h1  class='font-medium text-4xl p-3 mt-6 text-gray-900 text-center'>CONTACT US</h1>
 
                     <div class="page-contents mt-2 mb-9 p-3">
                         <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-10">
@@ -28,7 +28,7 @@
                                 </div>
                                 </div>
                                 <div class="sm:col-span-2">
-                                    <label for="company" class="text-start block text-sm font-semibold leading-6 text-gray-900">Subject</label>
+                                    <label for="company" class="text-start block text-sm font-semibold leading-6 ttext-gray-900">Subject</label>
                                     <div class="mt-2.5">
                                         <input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
                                     </div> 
@@ -46,6 +46,15 @@
                         </form>
                     </div>
                 </div>
+                <div class="profile p-6" id="profile">
+                        <div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
+                            <div class="grid grid-cols-2 px-6 py-8 gap-4">             
+                                <div class="col-span-2">
+                                    <img src="{{url('/images/contact-numbers.png')}}" class="w-full h-auto" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>

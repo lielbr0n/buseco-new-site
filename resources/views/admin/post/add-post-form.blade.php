@@ -17,7 +17,23 @@
         'publication' => 'Publication',
         'services' => 'Services',
         'institute_advisory' => 'Institutional Advisory',
-        'bids_awards' => 'Bids & Awards'
+        'bids_awards' => 'Bids & Awards',
+        'rcoa' => 'RCOA',
+        'monthly-generation-mix-under-oath' => 'Monthly Generation Mix Under Oath',
+        'district-election' => 'District Election',
+        'agma' => 'AGMA',
+        'daily-supply-and-load-outlook' => 'Daily Supply and Load Outlook',
+        'coop-news' => 'Coop News',
+        'applying-for-membership' => 'Applying for Membership',
+        'net-metering' => 'Net Metering',
+        'solar-home-system' => 'Solar Home System',
+        'ilp' => 'ILP',
+        'lifeline-discount' => 'Lifeline Discount',
+        'senior-citizen-discount' => 'Senior Citizen Discount',
+        'scheduled-unbundled-rates' => 'Scheduled Unbundled Rates',
+        'rates-2022' => 'Rates 2022',
+        'rates-2023' => 'Rates 2023',
+        'rates-2024' => 'Rates 2024'
     ];
 @endphp
 
