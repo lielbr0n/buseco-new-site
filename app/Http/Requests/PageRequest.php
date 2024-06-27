@@ -38,6 +38,7 @@ class PageRequest extends FormRequest
             'post_title' => ['required','max:255'], 
             'post_slug' =>  $post_slug_validation,
             'post_content' => ['required'],
+            'post_category' => ['required'],
             'post_template' => ['required'],
             'post_status' => ['required']
         ];
@@ -54,8 +55,7 @@ class PageRequest extends FormRequest
             'post_content' => $this->post_content,
             'post_author_id' => $user->id,
             'post_author_name' => $user->name,
-            'post_excerpt' => 'excerpt',
-            'post_category' => 'page',
+            'post_category' => $this->post_category,
             'post_tags' => '',
             'post_template' => $this->post_template,
             'post_status' => $this->post_status,

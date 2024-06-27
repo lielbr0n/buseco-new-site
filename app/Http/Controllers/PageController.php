@@ -64,11 +64,11 @@ class PageController extends Controller
         //return view('pages.bod');
     }
 
-    public function viewPage($pageName){
-        if($pageName){
-            $pageInfo = Page::where('post_slug', $pageName)->firstOrFail();
+    // public function viewPage($pageName){
+    //     if($pageName){
+    //         $pageInfo = Page::where('post_slug', $pageName)->firstOrFail();
         
-            return  view('pages.template-view-page', ['pageInfo' => $pageInfo]);
-        }
-    }
+    //         return  view('pages.template-view-page', ['pageInfo' => $pageInfo]);
+    //     }
+    // }
 }
