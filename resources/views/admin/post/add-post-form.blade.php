@@ -13,6 +13,11 @@
         'news-articles' => 'News Articles',
         'public-advisory' => 'Public Advisory',
         'job-opportunities' => 'Job Opportunities',
+        'erc' => 'ERC',
+        'publication' => 'Publication',
+        'services' => 'Services',
+        'institute_advisory' => 'Institutional Advisory',
+        'bids_awards' => 'Bids & Awards'
     ];
 @endphp
 

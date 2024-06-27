@@ -28,7 +28,17 @@
     $testpost_status = [
         //'publish' => 'Publish',
         'draft' => 'Draft',
-    ]
+    ];
+
+    $post_category = [
+        'uncategorized' => 'No Display',
+        'job-opportunities' => 'Job Opportunities',
+        'erc' => 'ERC',
+        'publication' => 'Publication',
+        'services' => 'Services',
+        'institute_advisory' => 'Institutional Advisory',
+        'bids_awards' => 'Bids & Awards'
+    ];
 @endphp
 
 <x-app-layout>
@@ -74,6 +84,11 @@
                         <div class="mt-3 mb-3">
                             <x-input-label for="textarea_pages" :value="__('Content')" />
                             <textarea id="textarea_pages" class="post_content" name="post_content">{!! old('post_content',  $pageInfo->post_content ?? '') !!}</textarea>
+                        </div>
+
+                        <div class="mt-3 mb-3">
+                            <x-input-label for="post_category" :value="__('Post Category To Show In This Page')" />
+                            <x-select :option="$post_category" id="post_category" :name="__('post_category')" :selected="$pageInfo->post_category ?? null" class="block mt-1 w-full py-2 px-4 border-2 border-gray-400 border-gray-300 focus:border-black focus:ring-black" required />
                         </div>
 
                         <div class="mt-3 mb-3">

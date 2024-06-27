@@ -11,10 +11,34 @@
                                 'font-medium text-4xl p-3',
                                 'hidden' => $pageInfo->post_option === null, //hidden if null
                             ])>{{ $pageInfo->post_title }}</h1>
-                        
-                            <div class="page-contents mt-2 p-3">
+                           
+                            <div class="page-contents mt-2 pl-3 pr-3 pb-3">
                                 <div class="revert-tailwind">
                                     {!! $pageInfo->post_content !!}
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-4">
+                                    @foreach($postInfo as $post)
+                                        <div class="pt-2 pb-2">
+                                           
+                                                <a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">
+                                                    <img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />
+                                                </a>
+                                           
+                                        </div>
+                                        <div class="col-span-2 pt-2 pl-4 pb-2">
+                                            <div class="post-title">
+                                                <a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}" class="text-[22px] font-bold hover:underline hover:text-[#0a961d]">{{ $post->post_title }}</a>
+                                            </div>
+                                            <div class="post-description text-justify" >
+                                                @if(empty($post->post_excerpt))
+                                                    {{ Str::of($post->post_content)->words('50', '...')->stripTags()->replace('&nbsp;', '') }}
+                                                @else
+                                                    {{ Str::of($post->post_excerpt)->stripTags()->replace('&nbsp;', '') }}
+                                                @endif
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -38,9 +62,31 @@
                             'hidden' => $pageInfo->post_option === null, //hidden if null
                         ])>{{ $pageInfo->post_title }}</h1>
 
-                        <div class="page-contents mt-2 p-3">
+                        <div class="page-contents mt-2 pl-3 pr-3 pb-3">
                             <div class="revert-tailwind">
                                 {!! $pageInfo->post_content !!}
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-4">
+                                @foreach($postInfo as $post)
+                                    <div class="pt-2 pb-2">
+                                        <a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">
+                                            <img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />
+                                        </a>
+                                    </div>
+                                    <div class="col-span-2 pt-2 pl-4 pb-2">
+                                        <div class="post-title">
+                                            <a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}" class="text-[22px] font-bold hover:underline hover:text-[#0a961d]">{{ $post->post_title }}</a>
+                                        </div>
+                                        <div class="post-description text-justify" >
+                                            @if(empty($post->post_excerpt))
+                                                {{ Str::of($post->post_content)->words('50', '...')->stripTags()->replace('&nbsp;', '') }}
+                                            @else
+                                                {{ Str::of($post->post_excerpt)->stripTags()->replace('&nbsp;', '') }}
+                                            @endif
+                                        </div>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
