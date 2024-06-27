@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-screen-xl">
         <div class="grid grid-cols-1">
             <div class="p-6">
-                <div class="border-2 border-[#b4e8ac] bg-[#e4eee3]">
+                <div class="border-2 border-[#b4e8ac] bg-[#B4E8AC]">
                     <h1  class='font-medium text-4xl p-3 mt-6 text-gray-900 text-center'>CONTACT US</h1>
 
                     <div class="page-contents mt-2 mb-9 p-3">
@@ -46,6 +46,15 @@
                         </form>
                     </div>
                 </div>
+                <div class="profile p-6" id="profile">
+                        <div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
+                            <div class="grid grid-cols-2 px-6 py-8 gap-4">             
+                                <div class="col-span-2">
+                                    <img src="{{url('/images/contact-numbers.png')}}" class="w-full h-auto" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
