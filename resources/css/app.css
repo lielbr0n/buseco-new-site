@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/** TW elements config, not sure of this */
+@layer base {
+    html {
+      @apply text-surface;
+      @apply bg-white;
+    }
+    html.dark {
+      @apply text-neutral-50;
+      @apply bg-body-dark;
+    }
+  }
+

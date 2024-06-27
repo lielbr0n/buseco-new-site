@@ -3,50 +3,198 @@
 @tailwind utilities;
 
 
-.services-icons-display{
-    display: unset;
-}
-.services-title{
-    font-weight: 900;
-    font-size: 28px;
-}
-
-.blog-title-section{
-    font-size: 42px;
-    font-weight: bold;
+.img-banner {
+    width: 100%;
+    height: auto;
+    /*height: 100vh;  or a fixed height, e.g. 300px */
+    object-fit: cover;
+    object-position: center;
 }
 
-.blog-title{
-    font-size: 25px;
-    font-weight: bold;
+.services{
+    background-color: #f2f2f2;
+
+    .services-icons-display{
+        display: unset;
+    }
+    .services-title{
+        font-weight: 900;
+        font-size: 28px;
+    }
+    .services-link:hover{
+        .services-icons-display{
+            fill: #00cc00;
+            transform: scale(1.2);
+        }
+    }
 }
 
-.about-us-title{
-    font-size: 42px;
-    font-weight: bold;
+.blog{
+    .blog-title{
+        font-size: 25px;
+        font-weight: bold;
+
+        a{
+            text-decoration: underline;
+            color: #404040;
+
+            &:hover{
+                color: #0a961d;
+            }
+        }
+    }
+
+    .blog-description{
+        /* remove the image content on short description of blog homepage */
+        /* p img {
+            display:none; 
+        }
+
+        div img {
+            display:none; 
+        } */
+    }
+
+    .more-news-btn{
+        color: #0a961d; 
+
+        &:hover{
+            color: #00cc00;
+            text-decoration: underline;
+        }
+    }
 }
 
-.vision-title{
-    font-size: 30px;
-    font-weight: bold;
-}
-.about-us-bg-color{
-    background-color: #007f00;
+#bloglist{
+    .blog-description{
+        /* remove the image content on short description of blog homepage */
+        /* p img {
+            display:none; 
+        }
+        div img {
+            display:none; 
+        } */
+    }
 }
 
-.account-button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem; /* 14px */
-    font-weight: 600;
-    line-height: 1.625; /* 23px */
-    color: #FFFFFF;
-    background-color: #0a961d;
-    border: none;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    cursor: pointer;
-  }
+.about-us{
+    
+    .about-us-title{
+        /* font-size: 42px;
+        font-weight: bold; */
+    }
+    
+    .vision-title{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .about-us-bg-color{
+        background-color: #007f00;
+    }
+}
+
+
+.advisories{
+    background-color: #e9e8e8;
+}
+
+header{
+
+    .nav-link:hover{
+        color: #0a961d;
+    }
+    .account-button {
+        /* display: inline-block; */
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem; /* 14px */
+        font-weight: 600;
+        line-height: 1.625; /* 23px */
+        color: #FFFFFF;
+        background-color: #0a961d;
+        border: none;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        cursor: pointer;
+        border: 1px solid #0a961d;
+
+        &:hover{
+            color: #0a961d;
+            background-color: #ffffff;
+            border: 1px solid #0a961d; 
+        }
+    }
+}
+
+footer{
+    background-color: #01440d;
+
+    .footer-title{
+        font-weight: bold;
+        font-size: 21px;
+    }
+
+    .branch-info{
+        color: #cccccc;
+
+        .branch-title{
+            font-size: 17px;
+        }
+        p{
+            font-size: 17px;
+        }
+    }
+
+    .links-info{
+        color: #cccccc;
+
+        .link-footer{
+            text-decoration: underline;
+            font-size: 17px;
+
+            &:hover{
+                color: #ffffff;
+            }
+        }
+    }
+    .fb-svg:hover{
+        transform: scale(1.3);
+    }
+    .twitter-svg:hover{
+        /* fill: #70c0f5; */
+        transform: scale(1.3);
+    }
+    .all-rights-reserved{
+        background-color: #026414;
+
+        .all-rights-text{
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: regular;
+        }
+    }
+    .madewithlove{
+        color: #797171;
+        background-color: #026414;
+    }
+}
+
+
+/* DIV or wrapper with this class will not be affected by Tailwind CSS  */ 
+/* The default html styling will be used if this class will be called   */ 
+/* by larp */
+
+/* .revert-tailwind{
+    all: initial;
+} */
+
+.revert-tailwind > * {
+    all: revert;
+
+    a{
+        color: revert;
+    } 
+}
+/* End Here */
   
 
 
