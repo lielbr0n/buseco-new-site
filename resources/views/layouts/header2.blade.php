@@ -140,129 +140,162 @@
             <a href="/" class="nav-link text-sm font-semibold leading-6 text-gray-900">HOME</a>
             {{-- <a href="#" class="nav-link text-sm font-semibold leading-6 text-gray-900">PUBLICATION</a> --}}
 
-            <div x-data="{ show: false, menu: false, servicesMenu: false }">
-                <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none"
-                    x-on:click="show = ! show"
-                    role="button"
-                >
+            <a
+                class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                href="#"
+                type="button"
+                id="dropdownMenuButton2"
+                data-twe-dropdown-toggle-ref
+                aria-expanded="false"
+                data-twe-ripple-init
+                data-twe-ripple-color="light">
                     PUBLICATION
-                    <span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path
-                            fill-rule="evenodd"
-                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                            clip-rule="evenodd" />
-                        </svg>
-                    </span>
+                <span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd" />
+                </svg>
+                </span>
+              </a>
+            <ul
+                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                aria-labelledby="dropdownMenuButton2"
+                data-twe-dropdown-menu-ref>
+                <li class="dropdown">
+                <a
+                    class="flex items-center w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/notices"
+                    data-twe-dropdown-item-ref
+                    >NOTICES
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 ml-2">
+                        <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                    </svg>   
                 </a>
-                <div class="relative">
-                    <div class="rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg min-w-[220px] top-1 w-full absolute z-10" x-show="show"
-                        x-cloak
-                        @click.away="show = false" x-transition:enter="transition ease-out duration-100"
-                        x-transition:enter-start="transform opacity-0 scale-95">
-                        <ul
-                            class="link-wrapper [&>li]:text-neutral-700 hover:[&>li]:text-white [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A]">
-                            
-                            <li class="flex items-center justify-between" 
-                                x-on:click="menu = ! menu" 
-                                @click.away="menu = false"
-                                >
-                                NOTICES
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                                    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
-                                </svg> 
-                            </li>
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -bottom-4 hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
-                                x-show="menu" x-transition:enter="transition ease-out duration-100"
-                                x-transition:enter-start="transform opacity-0 scale-95">
-                                <li><a href="/bids-&-awards" class="block w-full ">BIDS & AWARDS</a></li>
-                                <li><a href="/district-election" class="block w-full ">DISTRCIT ELECTION</a></li>
-                                <li><a href="/agma" class="block w-full ">AGMA</a></li>
-                            </div>
-                            
-                            <li><a href="/erc" class="block w-full ">ERC</a></li>
-                            <li><a href="/coop-news" class="block w-full ">COOP NEWS</a></li>
-                            <li><a href="/job-opportunities" class="block w-full ">JOB OPPORTUNITIES</a></li>
-                            <li><a href="/institutional-advisories" class="block w-full ">INSTITUTIONAL ADVISORIES</a></li>
 
-                            <li class="flex items-center justify-between" 
-                                x-on:click="servicesMenu = ! servicesMenu" 
-                                @click.away="servicesMenu = false"
-                                >
-                                SERVICES
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                                    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
-                                </svg> 
-                            </li> 
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -top-[39px] -right-[185px] -bottom-[40px] [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:text-white hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
-                                x-show="servicesMenu" x-transition:enter="transition ease-out duration-100"
-                                x-transition:enter-start="transform opacity-0 scale-95">
-                                <li><a href="/applying-for-membership" class="block w-full ">APPLYING FOR MEMBERSHIP</a></li>
-                                <li><a href="/rcoa" class="block w-full ">RCOA</a></li>
-                                <li><a href="/net-metering" class="block w-full ">NET METERING</a></li>
-                                <li><a href="/solar-home-system" class="block w-full ">SOLAR HOME SYSTEM</a></li>
-                                <li><a href="/ilp" class="block w-full ">ILP</a></li>
-                                <li><a href="/lifeline-discount" class="block w-full ">LIFELINE DISCOUNT</a></li>
-                                <li><a href="/senior-citizen-discount" class="block w-full ">SENIOR CITIZEN DISCOUNT</a></li>
-                            </div>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-            <div x-data="{ show: false, menu: false, servicesMenu: false }">
-                <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none"
-                    x-on:click="show = ! show"
-                    role="button"
-                >
-                    RATES
-                    <span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path
-                            fill-rule="evenodd"
-                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                            clip-rule="evenodd" />
-                        </svg>
-                    </span>
+                <ul class="dropdown-content absolute hidden text-gray-700 pl-5 ml-24 -mt-10">
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/bids-&-awards">BIDS & AWARDS</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/district-election">DISTRICT ELECTION</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/agma">AGMA</a>
+                </ul>
+                    
+                </li>
+                
+                
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/erc"
+                    data-twe-dropdown-item-ref
+                    >ERC</a>
+                </li>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/coop-news"
+                    data-twe-dropdown-item-ref
+                    >COOP NEWS</a>
+                  </li>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/job-opportunities"
+                    data-twe-dropdown-item-ref
+                    >JOB OPPORTUNITIES</a>
+                </li>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/institutional-advisories"
+                    data-twe-dropdown-item-ref
+                    >INSTITUTIONAL ADVISORIES</a>
+                </li>
+                <li class="dropdown">
+                <a
+                    class="flex items-center w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/notices"
+                    data-twe-dropdown-item-ref
+                    >SERVICES
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 ml-2">
+                        <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                    </svg>   
                 </a>
-                <div class="relative">
-                    <div class="rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg min-w-[250px] top-1 w-full absolute z-10" x-show="show"
-                        x-cloak
-                        @click.away="show = false" x-transition:enter="transition ease-out duration-100"
-                        x-transition:enter-start="transform opacity-0 scale-95">
-                        <ul
-                            class="link-wrapper [&>li]:text-neutral-700 hover:[&>li]:text-white [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A]">
-                            
-                            <li class="flex items-center justify-between" 
-                                x-on:click="menu = ! menu" 
-                                @click.away="menu = false"
-                                >
-                                SCHEDULED UNBUNDLED RATES
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-                                    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
-                                </svg> 
-                            </li>
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -bottom-4 hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
-                                x-show="menu" x-transition:enter="transition ease-out duration-100"
-                                x-transition:enter-start="transform opacity-0 scale-95">
-                                <li><a href="/rates-2024" class="block w-full ">2024</a></li>
-                                <li><a href="/rates-2023" class="block w-full ">2024</a></li>
-                                <li><a href="/rates-2022" class="block w-full ">2022</a></li>
-                            </div>
-                            
-                            <li><a href="/monthly-generation-mix-under-oath" class="block w-full ">MONTHLY GENERATION MIX UNDER OATH</a></li>
-                            <li><a href="/daily-supply-and-load-outlook" class="block w-full ">DAILY SUPPLY AND LOAD OUTLOOK</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+
+                <ul class="dropdown-content relative hidden text-gray-700 pl-5 ml-24 -mt-10">
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">APPLYING FOR MEMBERSHIP</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="|#">RCOA</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">NET METERING</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">SOLAR HOME SYSTEM</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">ILP</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">LIFELINE DISCOUNT</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">SENIOR CITIZEN DISCOUNT</a>
+                </ul>
+                    
+                </li>
+            </ul>
+
+            <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                href="#"
+                type="button"
+                id="dropdownMenuButton2"
+                data-twe-dropdown-toggle-ref
+                aria-expanded="false"
+                data-twe-ripple-init
+                data-twe-ripple-color="light">
+                RATES
+                <span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd" />
+                </svg>
+                </span>
+              </a>
+            <ul
+                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                aria-labelledby="dropdownMenuButton2"
+                data-twe-dropdown-menu-ref>
+                <li class="dropdown">
+                <a
+                    class="flex items-center w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/notices"
+                    data-twe-dropdown-item-ref
+                    >SCHEDULED UNBUNDLED RATES
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 ml-2">
+                        <path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" />
+                    </svg>   
+                </a>
+
+                <ul class="dropdown-content relative hidden text-gray-700 pl-5 ml-24 -mt-10">
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">2024</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">2023</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="#">2022</a>
+                </ul>
+                    
+                </li>
+                
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/monthly-generation-mix-under-oath"
+                    data-twe-dropdown-item-ref
+                    >MONTHLY GENERATION MIX UNDER OATH</a>
+                </li>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/daily-supply-and-load-outlook"
+                    data-twe-dropdown-item-ref
+                    >DAILY SUPPLY AND LOAD OUTLOOK</a>
+                </li>
+            </ul>
 
             <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                 href="#"
@@ -358,15 +391,81 @@
                     data-twe-dropdown-item-ref
                     >THE MANAGEMENT</a>
                 </li>
-
-                <li>
-                <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="/privacy"
-                    data-twe-dropdown-item-ref
-                    >PRIVACY</a>
-                </li>
               </ul>
+
+              <div x-data="{ show: false, menu: false, servicesMenu: false }">
+                <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none"
+                    x-on:click="show = ! show"
+                    role="button"
+                >
+                    PUBLICATION
+                    <span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor">
+                            <path
+                            fill-rule="evenodd"
+                            d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                            clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </a>
+                <div class="relative">
+                    <div class="rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg min-w-[220px] top-1 w-full absolute z-10" x-show="show"
+                        x-cloak
+                        @click.away="show = false" x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="transform opacity-0 scale-95">
+                        <ul
+                            class="link-wrapper [&>li]:text-neutral-700 hover:[&>li]:text-white [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A]">
+                            
+                            <li class="flex items-center justify-between" 
+                                x-on:click="menu = ! menu" 
+                                @click.away="menu = false"
+                                >
+                                NOTICES
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                                    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                                </svg> 
+                            </li>
+                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -bottom-4 hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
+                                x-show="menu" x-transition:enter="transition ease-out duration-100"
+                                x-transition:enter-start="transform opacity-0 scale-95">
+                                <li><a href="/bids-&-awards" class="block w-full ">BIDS & AWARDS</a></li>
+                                <li><a href="/district-election" class="block w-full ">DISTRCIT ELECTION</a></li>
+                                <li><a href="/agma" class="block w-full ">AGMA</a></li>
+                            </div>
+                            
+                            <li><a href="/erc" class="block w-full ">ERC</a></li>
+                            <li><a href="/coop-news" class="block w-full ">COOP NEWS</a></li>
+                            <li><a href="/job-opportunities" class="block w-full ">JOB OPPORTUNITIES</a></li>
+                            <li><a href="/institutional-advisories" class="block w-full ">INSTITUTIONAL ADVISORIES</a></li>
+
+                            <li class="flex items-center justify-between" 
+                                x-on:click="servicesMenu = ! servicesMenu" 
+                                @click.away="servicesMenu = false"
+                                >
+                                SERVICES
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                                    <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
+                                </svg> 
+                            </li> 
+                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -top-[39px] -right-[185px] -bottom-[75px] [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:text-white hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
+                                x-show="servicesMenu" x-transition:enter="transition ease-out duration-100"
+                                x-transition:enter-start="transform opacity-0 scale-95">
+                                <li><a href="#" class="block w-full ">APPLYING FOR MEMBERSHIP</a></li>
+                                <li><a href="#" class="block w-full ">RCOA</a></li>
+                                <li><a href="#" class="block w-full ">NET METERING</a></li>
+                                <li><a href="#" class="block w-full ">SOLAR HOME SYSTEM</a></li>
+                                <li><a href="#" class="block w-full ">ILP</a></li>
+                                <li><a href="#" class="block w-full ">LIFELINE DISCOUNT</a></li>
+                                <li><a href="#" class="block w-full ">SENIOR CITIZEN DISCOUNT</a></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <a href="{{route('contactus')}}" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
             <a href="https://buseco.coop/my-account-login/" class="account-button">MY ACCOUNT</a>
         </div>
@@ -496,12 +595,11 @@
                             <a href="/buseco-profile" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">BUSECO PROFILE</a>
                             <a href="/board-of-directors" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">BOARD OF DIRECTORS</a>
                             <a href="/the-management" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">THE MANAGEMENT</a>
-                            <a href="/privacy" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">PRIVACY</a>
                         </div> 
                     </div>
 
 
-                <a href="{{route('contactus')}}" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">CONTACT US</a>
+                <a href="/contact-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">CONTACT US</a>
                 <br>
                 <a href="/my-account" class="account-button">MY ACCOUNT</a>
                 {{-- <div class="py-6">
