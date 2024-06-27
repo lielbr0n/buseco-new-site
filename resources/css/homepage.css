@@ -178,6 +178,12 @@ footer{
     }
 }
 
+page-contents{
+        color: #ffffff;    
+        font-size: 17px;
+        font-weight: bold;
+}
+
 
 /* DIV or wrapper with this class will not be affected by Tailwind CSS  */ 
 /* The default html styling will be used if this class will be called   */ 

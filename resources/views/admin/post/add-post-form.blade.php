@@ -17,7 +17,12 @@
         'publication' => 'Publication',
         'services' => 'Services',
         'institute_advisory' => 'Institutional Advisory',
-        'bids_awards' => 'Bids & Awards'
+        'bids_awards' => 'Bids & Awards',
+        'rcoa' => 'RCOA',
+        'monthly-generation-mix-under-oath' => 'Monthly Generation Mix Under Oath',
+        'district-election' => 'District Election',
+        'agma' => 'AGMA',
+        'daily-supply-and-load-outlook' => 'Daily Supply and Load Outlook'
     ];
 @endphp
 
