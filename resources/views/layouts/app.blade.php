@@ -69,19 +69,54 @@
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
             @include('layouts.navigation')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
-          
-            <!-- Page Content -->
+           
             <main>
-                {{ $slot }}
+                <div class="grid grid-cols-6 gap-2">
+                    <div class="bg-white h-[92vh] hidden sm:block"> <!-- Set the height to 92 vh(view height) -->
+                        <ul class="px-2">
+                            <li @class([
+                                'my-1 py-1 hover:bg-[#0a961d] hover:text-white',
+                                'bg-[#0a961d]' => request()->routeIs('dashboard'),
+                            ])>
+                                <a href="{{route('dashboard')}}" @class([
+                                    'block text-base font-medium hover:text-white pl-1',
+                                    'text-white' => request()->routeIs('dashboard'),
+                                    'text-black' => !request()->routeIs('dashboard'),
+                                ])>Dashboard</a>
+                            </li>
+                            <li @class([
+                                'my-1 py-1 hover:bg-[#0a961d]',
+                                'bg-[#0a961d]' => request()->routeIs('post.*'), 
+                            ]) >
+                                <a href="{{route('post.index')}}" @class([
+                                    'block text-base font-medium hover:text-white pl-1',
+                                    'text-white' => request()->routeIs('post.*'),
+                                    'text-black' => !request()->routeIs('post.*'),
+                                ])>Post</a>
+                            </li>
+                            <li @class([
+                                'my-1 py-1 hover:bg-[#0a961d]',
+                                'bg-[#0a961d]' => request()->routeIs('page.*'),
+                            ]) >
+                                <a href="{{route('page.index')}}" @class([
+                                    'block text-base font-medium hover:text-white pl-1',
+                                    'text-white' => request()->routeIs('page.*'),
+                                    'text-black' => !request()->routeIs('page.*'),
+                                ])>Page</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-span-6 sm:col-span-5">
+                        @if (isset($header))
+                            <header class="bg-white shadow mr-1 ml-1 sm:mr-2 sm:ml-0">
+                                <div class="w-full py-1 px-2">
+                                    {{ $header }}
+                                </div>
+                            </header>
+                        @endif
+                        {{ $slot }}
+                    </div>
+                </div>
             </main>
         </div>
     </body>

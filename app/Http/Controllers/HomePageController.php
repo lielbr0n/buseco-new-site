@@ -14,7 +14,7 @@ class HomePageController extends Controller
 {
 
     public function index(){
-        $getLatestPostNewsAndJobOpp = Post::getLatestPostNewsAndJobOpp(3); //put 3 if display 3 post. 4 if 4 post and so on.
+        $getLatestPostNewsAndJobOpp = Post::getLatestPostNewsAndJobOpp(4); //put 3 if display 3 post. 4 if 4 post and so on.
         $latestPublicAdvisories = Post::getPostAdvisories(4); //get post with public_advisory catergories
 
         return view('home', ['getLatestPostNewsAndJobOpp' => $getLatestPostNewsAndJobOpp, 'latestPublicAdvisories' => $latestPublicAdvisories]); 
