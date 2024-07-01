@@ -6,6 +6,7 @@ use App\Models\Post;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Str;
 
 
 class PostRequest extends FormRequest
@@ -50,8 +51,7 @@ class PostRequest extends FormRequest
         $user = $this->user();
 
         if($this->filepath){
-            $feature_img_path = trim($this->filepath, url('/')); //remove the "base_url" - localhost:8000, only the path of photo will be save on DB.
-            $feature_img_path = '/'.$feature_img_path;
+            $feature_img_path = Str::of($this->filepath)->replace(url('/'), ''); //remove the "base_url" - localhost:8000, only the path of photo will be save on DB.
         }
        
         return array_merge($validated, [

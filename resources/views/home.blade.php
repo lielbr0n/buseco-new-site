@@ -39,18 +39,17 @@
 	<div class="profile p-6" id="profile">
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<div class="grid grid-cols-3 px-6 py-8 gap-4">
-				<div class="col-span-2">
+				<div class="col-span-3 md:col-span-2 my-auto">
 					<img src="{{url('/images/banner4.png')}}" class="w-full h-auto" />
+
+					<img src="{{url('/images/mco.png')}}" class="w-full h-auto" />
 				</div>
-				<div class="my-auto pl-4">
+				<div class="col-span-3 md:col-span-1 my-auto pl-4">
 					<h2 class="text-2xl font-medium">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
 					<br />
 					<p class="text-justify">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 					</p>
-				</div>
-				<div class="col-span-2">
-					<img src="{{url('/images/mco.png')}}" class="w-full h-auto" />
 				</div>
 			</div>
 		</div>
@@ -59,7 +58,7 @@
 	<div class="membership pl-6 pr-6 pb-6" id="membership">
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<h2 class="text-center font-medium text-[32px] mt-6 mb-2">APPLYING FOR MEMBERSHIP</h2>
-			<div class="grid grid-cols-4 px-6 py-8 gap-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-6 py-8 gap-4">
 				<div>
 					<img src="{{url('/images/step-1.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 1: COMPLETE THE APPLICATION</b></h2>
@@ -115,7 +114,7 @@
 	<div class="blog pl-6 pr-6 pb-6" id="blog">
 		<div class="mx-auto max-w-screen-xl border-2 px-4 py-7 border-[#2C8D0A]">
 		<h1 class="text-4xl font-semibold blog-title-section text-center">NEWS AND UPDATES</h1>
-		<div class="grid grid-cols-3 gap-4 mx-2 mt-5">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-2 mt-5">
 			@forelse($getLatestPostNewsAndJobOpp as $post)
 				<div class="">
 					<div class="blog-img-container h-[200px]">
@@ -255,7 +254,7 @@
 	</div>--}} <!--end contact us-->
 
 	<div class="advisories py-16 px-5" id="advisories">
-		<div class="grid grid-cols-2 gap-4">
+		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 			<div class="flex justify-center items-center">
 				<h2 class="text-5xl font-bold">BUSECO Advisory</h2>
 				<img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" />
