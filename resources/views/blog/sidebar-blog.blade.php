@@ -2,7 +2,7 @@
 <div class="bg-[#e9e8e8] p-[8px] mt-[10px] first:mt-0" style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);">
     <ul>
         <li class="border-b border-gray-500 my-1 pt-2 pb-2 first:pt-0">
-            <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="/coop-news">News & Articles</a>
+            <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="/coop-news">Coop News & Articles</a>
         </li>
         <li class="border-b border-gray-500 my-1 py-2">
             <a class="text-lg font-medium text-[#0a961d] hover:text-black advisory-links" href="/job-opportunities">Career Opportunities</a>
