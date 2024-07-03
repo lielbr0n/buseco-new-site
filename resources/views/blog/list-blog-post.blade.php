@@ -3,7 +3,7 @@
         <div class="grid grid-cols-3 gap-4">
             <div class="col-span-2 pt-6 pl-6 pb-6">
                 <div class="border-2 border-[#2C8D0A] p-3" >
-                    <h1 class="font-medium text-4xl mb-4">Coop News</h1>
+                    <h1 class="font-medium text-4xl mb-4">COOP NEWS AND UPDATES</h1>
                     @forelse($blogList as $blog)
                         <div class="blog-content-list bg-[#e9e8e8] mb-4 last:mb-0"  style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);">
                             <div class="blog-img-container h-[250px]">
