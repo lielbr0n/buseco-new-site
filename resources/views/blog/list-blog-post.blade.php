@@ -37,6 +37,7 @@
                     @empty
                         <div>No Post Found!</div>
                     @endforelse
+                    {{ $blogList->links() }}
                 </div>
             </div>
             <div class="pt-6 pr-6 pb-6">
