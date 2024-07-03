@@ -113,7 +113,7 @@
 	{{-- <div class="blog mt-20" id="blog"> --}}
 	<div class="blog pl-6 pr-6 pb-6" id="blog">
 		<div class="mx-auto max-w-screen-xl border-2 px-4 py-7 border-[#2C8D0A]">
-		<h1 class="text-4xl font-semibold blog-title-section text-center">NEWS AND UPDATES</h1>
+		<h1 class="text-4xl font-semibold blog-title-section text-center"> COOP NEWS AND UPDATES</h1>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-2 mt-5">
 			@forelse($getLatestPostNewsAndJobOpp as $post)
 				<div class="">
@@ -150,7 +150,7 @@
 		</div>
 		
 		<a href="{{route('blog.list')}}" class="flex justify-center items-center more-news-btn mt-5 text-lg font-semibold">
-			More News Here
+			More Coop News here
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
 				<path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
 			</svg>
