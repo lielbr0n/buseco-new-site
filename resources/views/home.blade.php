@@ -1,6 +1,125 @@
 <x-home-layout>
-  	<div class="banner" id="banner">
+  	{{-- <div class="banner" id="banner">
 		<img src="{{url('/images/banner4.png')}}" alt="buseco" class="img-banner"/>
+	</div> --}}
+
+	<div
+		id="banner"
+		class="relative"
+		data-twe-carousel-init
+		data-twe-ride="carousel">
+			<!--Carousel indicators-->
+			<div
+				class="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+				data-twe-carousel-indicators>
+				<button
+					type="button"
+					data-twe-target="#banner"
+					data-twe-slide-to="0"
+					data-twe-carousel-active
+					class="mx-[3px] box-content h-[5px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+					aria-current="true"
+					aria-label="Slide 1"></button>
+				<button
+					type="button"
+					data-twe-target="#banner"
+					data-twe-slide-to="1"
+					class="mx-[3px] box-content h-[5px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+					aria-label="Slide 2"></button>
+				<button
+					type="button"
+					data-twe-target="#banner"
+					data-twe-slide-to="2"
+					class="mx-[3px] box-content h-[5px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+					aria-label="Slide 3"></button>
+			</div>
+
+			<!--Carousel items-->
+			<div
+				class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+				<!--First item-->
+				<div
+				class="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+				data-twe-carousel-fade
+				data-twe-carousel-item
+				data-twe-carousel-active>
+				<img
+					src="{{url('/images/banner4.png')}}"
+					class="block w-full"
+					alt="buseco" />
+				</div>
+				<!--Second item-->
+				<div
+				class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+				data-twe-carousel-fade
+				data-twe-carousel-item>
+				<img
+					src="{{url('/images/mco.png')}}"
+					class="block w-full"
+					alt="Camera" />
+				</div>
+				<!--Third item-->
+				<div
+				class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+				data-twe-carousel-fade
+				data-twe-carousel-item>
+				<img
+					src="{{url('/images/banner4.png')}}"
+					class="block w-full"
+					alt="buseco" />
+				</div>
+			</div>
+
+			<!--Carousel controls - prev item-->
+			<button
+				class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+				type="button"
+				data-twe-target="#carouselExampleCrossfade"
+				data-twe-slide="prev">
+				<span class="inline-block h-8 w-8">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="4"
+					stroke="currentColor"
+					class="h-9 w-9">
+					<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M15.75 19.5L8.25 12l7.5-7.5" />
+				</svg>
+				</span>
+				<span
+				class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+				>Previous</span
+				>
+			</button>
+			<!--Carousel controls - next item-->
+			<button
+				class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+				type="button"
+				data-twe-target="#carouselExampleCrossfade"
+				data-twe-slide="next">
+				<span class="inline-block h-8 w-8">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="4"
+					stroke="currentColor"
+					class="h-9 w-9">
+					<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+				</svg>
+				</span>
+				<span
+				class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+				>Next</span
+				>
+			</button>
 	</div>
 
 	{{-- <div class="services py-5" id="services">
@@ -44,8 +163,8 @@
 
 					<img src="{{url('/images/mco.png')}}" class="w-full h-auto" />
 				</div>
-				<div class="col-span-3 md:col-span-1 my-auto pl-4">
-					<h2 class="text-2xl font-medium">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
+				<div class="col-span-3 md:col-span-1 my-auto md:pl-4">
+					<h2 class="text-2xl font-medium text-center md:text-left">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
 					<br />
 					<p class="text-justify">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -58,33 +177,33 @@
 	<div class="membership pl-6 pr-6 pb-6" id="membership">
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<h2 class="text-center font-medium text-[32px] mt-6 mb-2">APPLYING FOR MEMBERSHIP</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-6 py-8 gap-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-6 py-8 gap-8 lg:gap-4">
 				<div>
 					<img src="{{url('/images/step-1.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 1: COMPLETE THE APPLICATION</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
-					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6">Applicants will be required to submit application.</p>
+					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6">Applicants will be required to submit application.</p>
 					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-2.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 2: PAYMENT</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
-					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to pay.</p>
+					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to pay.</p>
 					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-3.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 3: TAKE THE ONLINE EXAM</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
-					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to attend the online PMES and take the exam. </p>
+					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to attend the online PMES and take the exam. </p>
 					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div>
 					<img src="{{url('/images/step-4.png')}}" class="w-full h-auto" />
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 4: SUBMIT REQUIREMENTS</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
-					<p class="h-36 text-center text-[15px] w-36 font-medium mx-auto mt-6 my-auto">All applicants will be required to process and submit necessary requirements to the Buseco Office.</p>
+					<p class="h-12 lg:h-36 text-center text-[15px] w-11/12 lg:w-36 font-medium mx-auto mt-6 my-auto">All applicants will be required to process and submit necessary requirements to the Buseco Office.</p>
 					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
 				</div>
 			</div>
@@ -93,17 +212,17 @@
 
 	<div class="faqa pl-6 pr-6 pb-6" id="faqa">
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
-			<div class="grid grid-cols-2 p-14 gap-4">
-				<div>
-					<h2 class="font-medium text-4xl mb-8">
+			<div class="grid grid-cols-1 sm:grid-cols-2 p-14 gap-4">
+				<div class="text-center sm:text-left">
+					<h2 class="font-medium text-4xl mb-8 ">
 						FREQUENTLY ASK QUESTION <br />
 						(FAQS)
 					</h2>
-					<div class="w-[115px] border-b-2 border-[#2C8D0A]"></div> <!-- border line -->
-					<p class="font-small text-3xl mt-14">Where can I pay my bills?</p>
-					<a href="/faq" class="block text-center border-2 text-[#ffffff] border-[#ffffff] p-1 w-3/12 bg-[#FF5722] mt-5 font-small hover:bg-[#2c8d0a] hover:border-[#256f0b]" role="button">READ MORE</a>
+					<div class="w-[115px] border-b-2 border-[#2C8D0A] mx-auto sm:mx-0"></div> <!-- border line -->
+					<p class="font-small text-3xl mt-14 mb-5">Where can I pay my bills?</p>
+					<a href="/faq" class="text-center border-2 text-[#ffffff] border-[#ffffff] py-2 px-4 w-3/12 bg-[#FF5722] font-small hover:bg-[#2c8d0a] hover:border-[#256f0b]" role="button">READ MORE</a>
 				</div>
-				<div class="my-auto mx-auto">
+				<div class="my-auto mx-auto hidden sm:block">
 					<img src="{{url('/images/faqq-img.png')}}" class="w-full h-auto " />
 				</div>
 			</div>
@@ -114,7 +233,7 @@
 	<div class="blog pl-6 pr-6 pb-6" id="blog">
 		<div class="mx-auto max-w-screen-xl border-2 px-4 py-7 border-[#2C8D0A]">
 		<h1 class="text-4xl font-semibold blog-title-section text-center"> COOP NEWS AND UPDATES</h1>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mx-2 mt-5">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8 lg:gap-4 mx-2 mt-5">
 			@forelse($getLatestPostNewsAndJobOpp as $post)
 				<div class="">
 					<div class="blog-img-container h-[200px]">
@@ -209,49 +328,6 @@
 			</div>
 		</div>
 	</div> --}} 
-     <!--contact us-->
-	{{--<div class="about-us mt-20 mb-20 text-center" id="contact-us">
-		<h1 class="text-5xl font-bold">Contact Us</h1>
-
-		<form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-10">
-			<div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-				<div>
-				<label for="first-name" class="text-start block text-sm font-semibold leading-6 text-gray-900">First name</label>
-				<div class="mt-2.5">
-					<input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-				</div>
-				</div>
-				<div>
-				<label for="last-name" class="text-start block text-sm font-semibold leading-6 text-gray-900">Last name</label>
-				<div class="mt-2.5">
-					<input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-				</div>
-				</div>
-				
-				<div class="sm:col-span-2">
-				<label for="email" class="text-start block text-sm font-semibold leading-6 text-gray-900">Email</label>
-				<div class="mt-2.5">
-					<input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-				</div>
-				</div>
-				<div class="sm:col-span-2">
-					<label for="company" class="text-start block text-sm font-semibold leading-6 text-gray-900">Subject</label>
-					<div class="mt-2.5">
-						<input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-					</div> 
-				</div> 
-				<div class="sm:col-span-2">
-				<label for="message" class="text-start block text-sm font-semibold leading-6 text-gray-900">Message</label>
-				<div class="mt-2.5">
-					<textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
-				</div>
-				</div>
-			</div>
-			<div class="mt-10">
-				<button type="submit" class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Send Message</button>
-			</div>
-			</form>
-	</div>--}} <!--end contact us-->
 
 	<div class="advisories py-16 px-5" id="advisories">
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -272,19 +348,6 @@
 						<li class="text-xl font-medium text-red-600">No advisory as of the moment.</li>
 					@endforelse
 				</ul>
-
-					{{-- <li class="border-b border-gray-500 my-1 py-2">
-						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">CANCELLED POWER INTERRUPTION</a>
-						<p class="text-sm">May 29, 2024 - 5:13pm</p>
-					</li>
-					<li class="border-b border-gray-500 my-1 py-2">
-						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
-						<p class="text-sm">May 27, 2024 - 5:13pm</p>
-					</li>
-					<li class="border-b border-gray-500 my-1 py-2">
-						<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="#">BsTC UNSCHEDULED POWER INTERRUPTION</a>
-						<p class="text-sm">May 26, 2024 - 5:13pm</p>
-					</li> --}}
 			</div>
 		</div>
 	</div>

@@ -72,6 +72,7 @@
            
             <main>
                 <div class="grid grid-cols-6 gap-2">
+                    <!-- Side Bar Menu -->
                     <div class="bg-white h-[92vh] hidden sm:block"> <!-- Set the height to 92 vh(view height) -->
                         <ul class="px-2">
                             <li @class([
@@ -106,6 +107,9 @@
                             </li>
                         </ul>
                     </div>
+                    <!-- End Side Bar Menu -->
+
+                    <!-- Admin Body -->
                     <div class="col-span-6 sm:col-span-5">
                         @if (isset($header))
                             <header class="bg-white shadow mr-1 ml-1 sm:mr-2 sm:ml-0">
@@ -114,8 +118,10 @@
                                 </div>
                             </header>
                         @endif
+
                         {{ $slot }}
                     </div>
+                    <!-- End Admin Body -->
                 </div>
             </main>
         </div>

@@ -2,7 +2,7 @@
     .dropdown:hover > .dropdown-content {
         display: block;
     }
-    </style>
+</style>
 <header class="bg-white sticky top-0 z-50 shadow-md" x-data="{ open: false }">
     <nav class="mx-auto flex max-w-7xl items-center justify-between py-2 px-6 lg:px-8 " aria-label="Global">
       <div class="flex lg:flex-1">

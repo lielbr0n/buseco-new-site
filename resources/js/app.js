@@ -5,6 +5,7 @@ import Alpine from 'alpinejs';
 import { 
     Tooltip,
     Dropdown,
+    Carousel,
     initTWE,
 } from 'tw-elements'; //import TW elements
 
@@ -13,7 +14,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 //init here the imported TW elements
-initTWE({ Dropdown });
+initTWE({ Dropdown, Carousel });
 
 let post_title = document.getElementById("post_title");
 if(post_title){
