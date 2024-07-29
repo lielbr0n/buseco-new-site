@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/storage
+/public/.htaccess
 /storage/*.key
 /vendor
 bootstrap/cache
@@ -18,3 +19,4 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/php.ini

@@ -186,10 +186,21 @@ footer{
     }
 }
 
-page-contents{
-        color: #ffffff;    
-        font-size: 17px;
-        font-weight: bold;
+.page-contents{
+    /* color: #ffffff;    
+    font-size: 17px;
+    font-weight: bold; */
+
+    /* Add to parent element "overflow-x:auto" if parent element has child element "table"  */
+    p:has(table) {
+        overflow-x:auto;
+    }
+    div:has(table) {
+        overflow-x:auto;
+    }
+    span:has(table) {
+        overflow-x:auto;
+    }
 }
 
 
