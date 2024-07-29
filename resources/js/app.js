@@ -18,20 +18,32 @@ initTWE({ Dropdown, Carousel });
 
 let post_title = document.getElementById("post_title");
 if(post_title){
-  post_title.onchange = function() {myFunction()};
+  post_title.onchange = function() {filterSlugByPostTitleChange()}; //filter slug on title field change event
+}
+
+let post_slug = document.getElementById("post_slug");
+if(post_slug){
+  post_slug.onchange = function() {filterSlugByPostSlugChange()}; //filter slug on slug field change event
 }
     
-function myFunction() {
+function filterSlugByPostTitleChange() {
   let x = document.getElementById("post_title");
   let postSLug = document.getElementById("post_slug").value;
-  let toSlugVal= x.value.replaceAll(' ', '-').toLowerCase();
-
-  console.log(postSLug)
+  let removeCharacters = x.value.replaceAll(/[.,'"=<>%!&:;*+?^${}()|[\]\\]/g, "").toLowerCase(); //remove all characters in the string
+  let toSlugVal= removeCharacters.replaceAll(/\s+/g, ' ').replaceAll(' ', '-').toLowerCase(); //first replaceAll is to remove double space, second is to replace all space with "-"
 
   if(!postSLug){
-    
     document.getElementById("post_slug").value = toSlugVal;
   }
+}
+
+function filterSlugByPostSlugChange() {
+  let x = document.getElementById("post_slug");
+  let postSLug = document.getElementById("post_slug").value;
+  let removeCharacters = x.value.replaceAll(/[.,'"=<>%!&:;*+?^${}()|[\]\\]/g, "").toLowerCase(); //remove all characters in the string
+  let toSlugVal= removeCharacters.replaceAll(/\s+/g, ' ').replaceAll(' ', '-').toLowerCase(); //first replaceAll is to remove double space, second is to replace all space with "-"
+  
+  document.getElementById("post_slug").value = toSlugVal;
 }
 
 //Stand Alone JavaScript integration function of laravel file manager by unisharp

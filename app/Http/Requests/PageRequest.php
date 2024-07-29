@@ -49,9 +49,13 @@ class PageRequest extends FormRequest
         
         $user = $this->user();
 
+        $removedCharacters = Str::of($this->post_slug)->replaceMatches('/[.,"=<>%!&:;*+?^${}()|[\]]++/', ''); //remove characters in the string
+        $post_slug = Str::of($removedCharacters)->replaceMatches('!\s+!', ' ')->replace(' ', '-')->lower(); //first replaceMatches is to remove double space, second is to replace all space with "-"
+        $finalPostSlug = Str::of($post_slug)->replaceEnd('-', '');
+
         return array_merge($validated, [
             'post_title' => $this->post_title,
-            'post_slug' => $this->post_slug,
+            'post_slug' => $finalPostSlug,
             'post_content' => $this->post_content,
             'post_author_id' => $user->id,
             'post_author_name' => $user->name,

@@ -26,8 +26,7 @@ class PostRequest extends FormRequest
      */
     public function rules(): array
     {
-    
-        $post_slug_validation = ['required', 'unique:post,post_slug', 'max:100']; //validation if create(insert data), no pageId
+        $post_slug_validation = ['required', 'lowercase', 'unique:post,post_slug', 'max:100']; //validation if create(insert data), no pageId
 
         //validation if update, there is pageId
         if(request()->postId){
@@ -53,10 +52,14 @@ class PostRequest extends FormRequest
         if($this->filepath){
             $feature_img_path = Str::of($this->filepath)->replace(url('/'), ''); //remove the "base_url" - localhost:8000, only the path of photo will be save on DB.
         }
-       
+
+        $removedCharacters = Str::of($this->post_slug)->replaceMatches('/[.,"=<>%!&:;*+?^${}()|[\]]++/', ''); //remove characters in the string
+        $post_slug = Str::of($removedCharacters)->replaceMatches('!\s+!', ' ')->replace(' ', '-')->lower(); //first replaceMatches is to remove double space, second is to replace all space with "-"
+        $finalPostSlug = Str::of($post_slug)->replaceEnd('-', '');
+      
         return array_merge($validated, [
             'post_title' => $this->post_title,
-            'post_slug' => $this->post_slug,
+            'post_slug' => $finalPostSlug,
             'post_content' => $this->post_content,
             'post_author_id' => $user->id,
             'post_author_name' => $user->name,
