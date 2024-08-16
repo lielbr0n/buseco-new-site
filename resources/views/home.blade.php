@@ -332,7 +332,7 @@
 	<div class="advisories py-16 px-5" id="advisories">
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 			<div class="flex justify-center items-center">
-				<h2 class="text-5xl font-bold">BUSECO Advisory</h2>
+				<h2 class="text-5xl font-bold">BUSECO Advisory!</h2>
 				<img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" />
 			</div>
 			<div @class(['flex' => count($latestPublicAdvisories) === 0])>
