@@ -6,6 +6,7 @@ use App\Models\Page;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Str;
 
 
 class PageRequest extends FormRequest

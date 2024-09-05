@@ -287,52 +287,10 @@
 		</div>
 	</div>
 
-	{{-- </div> --}}
-
-	{{-- <div class="about-us mt-20 text-center" id="about-us">
-		<h1 class="about-us-title">About Us</h1>
-
-		<div class="grid grid-cols-2 gap-4 px-2 mt-5 h-72 about-us-bg-color">
-			<div class="my-auto">
-				<p class="vision-title text-white">Vision</p>	
-				<p class="text-justify text-white px-5">A reliable, viable and efficient electric distribution utility operated and managed by competent, honest and responsive human resources towards satisfied consumers.</p>
-			</div>
-			<div class="flex justify-center my-auto">
-				<img class="h-64 w-auto" src="{{url('/images/vision-logo-2.png')}}"  />
-			</div>
-		</div>
-
-		<div class="grid grid-cols-2 gap-4 px-2 h-72">
-			<div class="flex justify-center my-auto">
-				<img class="h-64 w-auto" src="{{url('/images/commit-6.png')}}"  />
-			</div>
-			<div class="my-auto">
-				<p class="vision-title">Commitment</p>	
-				<p class="text-justify px-5">
-					I commit to BUSECO, as a distribution utility, business enterprise, social development agency, and people's movement and world class organization, its corporate culture, flagship programs and further pledge to pursue the paradigm shift necessary in EPIRA environment.
-					<br />
-					"So help me God"
-				</p>
-			</div>
-		</div>
-
-		<div class="grid grid-cols-2 gap-4 px-2 h-72 about-us-bg-color">
-			<div class="my-auto">
-				<p class="vision-title text-white">Battle Cry</p>	
-				<p class="text-justify text-white px-5">
-					Thou shall protect the rights and promote the interest of all the cooperative members with your Whole Hear, Absolute Honesty, Maximum Efficiency, and Total Solidarity.
-				</p>
-			</div>
-			<div class="flex justify-center my-auto">
-				<img class="h-44 w-auto" src="{{url('/images/battlecry-2.png')}}"  />
-			</div>
-		</div>
-	</div> --}} 
-
 	<div class="advisories py-16 px-5" id="advisories">
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 			<div class="flex justify-center items-center">
-				<h2 class="text-5xl font-bold">BUSECO Advisory</h2>
+				<h2 class="text-5xl font-bold">BUSECO Advisory!</h2>
 				<img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" />
 			</div>
 			<div @class(['flex' => count($latestPublicAdvisories) === 0])>
@@ -342,7 +300,7 @@
 					@forelse($latestPublicAdvisories as $advisory)
 						<li class="border-b border-gray-500 my-1 py-2">
 							<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="{{route('blog.single', ['postSlug' => $advisory->post_slug] )}}">{{$advisory->post_title}}</a>
-							<p class="text-sm">{{ date_format($post->created_at,"F d, Y h:i:s a") }}</p>
+							<p class="text-sm">{{ date_format($advisory->created_at,"F d, Y h:i:s a") }}</p>
 						</li> 
 					@empty
 						<li class="text-xl font-medium text-red-600">No advisory as of the moment.</li>
