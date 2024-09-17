@@ -68,7 +68,7 @@
             <h2 class="branch-title"><b>Malaybalay Branch</b></h2>
             <p>Casisang, Malaybalay City, Bukidnon</p>
             <p><b>Smart:</b> 0998-843-8335</p>
-            <p><b>Globe:</b> 0935-144-2484</p>
+            <p><b>Globe:</b> 0935-114-2484</p>
         </div>
         <!--footer3 -->
         <div class="branch-info">
