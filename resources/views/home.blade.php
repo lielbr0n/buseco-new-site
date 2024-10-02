@@ -1,6 +1,6 @@
 <x-home-layout>
   	{{-- <div class="banner" id="banner">
-		<img src="{{url('/images/banner4.png')}}" alt="buseco" class="img-banner"/>
+		<img src="{{url('/images/.png')}}" alt="buseco" class="img-banner"/>
 	</div> --}}
 
 	<div
@@ -44,7 +44,7 @@
 				data-twe-carousel-item
 				data-twe-carousel-active>
 				<img
-					src="{{url('/images/banner4.png')}}"
+					src="{{url('/images/obb1.png')}}"
 					class="block w-full"
 					alt="buseco" />
 				</div>
@@ -64,7 +64,17 @@
 				data-twe-carousel-fade
 				data-twe-carousel-item>
 				<img
-					src="{{url('/images/banner4.png')}}"
+					src="{{url('/images/pob.png')}}"
+					class="block w-full"
+					alt="buseco" />
+				</div>
+				<!--Fourth item-->
+				<div
+				class="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
+				data-twe-carousel-fade
+				data-twe-carousel-item>
+				<img
+					src="{{url('/images/cb.png')}}"
 					class="block w-full"
 					alt="buseco" />
 				</div>
