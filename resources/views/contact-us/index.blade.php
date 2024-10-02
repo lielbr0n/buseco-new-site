@@ -2,7 +2,7 @@
     <div class="mx-auto max-w-screen-xl">
         <div class="grid grid-cols-1 gap-4">
             <div class="p-6">
-                <div class="border-2 border-[#b4e8ac] bg-[#2b6f44]">
+                <div class="border-2 border-[#b4e8ac] bg-[#01440D]">
                     <h1  class='font-medium text-4xl p-4 mt-6 text-white text-center'>CONTACT US</h1>
 
                     <div class="page-contents mt-2 mb-9 p-3">

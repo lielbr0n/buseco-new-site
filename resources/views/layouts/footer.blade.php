@@ -7,6 +7,7 @@
         <a href="https://www.erc.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/ERC-150.jpg')}}" alt="" /></a>
         <a href="https://www.transco.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/transco-150.jpg')}}" alt="" /></a>
         <a href="https://www.napocor.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
+        <a href="http://127.0.0.1:8000/privacy/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/CORSeal.png')}}" alt="" /></a>
     </div>
 </div>
 <!--end logos-->
@@ -62,7 +63,7 @@
 
             <p>Tankulan, Manolo Fortich, Bukidnon</p>
             <p><b>Smart:</b> 0998-843-8334</p>
-            <p><b>Globe:</b> 0935-144-3095</p>
+            <p><b>Globe:</b> 0935-114-3095</p>
             <br />
 
             <h2 class="branch-title"><b>Malaybalay Branch</b></h2>
