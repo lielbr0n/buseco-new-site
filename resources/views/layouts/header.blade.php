@@ -148,62 +148,7 @@
                     </div>
                 </div>
             </div>
-
-            <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-                href="#"
-                type="button"
-                id="dropdownMenuButton2"
-                data-twe-dropdown-toggle-ref
-                aria-expanded="false"
-                data-twe-ripple-init
-                data-twe-ripple-color="light">
-                ONLINE SERVICES
-                <span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor">
-                    <path
-                    fill-rule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clip-rule="evenodd" />
-                </svg>
-                </span>
-              </a>
-              <ul
-                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
-                aria-labelledby="dropdownMenuButton2"
-                data-twe-dropdown-menu-ref>
-                <li>
-                <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="https://online.buseco.coop"
-                    data-twe-dropdown-item-ref
-                    >MEMBERSHIP APPLICATION</a>
-                </li>
-                <li>
-                <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="https://reconnect.buseco.coop"
-                    data-twe-dropdown-item-ref
-                    >RECONNECTION APPLICATION</a>
-                </li>
-                <li>
-                <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="/download-forms"
-                    data-twe-dropdown-item-ref
-                    >DOWNLOAD FORMS</a>
-                </li>
-                <li>
-                <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="/faq"
-                    data-twe-dropdown-item-ref
-                    >FAQs</a>
-                </li>
-              </ul>
-                
+            
             <a class="flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                 href="/faq"
                 type="button"
@@ -260,7 +205,68 @@
                 </li>
               </ul>
             <a href="{{route('contactus')}}" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
-            <a href="https://buseco.coop/my-account-login/" class="account-button">MY ACCOUNT</a>
+            <a class="account-button flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                href="#"
+                type="button"
+                id="dropdownMenuButton2"
+                data-twe-dropdown-toggle-ref
+                aria-expanded="false"
+                data-twe-ripple-init
+                data-twe-ripple-color="light">
+                ONLINE SERVICES
+                <span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd" />
+                </svg>
+                </span>
+              </a>
+              <ul
+                class="absolute z-[1000] float-left m-0 hidden min-w-max list-none overflow-hidden rounded border-2 border-[#2C8D0A] bg-white bg-clip-padding text-base shadow-lg data-[twe-dropdown-show]:block dark:bg-surface-dark"
+                aria-labelledby="dropdownMenuButton2"
+                data-twe-dropdown-menu-ref>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="https://online.buseco.coop"
+                    data-twe-dropdown-item-ref
+                    >MEMBERSHIP APPLICATION</a>
+                </li>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="https://reconnect.buseco.coop"
+                    data-twe-dropdown-item-ref
+                    >RECONNECTION APPLICATION</a>
+                </li>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="https://buseco.coop/my-account-login"
+                    data-twe-dropdown-item-ref
+                    >MY ACCOUNT</a>
+                </li>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/download-forms"
+                    data-twe-dropdown-item-ref
+                    >DOWNLOADABLE FORMS</a>
+                </li>
+                <li>
+                <a
+                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
+                    href="/faq"
+                    data-twe-dropdown-item-ref
+                    >FAQs</a>
+                </li>
+              </ul>
+            <!--<a href="https://buseco.coop/my-account-login/" class="account-button">MY ACCOUNT</a>-->
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -418,29 +424,6 @@
                             <a href="/daily-supply-and-load-outlook" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">DAILY SUPPLY AND LOAD OUTLOOK</a>
                         </div> 
                     </div>
-                
-                <div class="-mx-3" x-data="{ isOpen: false }">
-                        <button type="button" @click="isOpen = !isOpen" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-[#2C8D0A] active:bg-[#2C8D0A] active:text-[#ffffff]  focus:text-[#ffffff] " aria-controls="disclosure-1" aria-expanded="false">
-                ONLINE SERVICES
-                <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" :class="{ 'rotate-180': isOpen }">
-                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                        </svg>
-                        </button>
-                        <div  
-                            x-show="isOpen" 
-                            class="mt-2 space-y-2" id="disclosure-1"
-                            x-transition:enter="transition ease-out duration-100 transform"
-                            x-transition:enter-start="opacity-0 scale-95"
-                            x-transition:enter-end="opacity-100 scale-100"
-                            x-transition:leave="transition ease-in duration-75 transform"
-                            x-transition:leave-start="opacity-100 scale-100"
-                            x-transition:leave-end="opacity-0 scale-95"
-                        >
-                            <a href="https://online.buseco.coop/" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">MEMBERSHIP APPLICATION</a>
-                            <a href="/download-forms" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">DOWNLOAD FORMS</a>
-                            <a href="/faq" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">FAQs</a>
-                        </div> 
-                    </div>
 
                 <div class="-mx-3" x-data="{ isOpen: false }">
                         <button type="button" @click="isOpen = !isOpen" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-[#2C8D0A] active:bg-[#2C8D0A] active:text-[#ffffff]  focus:text-[#ffffff] " aria-controls="disclosure-1" aria-expanded="false">
@@ -466,10 +449,32 @@
                         </div> 
                     </div>
 
-
                 <a href="{{route('contactus')}}" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">CONTACT US</a>
-                <br>
-                <a href="/my-account" class="account-button">MY ACCOUNT</a>
+                {{--<a href="/my-account" class="account-button">MY ACCOUNT</a>--}}
+                <div class="-mx-3" x-data="{ isOpen: false }">
+                        <button type="account-button" @click="isOpen = !isOpen" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-[#2C8D0A] active:bg-[#2C8D0A] active:text-[#ffffff]  focus:text-[#ffffff] " aria-controls="disclosure-1" aria-expanded="false">
+                ONLINE SERVICES
+                <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" :class="{ 'rotate-180': isOpen }">
+                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                        </svg>
+                        </button>
+                        <div  
+                            x-show="isOpen" 
+                            class="mt-2 space-y-2" id="disclosure-1"
+                            x-transition:enter="transition ease-out duration-100 transform"
+                            x-transition:enter-start="opacity-0 scale-95"
+                            x-transition:enter-end="opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75 transform"
+                            x-transition:leave-start="opacity-100 scale-100"
+                            x-transition:leave-end="opacity-0 scale-95"
+                        >
+                            <a href="https://online.buseco.coop/" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">MEMBERSHIP APPLICATION</a>
+                            <a href="https://reconnect.buseco.coop/" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">RECONNECTION APPLICATION</a>
+                            <a href="https://buseco.coop/my-account-login/" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">MY ACCOUNT</a>
+                            <a href="/download-forms" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">DOWNLOADABLE FORMS</a>
+                            <a href="/faq" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">FAQs</a>
+                        </div> 
+                    </div>
                 {{-- <div class="py-6">
                 <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
                 </div> --}}
