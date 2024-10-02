@@ -130,7 +130,7 @@
 						<path fill-rule="evenodd" d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd" />
 					</svg>
 					
-					<h2 class="services-title">Online Services1</h2>
+					<h2 class="services-title">Online Services</h2>
 				</a>
 			</div>
 			<div class="text-center">
@@ -161,13 +161,13 @@
 				<div class="col-span-3 md:col-span-2 my-auto">
 					<img src="{{url('/images/banner4.png')}}" class="w-full h-auto" />
 
-					<img src="{{url('/images/mco.png')}}" class="w-full h-auto" />
+					<img src="{{url('/images/obb.png')}}" class="w-full h-auto" />
 				</div>
 				<div class="col-span-3 md:col-span-1 my-auto md:pl-4">
 					<h2 class="text-2xl font-medium text-center md:text-left">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
 					<br />
 					<p class="text-justify">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					Bukidnon II Electric Cooperative, Inc. (BUSECO) is a non-stock, non-profit electric cooperative duly organized and existing under and by virtue of the provisions of P.D. 269 and the laws of the Republic of the Philippines. It was registered with the National Electrification Administration on July 28, 1977. Its franchise was granted permanent on June 10, 1981. Operations started on February 2, 1970 when BUSECO took over Manolo Fortich Municipal Electrical System, even if the first energization was on June 29, 1979. It serves the cities/municipalities of the province of Bukidnon, namely:  Malitbog, Baungon, Libona, Manolo Fortich, Sumilao, Impasug-ong, Malaybalay, Lantapan, Cabanglasan and some parts of Talakag and Valencia City.
 					</p>
 				</div>
 			</div>
