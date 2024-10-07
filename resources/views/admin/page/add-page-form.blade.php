@@ -47,7 +47,7 @@
         'applying-for-membership' => 'Applying for Membership',
         'net-metering' => 'Net Metering',
         'solar-home-system' => 'Solar Home System',
-        'ilp' => 'ILP',
+        'csp' => 'CSP',
         'lifeline-discount' => 'Lifeline Discount',
         'senior-citizen-discount' => 'Senior Citizen Discount',
         'scheduled-unbundled-rates' => 'Scheduled Unbundled Rates',
