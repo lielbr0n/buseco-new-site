@@ -83,7 +83,7 @@
                                     <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                                 </svg> 
                             </li> 
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -top-[39px] -right-[185px] -top-[1px] -bottom-[78px] [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:text-white hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
+                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -top-[-2px] -right-[185px] -top-[1px] -bottom-[78px] [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:text-white hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="servicesMenu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/applying-for-membership" class="block w-full ">APPLYING FOR MEMBERSHIP</a></li>
@@ -134,12 +134,18 @@
                                     <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                                 </svg> 
                             </li>
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -top-[1px] bottom-[58px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
+                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -top-[1px] bottom-[-159px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/rates-2024" class="block w-full ">2024</a></li>
                                 <li><a href="/rates-2023" class="block w-full ">2023</a></li>
                                 <li><a href="/rates-2022" class="block w-full ">2022</a></li>
+                                <li><a href="/rates-2021" class="block w-full ">2021</a></li>
+                                <li><a href="/rates-2020" class="block w-full ">2020</a></li>
+                                <li><a href="/rates-2019" class="block w-full ">2019</a></li>
+                                <li><a href="/rates-2018" class="block w-full ">2018</a></li>
+                                <li><a href="/rates-2017" class="block w-full ">2017</a></li>
+                                <li><a href="/rates-2016" class="block w-full ">2016</a></li>
                             </div>
                             
                             <li><a href="/monthly-generation-mix-under-oath" class="block w-full ">MONTHLY GENERATION MIX UNDER OATH</a></li>
@@ -205,7 +211,7 @@
                 </li>
               </ul>
             <a href="{{route('contactus')}}" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
-            <a class="account-button flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#0a961d] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+            <a class="account-button flex items-center text-sm font-semibold leading-6 text-gray-900 transition duration-150 ease-in-out hover:text-[#0a961d] focus:text-[#ffffff] focus:outline-none focus:ring-0 active:text-[#0a961d] motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                 href="#"
                 type="button"
                 id="dropdownMenuButton2"

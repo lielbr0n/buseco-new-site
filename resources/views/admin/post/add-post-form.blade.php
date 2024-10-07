@@ -30,6 +30,12 @@
         'lifeline-discount' => 'Lifeline Discount',
         'senior-citizen-discount' => 'Senior Citizen Discount',
         'scheduled-unbundled-rates' => 'Scheduled Unbundled Rates',
+        'rates-2016' => 'Rates 2016',
+        'rates-2017' => 'Rates 2017',
+        'rates-2018' => 'Rates 2018',
+        'rates-2019' => 'Rates 2019',
+        'rates-2020' => 'Rates 2020',
+        'rates-2021' => 'Rates 2021',
         'rates-2022' => 'Rates 2022',
         'rates-2023' => 'Rates 2023',
         'rates-2024' => 'Rates 2024'
