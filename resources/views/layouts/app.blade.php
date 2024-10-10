@@ -95,16 +95,30 @@
                                     'text-black' => !request()->routeIs('post.*'),
                                 ])>Post</a>
                             </li>
-                            <li @class([
-                                'my-1 py-1 hover:bg-[#0a961d]',
-                                'bg-[#0a961d]' => request()->routeIs('page.*'),
-                            ]) >
-                                <a href="{{route('page.index')}}" @class([
-                                    'block text-base font-medium hover:text-white pl-1',
-                                    'text-white' => request()->routeIs('page.*'),
-                                    'text-black' => !request()->routeIs('page.*'),
-                                ])>Page</a>
-                            </li>
+                            
+                            @if(Auth::user()->role === "admin" && Auth::user()->status === 1)
+                                <li @class([
+                                    'my-1 py-1 hover:bg-[#0a961d]',
+                                    'bg-[#0a961d]' => request()->routeIs('page.*'),
+                                ]) >
+                                    <a href="{{route('page.index')}}" @class([
+                                        'block text-base font-medium hover:text-white pl-1',
+                                        'text-white' => request()->routeIs('page.*'),
+                                        'text-black' => !request()->routeIs('page.*'),
+                                    ])>Page</a>
+                                </li>
+
+                                <li @class([
+                                    'my-1 py-1 hover:bg-[#0a961d]',
+                                    'bg-[#0a961d]' => request()->routeIs('user.*'),
+                                ]) >
+                                    <a href="{{route('user.index')}}" @class([
+                                        'block text-base font-medium hover:text-white pl-1',
+                                        'text-white' => request()->routeIs('user.*'),
+                                        'text-black' => !request()->routeIs('user.*'),
+                                    ])>Users</a>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                     <!-- End Side Bar Menu -->
