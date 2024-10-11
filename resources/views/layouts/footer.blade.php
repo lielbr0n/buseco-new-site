@@ -1,13 +1,13 @@
  <!--logos-->
  <div class="corporate-partners" id="corporate-partners">
-    <div class="flex gap-4 justify-center p-5">
+    <div class="flex items-center sm:gap-4 sm:gap-4 justify-center p-5">
         <a href="https://www.nea.gov.ph/ao39/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/NEA-LOGO-150.png')}}" alt="" /></a>
         <a href="https://doe.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/doe_logo-150.jpg')}}" alt="" /></a>
         <a href="https://www.ngcp.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/ngc-150.png')}}" alt="" /></a>
         <a href="https://www.erc.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/ERC-150.jpg')}}" alt="" /></a>
-        <a href="https://www.transco.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/transco-150.jpg')}}" alt="" /></a>
+        <a href="https://www.transco.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/transco-150.jpg')}}" alt="" /></a>       
         <a href="https://www.napocor.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
-        <a href="https://test.buseco.coop/privacy/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/CORSeal.png')}}" alt="" /></a>
+        <a href="https://test.buseco.coop/privacy/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/CORSeal-150.png')}}" alt="" /></a>
     </div>
 </div>
 <!--end logos-->
