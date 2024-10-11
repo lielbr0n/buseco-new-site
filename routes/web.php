@@ -6,6 +6,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomProfileController;
+use App\Http\Controllers\ContactUsController;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -33,6 +34,8 @@ Route::controller(HomePageController::class)->group(function () {
     Route::get('/coop-news', 'blogListPage')->name('blog.list');
     Route::get('/contact-us', 'contactUs')->name('contactus');
 });
+
+Route::post('/contactus', [ContactUsController::class, 'sendEmailContactUs'])->name('contactus.email');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
