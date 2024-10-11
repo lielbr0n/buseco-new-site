@@ -44,7 +44,7 @@
 				data-twe-carousel-item
 				data-twe-carousel-active>
 				<img
-					src="{{url('/images/obb1.png')}}"
+					src="{{url('/images/obb.png')}}"
 					class="block w-full"
 					alt="buseco" />
 				</div>
@@ -56,7 +56,7 @@
 				<img
 					src="{{url('/images/mco.png')}}"
 					class="block w-full"
-					alt="Camera" />
+					alt="buseco" />
 				</div>
 				<!--Third item-->
 				<div

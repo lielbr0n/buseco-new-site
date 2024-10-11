@@ -65,14 +65,13 @@
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/bids-&-awards" class="block w-full ">BIDS & AWARDS</a></li>
+                                <li><a href="/csp" class="block w-full ">CSP</a></li>
                                 <li><a href="/district-election" class="block w-full ">DISTRICT ELECTION</a></li>
                                 <li><a href="/agma" class="block w-full ">AGMA</a></li>
                             </div>
-                            
                             <li><a href="/erc" class="block w-full ">ERC</a></li>
                             <li><a href="/coop-news" class="block w-full ">COOP NEWS</a></li>
                             <li><a href="/job-opportunities" class="block w-full ">JOB OPPORTUNITIES</a></li>
-                            <li><a href="/institutional-advisories" class="block w-full ">INSTITUTIONAL ADVISORIES</a></li>
 
                             <li class="flex items-center justify-between" 
                                 x-on:click="servicesMenu = ! servicesMenu" 
@@ -87,10 +86,10 @@
                                 x-show="servicesMenu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/applying-for-membership" class="block w-full ">APPLYING FOR MEMBERSHIP</a></li>
-                                <li><a href="/rcoa" class="block w-full ">RCOA</a></li>
+                                <!--<li><a href="/rcoa" class="block w-full ">RCOA</a></li>-->
                                 <li><a href="/net-metering" class="block w-full ">NET METERING</a></li>
                                 <li><a href="/solar-home-system" class="block w-full ">SOLAR HOME SYSTEM</a></li>
-                                <li><a href="/ilp" class="block w-full ">ILP</a></li>
+                                <!--<li><a href="/ilp" class="block w-full ">ILP</a></li>-->
                                 <li><a href="/lifeline-discount" class="block w-full ">LIFELINE DISCOUNT</a></li>
                                 <li><a href="/senior-citizen-discount" class="block w-full ">SENIOR CITIZEN DISCOUNT</a></li>
                             </div>
@@ -337,6 +336,8 @@
                                     x-transition:leave-end="opacity-0 scale-95"
                                 >
                                     <a href="/bids-&-awards" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">BIDS & AWARDS</a>
+                                    <a href="/csp" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">CSP</a>
+                                    
                                     <a href="/district-election" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">DISTRICT ELECTION</a>
                                     <a href="/agma" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">AGMA</a>
                                 </div> 
@@ -344,7 +345,6 @@
                             <a href="/erc" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">ERC</a>
                             <a href="/coop-news" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">COOP NEWS</a>
                             <a href="job-opportunities" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">JOB OPPORTUNITIES</a>
-                            <a href="institutional-advisories" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">INSTITUTIONAL ADVISORIES</a>
 
                             <div class="pl-[10px] pr-3 text-sm font-semibold leading-7 text-gray-900"
                                 x-data="{ isOpenServices: false }"
@@ -366,10 +366,10 @@
                                     x-transition:leave-end="opacity-0 scale-95"
                                 >
                                     <a href="/applying-for-membership" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">APPLYING FOR MEMBERSHIP</a>
-                                    <a href="/roa" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">RCOA</a>
+                                    <!--<a href="/roa" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">RCOA</a>-->
                                     <a href="/net-metering" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">NET METERING</a>
                                     <a href="/solar-home-system" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">SOLAR HOME SYSTEM</a>
-                                    <a href="/ilp" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">ILP</a>
+                                    <!--<a href="/ilp" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">ILP</a>-->
                                     <a href="/lifeline-discount" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">LIFELINE DISCOUNT</a>
                                     <a href="/senior-citizen-discount" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">SENIOR CITIZEN DISCOUNT</a>
                                 </div> 
