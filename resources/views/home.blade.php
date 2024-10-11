@@ -175,16 +175,16 @@
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<div class="grid grid-cols-3 px-6 py-8 gap-4">
 				<div class="col-span-3 md:col-span-2 my-auto">
-					<img src="{{url('/images/banner4.png')}}" class="w-full h-auto" />
-
 					<img src="{{url('/images/obb.png')}}" class="w-full h-auto" />
 				</div>
 				<div class="col-span-3 md:col-span-1 my-auto md:pl-4">
 					<h2 class="text-2xl font-medium text-center md:text-left">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
 					<br />
-					<p class="text-justify">
-					Bukidnon II Electric Cooperative, Inc. (BUSECO) is a non-stock, non-profit electric cooperative duly organized and existing under and by virtue of the provisions of P.D. 269 and the laws of the Republic of the Philippines. It was registered with the National Electrification Administration on July 28, 1977. Its franchise was granted permanent on June 10, 1981. Operations started on February 2, 1970 when BUSECO took over Manolo Fortich Municipal Electrical System, even if the first energization was on June 29, 1979. It serves the cities/municipalities of the province of Bukidnon, namely:  Malitbog, Baungon, Libona, Manolo Fortich, Sumilao, Impasug-ong, Malaybalay, Lantapan, Cabanglasan and some parts of Talakag and Valencia City.
-					</p>
+					<p class="text-justify mb-4">
+					Bukidnon II Electric Cooperative, Inc. (BUSECO) is a non-stock, non-profit electric cooperative duly organized and existing under and by virtue of the provisions of P.D. 269 and the laws of the Republic of the Philippines. </p>
+					<p class="text-justify mb-4">It was registered with the National Electrification Administration on July 28, 1977. Its franchise was granted permanent on June 10, 1981. </p>
+					<p class="text-justify mb-4">Operations started on February 2, 1970 when BUSECO took over Manolo Fortich Municipal Electrical System, even if the first energization was on June 29, 1979. </p>
+					<p class="text-justify mb-4">It serves the cities/municipalities of the province of Bukidnon, namely:  Malitbog, Baungon, Libona, Manolo Fortich, Sumilao, Impasug-ong, Malaybalay, Lantapan, Cabanglasan and some parts of Talakag and Valencia City.</p>
 				</div>
 			</div>
 		</div>
