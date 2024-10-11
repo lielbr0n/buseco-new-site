@@ -6,42 +6,68 @@
                     <h1  class='font-medium text-4xl p-4 mt-6 text-white text-center'>CONTACT US</h1>
 
                     <div class="page-contents mt-2 mb-9 p-3">
-                        <form action="#" method="POST" class="mx-auto mt-16 max-w-xl sm:mt-10">
+                        <form method="POST" action="{{route('contactus.email')}}" class="mx-auto max-w-xl mt-[10px]">
+                            @csrf
+                            <x-success-message-status class="mt-0 mb-4" :message="session('message')" />
+                            <?php //dd(@errors) ?>
                             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-                                <div>
-                                <label for="first-name" class="text-start block text-medium font-semibold leading-6 text-white">FIRST NAME</label>
-                                <div class="mt-2.5">
-                                    <input type="text" name="first-name" id="first-name" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                </div>
-                                </div>
-                                <div>
-                                <label for="last-name" class="text-start block text-medium font-semibold leading-6 text-white">LAST NAME</label>
-                                <div class="mt-2.5">
-                                    <input type="text" name="last-name" id="last-name" autocomplete="family-name" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                </div>
-                                </div>
-                                
                                 <div class="sm:col-span-2">
-                                <label for="email" class="text-start block text-medium font-semibold leading-6 text-white">EMAIL ADDRESS</label>
-                                <div class="mt-2.5">
-                                    <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-                                </div>
-                                </div>
-                                <div class="sm:col-span-2">
-                                    <label for="company" class="text-start block text-medium font-semibold leading-6 text-white">SUBJECT</label>
+                                    <label for="fullname" class="text-start block text-medium font-semibold leading-6 text-white">FULL NAME <span class="text-[#ff0000]">*</span></label>
                                     <div class="mt-2.5">
-                                        <input type="text" name="company" id="company" autocomplete="organization" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+                                        <input type="text" name="fullname" id="fullname" autocomplete="given-name" value="{{ old('fullname') }}" class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
+                                        <x-input-error :messages="$errors->get('fullname')" class="mt-2 text-[#ff3333] font-bold text-base" />
+                                    </div>
+                                </div>
+                            
+                                <div class="sm:col-span-2">
+                                    <label for="email" class="text-start block text-medium font-semibold leading-6 text-white">EMAIL ADDRESS <span class="text-[#ff0000]">*</span></label>
+                                    <div class="mt-2.5">
+                                        <input type="email" name="email" id="email" autocomplete="email" value="{{ old('email') }}" class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
+                                        <x-input-error :messages="$errors->get('email')" class="mt-2 text-[#ff3333] font-bold text-base" />
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="municipality" class="text-start block text-medium font-semibold leading-6 text-white">MUNICIPALITY <span class="text-[#ff0000]">*</span></label>
+                                    <div class="mt-2.5">
+                                        <select class='block w-full rounded-md border-0 px-3.5 py-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6' id="municipality" name="municipality" required >
+                                            <option value="manolofortich"  {{ old('municipality') == 'manolofortich' ? 'selected' : '' }} >Manolo Fortich</option>
+                                            <option value="malaybalay" {{ old('municipality') == 'malaybalay' ? 'selected' : '' }} >Malaybalay</option>
+                                        </select>
+                                        <x-input-error :messages="$errors->get('municipality')" class="mt-2 text-[#ff3333] font-bold text-base" />
+                                    </div>
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="subject" class="text-start block text-medium font-semibold leading-6 text-white">SUBJECT <span class="text-[#ff0000]">*</span></label>
+                                    <div class="mt-2.5">
+                                        <input type="text" name="subject" id="subject" autocomplete="subject" value="{{ old('subject') }}" class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
+                                        <x-input-error :messages="$errors->get('subject')" class="mt-2 text-[#ff3333] font-bold text-base" />
                                     </div> 
                                 </div> 
                                 <div class="sm:col-span-2">
-                                <label for="message" class="text-start block text-medium font-semibold leading-6 text-white">MESSAGE</label>
-                                <div class="mt-2.5">
-                                    <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"></textarea>
-                                </div>
+                                    <label for="message" class="text-start block text-medium font-semibold leading-6 text-white">MESSAGE <span class="text-[#ff0000]">*</span></label>
+                                    <div class="mt-2.5">
+                                        <textarea name="message" id="message" rows="4" class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>{{ old('message') }}</textarea>
+                                        <x-input-error :messages="$errors->get('message')" class="mt-2 text-[#ff3333] font-bold text-base" />
+                                    </div>
                                 </div>
                             </div>
+                            <div class="mt-6">
+                                {!! NoCaptcha::renderJs() !!}
+                                {!! NoCaptcha::display() !!}
+                            </div>
+                            @if ($errors->has('g-recaptcha-response'))
+                                <span class="help-block text-[#ff3333] text-[13px] font-bold">
+                                    {{ $errors->first('g-recaptcha-response') }}
+                                </span>
+                            @endif
                             <div class="mt-10">
-                                <button type="submit" class="block w-full rounded-md bg-blue-600 px-3.5 py-2.5 text-center text-large font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">SEND MESSAGE</button>
+                                <button type="submit" 
+                                    class="block w-full rounded-md bg-blue-600 px-3.5 py-3 text-center text-large font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                                    onclick="this.form.submit(); this.disabled = true;"
+                                >
+                                    SEND MESSAGE</button>
                             </div>
                         </form>
                     </div>
