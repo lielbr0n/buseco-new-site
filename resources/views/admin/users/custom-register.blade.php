@@ -18,8 +18,6 @@
         <div class="w-full pl-1 pr-1 sm:pr-2 sm:pl-0">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-3 text-gray-900">
-                {{-- <x-success-message-status class="mb-4" :status="session('message')" /> --}}
-
                     <form method="POST" action="{{ route('user.add') }}">
                         @csrf
 
