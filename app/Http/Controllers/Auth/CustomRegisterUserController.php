@@ -54,8 +54,11 @@ class CustomRegisterUserController extends Controller
             'status' => $request->status
         ]);
 
-        event(new Registered($user));
+        if($user){
+            event(new Registered($user));
 
-        return redirect(route('user.add'))->with('message', 'Added user successfully!');
+            //return redirect(route('user.add'))->with('message', 'Added user successfully!');
+            return redirect(route('user.profile.edit', ['userId' => $user->id]))->with('postMessage', 'Saved Successfully!');
+        }
     }
 }

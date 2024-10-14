@@ -42,7 +42,7 @@ class CustomProfileController extends Controller
 
         $userProfile->save(); // Then save!
 
-        return redirect(route('user.profile.edit', ['userId' => $userId]))->with('message',  'Updated Successfully!');
+        return redirect(route('user.profile.edit', ['userId' => $userId]))->with('postMessage',  'Updated Successfully!');
     }
 
     /**
@@ -57,6 +57,6 @@ class CustomProfileController extends Controller
         $userProfile = User::findOrFail($userId);
         $userProfile->delete();
     
-        return redirect(route('user.index'))->with('message', 'Deleted the user successfully.');
+        return redirect(route('user.index'))->with('postMessage', 'Deleted Successfully!');
     }
 }

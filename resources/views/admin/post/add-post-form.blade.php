@@ -48,6 +48,7 @@
             <h2 class="font-semibold text-2xl text-gray-800 leading-tight">
                 {{ __('Post') }}
             </h2>
+            <x-success-message-add-and-update class="mt-0 mb-4" :postMessage="session('postMessage')" />
             <a href="{{route('post.add')}}" class="flex items-center ml-auto px-4 py-1 bg-[#198754] border border-gray-300 rounded-md font-semibold text-xs text-[#ffffff] uppercase tracking-widest shadow-sm hover:bg-[#198754] focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-25 transition ease-in-out duration-150'">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 mr-2">
                     <path fill-rule="evenodd" d="M5.625 1.5H9a3.75 3.75 0 0 1 3.75 3.75v1.875c0 1.036.84 1.875 1.875 1.875H16.5a3.75 3.75 0 0 1 3.75 3.75v7.875c0 1.035-.84 1.875-1.875 1.875H5.625a1.875 1.875 0 0 1-1.875-1.875V3.375c0-1.036.84-1.875 1.875-1.875ZM12.75 12a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V18a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V12Z" clip-rule="evenodd" />
@@ -85,6 +86,7 @@
                         <div class="mt-3 mb-3">
                             <x-input-label for="textarea_post" :value="__('Content')" />
                             <textarea id="textarea_post" class="post_content" name="post_content">{!! old('post_content',  $postInfo->post_content ?? '') !!}</textarea>
+                            <x-input-error :messages="$errors->get('post_content')" class="mt-2" />
                         </div>
 
                         {{-- <div class="mt-3 mb-3">
@@ -95,11 +97,13 @@
                         <div class="mt-3 mb-3">
                             <x-input-label for="post_category" :value="__('Category')" />
                             <x-select :option="$post_category" id="post_category" :name="__('post_category')" :selected="$postInfo->post_category ?? null" class="block mt-1 w-full py-2 px-4 border-2 border-gray-400 border-gray-300 focus:border-black focus:ring-black" required />
+                            <x-input-error :messages="$errors->get('post_category')" class="mt-2" />
                         </div>
 
                         <div class="mt-3 mb-3">
                             <x-input-label for="post_status" :value="__('Save as Publish or Draft?')" />
                             <x-select :option="$post_status" id="post_status" :name="__('post_status')" :selected="$postInfo->post_status ?? null" class="block mt-1 w-full py-2 px-4 border-2 border-gray-400 border-gray-300 focus:border-black focus:ring-black" />
+                            <x-input-error :messages="$errors->get('post_status')" class="mt-2" />
                         </div>
                         
                         <div class="mt-5 mb-3">
@@ -117,6 +121,7 @@
                                 <label class="font-bold inline-block ps-[0.15rem] hover:cursor-pointer" for="showPostTitle">
                                     Show Post Title
                                 </label>
+                                <x-input-error :messages="$errors->get('post_show_posttitle')" class="mt-2" />
                             </div>
                             <div class="mt-2">
                                 <x-input-label for="post_excerpt" :value="__('Post Excerpt')" />

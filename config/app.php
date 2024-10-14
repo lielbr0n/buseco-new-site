@@ -69,8 +69,8 @@ return [
     |
     */
 
-    /*'timezone' => 'Asia/Manila',*/
-    'timezone' => env('Asia/Singapore', 'UTC'),
+    'timezone' => 'Asia/Manila',
+    /*'timezone' => env('Asia/Singapore', 'UTC'),*/
 
     /*
     |--------------------------------------------------------------------------

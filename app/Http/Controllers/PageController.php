@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Auth;
+use DB;
 
 Use App\Http\Requests\PageRequest;
-
-use Illuminate\Support\Facades\Auth;
 
 use App\Models\Page;
 
@@ -16,6 +16,23 @@ class PageController extends Controller
 {
     public function index(){
         $pages = Page::getPages();
+
+        if(request()->search){
+            $q = request()->input('search');
+            
+            /** Using laravel scout custom search */
+            // $membersInfo = MembershipApplication::search($q)
+            // ->paginate(10)
+            // ->appends(['search' => $q]);
+
+            /** For now search uses eloquent and raw query */
+            $searchString = "%" . str_replace(" ", "%", $q) . "%"; //replace space with % wildcard.
+            $pages = Page::query()
+            ->where(DB::raw('concat(post_title)'), 'LIKE', $searchString)
+            ->where('post_type', 'page')
+            ->paginate(10)
+            ->appends(['search' => $q]); //to append in url, for pagination
+        }
 
         return view('admin.page.index', ['pages' => $pages]); 
     }
@@ -26,9 +43,11 @@ class PageController extends Controller
 
     public function createPage(PageRequest $request){
         if (Auth::check()) {
-            $membershipApp = Page::create($request->validated());
+            $page = Page::create($request->validated());
             
-            return redirect(route('page.index')); 
+            if($page){
+                return redirect(route('page.edit', ['pageId' => $page->post_id ]))->with('postMessage', 'Saved Successfully!'); 
+            }
         }
     }
 
@@ -48,7 +67,7 @@ class PageController extends Controller
         //save the updated data
         $pageInfo->save();
 
-        return view('admin.page.add-page-form', ['pageInfo' => $pageInfo]); 
+        return back()->with('postMessage', 'Updated Successfully!');
     }
 
     public function deletePage($pageId){
@@ -57,7 +76,7 @@ class PageController extends Controller
 
         $pageInfo->delete();
 
-        return redirect(route('page.index')); 
+        return redirect(route('page.index'))->with('postMessage', 'Deleted Successfully!'); 
     }
 
     public function BOD(){
