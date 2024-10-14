@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use DB;
 
 use App\Models\Post;
 
@@ -16,6 +17,23 @@ class PostController extends Controller
     public function index(){
         $post = Post::getPost();
 
+        if(request()->search){
+            $q = request()->input('search');
+            
+            /** Using laravel scout custom search */
+            // $membersInfo = MembershipApplication::search($q)
+            // ->paginate(10)
+            // ->appends(['search' => $q]);
+
+            /** For now search uses eloquent and raw query */
+            $searchString = "%" . str_replace(" ", "%", $q) . "%"; //replace space with % wildcard.
+            $post = Post::query()
+            ->where(DB::raw('concat(post_title)'), 'LIKE', $searchString)
+            ->where('post_type', 'post')
+            ->paginate(10)
+            ->appends(['search' => $q]); //to append in url, for pagination
+        }
+
         return view('admin.post.index', ['posts' => $post]); 
     }
 
@@ -25,9 +43,11 @@ class PostController extends Controller
 
     public function createPost(PostRequest $request){
         if (Auth::check()) {
-            $membershipApp = Post::create($request->validated());
+            $post= Post::create($request->validated());
             
-            return redirect(route('post.index')); 
+            if($post){
+                return redirect(route('post.edit', ['postId' => $post->post_id ]))->with('postMessage', 'Saved Successfully!'); 
+            }
         }
     }
 
@@ -47,7 +67,7 @@ class PostController extends Controller
         //save the updated data
         $postInfo->save();
 
-        return view('admin.post.add-post-form', ['postInfo' => $postInfo]); 
+        return back()->with('postMessage', 'Updated Successfully!');
     }
 
     public function deletePost($postId){
@@ -57,6 +77,6 @@ class PostController extends Controller
         //delete post
         $postInfo->delete();
 
-        return redirect(route('post.index')); 
+        return redirect(route('post.index'))->with('postMessage', 'Deleted Successfully!'); 
     }
 }

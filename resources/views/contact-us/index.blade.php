@@ -9,7 +9,7 @@
                         <form method="POST" action="{{route('contactus.email')}}" class="mx-auto max-w-xl mt-[10px]">
                             @csrf
                             <x-success-message-status class="mt-0 mb-4" :message="session('message')" />
-                            <?php //dd(@errors) ?>
+                           
                             <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                                 <div class="sm:col-span-2">
                                     <label for="fullname" class="text-start block text-medium font-semibold leading-6 text-white">FULL NAME <span class="text-[#ff0000]">*</span></label>
