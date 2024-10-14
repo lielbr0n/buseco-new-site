@@ -55,7 +55,7 @@
         <!-- template with full width -->
         @else
             <div class="grid grid-cols-1">
-                <div class="p-6">
+                <div class="px-6 pt-6 pb-0">
                     <div class="border-2 border-[#2C8D0A] ">
                         <h1  @class([
                             'font-medium text-4xl p-3',
