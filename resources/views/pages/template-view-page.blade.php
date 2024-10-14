@@ -3,7 +3,7 @@
         <!-- template with right side bar -->
         @if($pageInfo->post_template === 'with-right-sidebar') 
             <div class="grid grid-cols-3 gap-4 ">
-                <div class="col-span-2 pt-6 pl-6 pb-6">
+                <div class="col-span-3 md:col-span-2 pt-6 pl-6 pb-6 pr-6 md:pr-0">
                     <!-- Publish Status  or Draft Status but the user is Authenticated(editor, admin) -->
                     @if($pageInfo->post_status === 'publish' || (Auth::check() && $pageInfo->post_status === 'draft')) 
                         <div class="border-2 border-[#2C8D0A] ">
@@ -46,7 +46,7 @@
                         {{ redirect(abort(404)); }} 
                     @endif
                 </div>
-                <div class="pt-6 pr-6 pb-6">
+                <div class="col-span-3 md:col-span-1 pl-6 md:pl-0 pt-0 md:pt-6 pr-6 pb-0 md:pb-6">
                     <div class="border-2 border-[#2C8D0A] p-[6px]">
                         @include('blog.sidebar-blog', ['latestPosts' => $latestPosts])
                     </div>
