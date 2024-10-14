@@ -1,12 +1,12 @@
 <x-home-layout>
     <div class="mx-auto max-w-screen-xl" id="bloglist">
         <div class="grid grid-cols-3 gap-4">
-            <div class="col-span-2 pt-6 pl-6 pb-6">
+            <div class="col-span-3 md:col-span-2 pt-6 pl-6 pb-6 pr-6 md:pr-0">
                 <div class="border-2 border-[#2C8D0A] p-3" >
                     <h1 class="font-medium text-4xl mb-4">COOP NEWS AND UPDATES</h1>
                     @forelse($blogList as $blog)
                         <div class="blog-content-list bg-[#e9e8e8] mb-4 last:mb-0"  style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);">
-                            <div class="blog-img-container h-[250px]">
+                            <div class="blog-img-container h-[150px] md:h-[250px]">
                                 <a href="{{route('blog.single', ['postSlug' => $blog->post_slug] )}}">
                                     <img src="{{url($blog->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />
                                 </a>
@@ -40,7 +40,7 @@
                     {{ $blogList->links() }}
                 </div>
             </div>
-            <div class="pt-6 pr-6 pb-6">
+            <div class="col-span-3 md:col-span-1 pt-6 pr-6 pb-0 md:pb-6 pl-6 md:pl-0">
                 <div class="border-2 border-[#2C8D0A] p-[6px]">
                     @include('blog.sidebar-blog', ['latestPosts' => $latestPosts])
                 </div>

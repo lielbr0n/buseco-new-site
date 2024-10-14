@@ -194,33 +194,33 @@
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<h2 class="text-center font-medium text-[32px] mt-6 mb-2">APPLYING FOR MEMBERSHIP</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-6 py-8 gap-8 lg:gap-4">
-				<div>
-					<img src="{{url('/images/step-1.png')}}" class="w-full h-auto" />
+				<div class="group">
+					<a href="/applying-for-membership"><img src="{{url('/images/step-1.png')}}" class="w-full h-auto" /></a>
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 1: COMPLETE THE APPLICATION</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6">Applicants will be required to submit application.</p>
-					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small group-hover:bg-[#ffffff] group-hover:text-black" role="button">READ MORE</a>
 				</div>
-				<div>
-					<img src="{{url('/images/step-2.png')}}" class="w-full h-auto" />
+				<div class="group">
+					<a href="/applying-for-membership"><img src="{{url('/images/step-2.png')}}" class="w-full h-auto" /></a>
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 2: PAYMENT</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to pay.</p>
-					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small group-hover:bg-[#ffffff] group-hover:text-black" role="button">READ MORE</a>
 				</div>
-				<div>
-					<img src="{{url('/images/step-3.png')}}" class="w-full h-auto" />
+				<div class="group">
+					<a href="/applying-for-membership"><img src="{{url('/images/step-3.png')}}" class="w-full h-auto" /></a>
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 3: TAKE THE ONLINE EXAM</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to attend the online PMES and take the exam. </p>
-					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small group-hover:bg-[#ffffff] group-hover:text-black" role="button">READ MORE</a>
 				</div>
-				<div>
-					<img src="{{url('/images/step-4.png')}}" class="w-full h-auto" />
+				<div class="group">
+					<a href="/applying-for-membership"><img src="{{url('/images/step-4.png')}}" class="w-full h-auto" /></a>
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 4: SUBMIT REQUIREMENTS</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-11/12 lg:w-36 font-medium mx-auto mt-6 my-auto">All applicants will be required to process and submit necessary requirements to the Buseco Office.</p>
-					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small hover:bg-[#ffffff] hover:text-black" role="button">READ MORE</a>
+					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small group-hover:bg-[#ffffff] group-hover:text-black" role="button">READ MORE</a>
 				</div>
 			</div>
 		</div>
@@ -251,8 +251,8 @@
 		<h1 class="text-4xl font-semibold blog-title-section text-center"> COOP NEWS AND UPDATES</h1>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-8 lg:gap-4 mx-2 mt-5">
 			@forelse($getLatestPostNewsAndJobOpp as $post)
-				<div class="">
-					<div class="blog-img-container h-[200px]">
+				<div class="group">
+					<div class="blog-img-container h-[200px] border-2 border-[#808080] group-hover:outline group-hover:outline-1 group-hover:outline-[#2F3C45]">
 						<a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">
 							<img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />
 						</a>
@@ -270,7 +270,7 @@
 						</svg>
 						{{ $post->post_author_name }}
 					</div> --}}
-					<div class="blog-title mt-2"><a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">{{ $post->post_title }}</a></div>
+					<div class="blog-title mt-2 "><a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}" class="group-hover:text-[#0a961d]">{{ $post->post_title }}</a></div>
 					<div class="blog-description text-justify mt-1" id="blog-description">
 						@if(empty($post->post_excerpt))
 							{{ Str::of($post->post_content)->words('50', '...')->stripTags()->replace('&nbsp;', '') }}
