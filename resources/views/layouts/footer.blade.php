@@ -8,6 +8,9 @@
         <a href="https://www.transco.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/transco-150.jpg')}}" alt="" /></a>       
         <a href="https://www.napocor.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
         <a href="https://test.buseco.coop/privacy/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/CORSeal-150.png')}}" alt="" /></a>
+        <a href="https://tinyurl.com/BSTCorp/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/bstclogo-150.png')}}" alt="" /></a>
+        <a href="https://psalm.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/PSALMlogo-150.png')}}" alt="" /></a>
+
     </div>
 </div>
 <!--end logos-->
@@ -37,22 +40,25 @@
                     </span>
                 </button>
                 </a>
-                <!--googleicon-->
-                <button
-                    type="button"
-                    data-twe-ripple-init
-                    data-twe-ripple-color="light"
-                    class="mb-2 inline-block rounded bg-[#ea4335] px-4 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
-                    <span class="[&>svg]:h-4 [&>svg]:w-4">
-                        <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="currentColor"
-                        viewBox="0 0 488 512">
-                        <path
-                            d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
-                        </svg>
-                    </span>
-                </button>
+                <!--google email icon-->
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=busecoonline@gmail.com" target="_blank">
+                    <button
+                        type="button"
+                        data-twe-ripple-init
+                        data-twe-ripple-color="light"
+                        class="mb-2 inline-block rounded bg-[#ea4335] px-4 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg">
+                        <span class="[&>svg]:h-4 [&>svg]:w-4">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor"
+                                viewBox="0 0 488 512">
+                                <path
+                                    d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z" />
+                            </svg>
+                        </span>
+                    </button>
+                </a>
+
             </div>
         </div>
          <!--footer2 --> 
@@ -77,12 +83,22 @@
             <h2 class="branch-title"><b>MONDAY - FRIDAY</b></h2>
             <p>Manolo Fortich: 8:00AM-5:00PM</p>
             <p>Malaybalay City: 8:00AM-5:00PM</p>
+        <br>
+            <h2 class="footer-title mb-2 lg:mb-6 border-b w-full md:w-11/12">COLLECTION HOURS</h2>
+            <h2 class="branch-title"><b>MONDAY - FRIDAY</b></h2>
+            <p>Manolo Fortich: 8:00AM-5:00PM</p>
+            <p>Malaybalay City: 8:00AM-5:00PM</p>
+        <br>
+            <h2 class="branch-title"><b>SATURDAY</b></h2>
+            <p>Manolo Fortich: 8:00AM-12:00PM</p>
+            <p>Malaybalay City: 8:00AM-12:00PM</p>
         </div>
          <!--footer4 -->      
         <div class="links-info">
             <h2 class="footer-title mb-2 lg:mb-6 border-b w-full md:w-11/12">LINKS</h2>
 
             <a href="https://online.buseco.coop/" class="link-footer">Membership Application</a><br />
+            <a href="https://reconnect.buseco.coop/" class="link-footer">Reconnection Application</a><br />
             <a href="https://buseco.coop/my-account-login/" class="link-footer">My Account</a><br />
             <a href="/coop-news" class="link-footer">News and Updates</a><br />
             <a href="/privacy" class="link-footer">Privacy</a><br />
