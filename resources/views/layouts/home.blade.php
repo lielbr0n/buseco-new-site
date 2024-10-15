@@ -7,6 +7,8 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <link rel="icon" href="{{ url('images/buseco.png') }}">
+        
         <!-- Fonts -->
         <!--link rel="preconnect" href="https://fonts.bunny.net"> -->
         <link rel="preconnect" href="https://fonts.bunny.net">
