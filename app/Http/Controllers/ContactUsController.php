@@ -21,7 +21,7 @@ class ContactUsController extends Controller
             'g-recaptcha-response' => 'required|captcha'
         ]);
         
-        Mail::to($contactUsQuery['municipality'] === 'manolofortich' ? 'busecoonline@gmail.com' : 'bomsdmanolo@gmail.com')->send(new ContactUs($contactUsQuery));
+        Mail::to($contactUsQuery['municipality'] == 'manolofortich' ? 'bomsdmanolo@gmail.com' : 'bomsdmy@gmail.com')->send(new ContactUs($contactUsQuery));
 
         return back()->with('message', 'Message Sent Successfully!');
     }
