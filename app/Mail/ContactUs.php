@@ -50,7 +50,7 @@ class ContactUs extends Mailable
             with: [
                 'fullname' => strtoupper($this->fullName),
                 'contactEmail' => $this->contactEmail,
-                'municipality' => strtoupper($this->municipality),
+                /*'municipality' => strtoupper($this->municipality),*/
                 'subjectBody' => strtoupper($this->subjectBody),
                 'messageBody' => strtoupper($this->messageBody),
             ],

@@ -72,7 +72,7 @@
             <p><b>Globe:</b> 0935-114-3095</p>
             <br />
 
-            <h2 class="branch-title"><b>Malaybalay Branch</b></h2>
+            <h2 class="branch-title"><b>Malaybalay City Branch</b></h2>
             <p>Casisang, Malaybalay City, Bukidnon</p>
             <p><b>Smart:</b> 0998-843-8335</p>
             <p><b>Globe:</b> 0935-114-2484</p>
@@ -81,17 +81,17 @@
         <div class="branch-info">
             <h2 class="footer-title mb-2 lg:mb-6 border-b w-full md:w-11/12">OFFICE HOURS</h2>
             <h2 class="branch-title"><b>MONDAY - FRIDAY</b></h2>
-            <p>Manolo Fortich: 8:00AM-5:00PM</p>
-            <p>Malaybalay City: 8:00AM-5:00PM</p>
+            <p>Manolo Fortich Branch: 8:00AM-5:00PM</p>
+            <p>Malaybalay City Branch: 8:00AM-5:00PM</p>
         <br>
             <h2 class="footer-title mb-2 lg:mb-6 border-b w-full md:w-11/12">COLLECTION HOURS</h2>
             <h2 class="branch-title"><b>MONDAY - FRIDAY</b></h2>
-            <p>Manolo Fortich: 8:00AM-5:00PM</p>
-            <p>Malaybalay City: 8:00AM-5:00PM</p>
+            <p>Manolo Fortich Branch: 7:00AM-5:00PM</p>
+            <p>Malaybalay City Branch: 7:00AM-5:00PM</p>
         <br>
             <h2 class="branch-title"><b>SATURDAY</b></h2>
-            <p>Manolo Fortich: 8:00AM-12:00PM</p>
-            <p>Malaybalay City: 8:00AM-12:00PM</p>
+            <p>Manolo Fortich Branch: 7:00AM-12:00PM</p>
+            <p>Malaybalay City Branch: 7:00AM-12:00PM</p>
         </div>
          <!--footer4 -->      
         <div class="links-info">
@@ -105,6 +105,6 @@
         </div>
 
     </div>
-    <div class="all-rights-reserved py-4"><p class="all-rights-text text-center">&copy; 2024 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
-    <div class="madewithlove"><p class="all-rights-text text-center">catscanc0de&trade;</p><br></div>
+    <div class="all-rights-reserved py-4"><p class="all-rights-text text-center mt-5">&copy; 2024 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
+    <div class="madewithlove"><p class="all-rights-text text-center py-2">catscanc0de&trade;</p><br></div>
 </footer>
