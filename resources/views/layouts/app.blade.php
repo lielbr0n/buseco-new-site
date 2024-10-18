@@ -32,7 +32,7 @@
                 selector: 'textarea.post_content',
                 relative_urls: false,
                 plugins: [
-                    'code', 'table', 'lists', 'codesample', 'image', 'wordcount', 'media', 'link', 'anchor', 'searchreplace', 'help'
+                    'code', 'table', 'lists', 'codesample', 'image', 'file', 'wordcount', 'media', 'link', 'anchor', 'searchreplace', 'help'
                 ],
                 menubar: 'file edit view insert format tools table help',
                 toolbar: 'undo redo |  blocks fontsizeinput fontinput  | bold italic underline strikethrough | alignleft aligncenter alignright | indent outdent | bullist numlist | table | link image media | code',
