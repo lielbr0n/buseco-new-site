@@ -39,7 +39,7 @@ class HomePageController extends Controller
 
     public function viewPage($pageName){
         $latestPosts = Post::getLatestPost(4);
-
+        
         if($pageName){
             $pageInfo = Page::where('post_slug', $pageName)->firstOrFail();
 

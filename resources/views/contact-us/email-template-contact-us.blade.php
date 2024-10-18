@@ -6,7 +6,7 @@ Full Name: <b>{{ $fullname }}</b>
 <br/>
 Email: <b>{{ $contactEmail }}</b>
 <br/>
-Municipality: <b>{{ $municipality == 'manolofortich' ? 'MANOLO FORTICH' : "MALAYBALAY" }}</b>
+Municipality: <b>{{ $municipality == 'manolofortich' ? 'MANOLO FORTICH BRANCH' : "MALAYBALAY CITY BRANCH" }}</b>
 <br/>
 Subject: <b>{{ $subjectBody }}</b>
 <br/>
