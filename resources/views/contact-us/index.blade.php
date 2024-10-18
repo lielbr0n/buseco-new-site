@@ -28,11 +28,11 @@
                                 </div>
 
                                 <div class="sm:col-span-2">
-                                    <label for="municipality" class="text-start block text-medium font-semibold leading-6 text-white">MUNICIPALITY <span class="text-[#ff0000]">*</span></label>
+                                    <label for="municipality" class="text-start block text-medium font-semibold leading-6 text-white">MUNICIPALITY/BRANCH <span class="text-[#ff0000]">*</span></label>
                                     <div class="mt-2.5">
                                         <select class='block w-full rounded-md border-0 px-3.5 py-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6' id="municipality" name="municipality" required >
-                                            <option value="manolofortich"  {{ old('municipality') == 'manolofortich' ? 'selected' : '' }} >Manolo Fortich</option>
-                                            <option value="malaybalay" {{ old('municipality') == 'malaybalay' ? 'selected' : '' }} >Malaybalay</option>
+                                            <option value="manolofortich"  {{ old('municipality') == 'manolofortich' ? 'selected' : '' }} >Manolo Fortich Branch</option>
+                                            <option value="malaybalay" {{ old('municipality') == 'malaybalay' ? 'selected' : '' }} >Malaybalay City Branch</option>
                                         </select>
                                         <x-input-error :messages="$errors->get('municipality')" class="mt-2 text-[#ff3333] font-bold text-base" />
                                     </div>

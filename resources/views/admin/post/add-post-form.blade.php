@@ -10,7 +10,7 @@
     ];
 
     $post_category = [
-        'news-articles' => 'News Articles',
+        'news-articles' => 'Coop News',
         'public-advisory' => 'Public Advisory',
         'job-opportunities' => 'Job Opportunities',
         'erc' => 'ERC',
@@ -22,7 +22,6 @@
         'district-election' => 'District Election',
         'agma' => 'AGMA',
         'daily-supply-and-load-outlook' => 'Daily Supply and Load Outlook',
-        'coop-news' => 'Coop News',
         'applying-for-membership' => 'Applying for Membership',
         'net-metering' => 'Net Metering',
         'solar-home-system' => 'Solar Home System',

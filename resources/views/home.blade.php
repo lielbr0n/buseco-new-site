@@ -271,7 +271,7 @@
 						{{ $post->post_author_name }}
 					</div> --}}
 					<div class="blog-title mt-2 "><a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}" class="group-hover:text-[#0a961d]">{{ $post->post_title }}</a></div>
-					<div class="blog-description text-justify mt-1" id="blog-description">
+					<div class="blog-description text-justify mt-1 text-wrap overflow-hidden" id="blog-description">
 						@if(empty($post->post_excerpt))
 							{{ Str::of($post->post_content)->words('50', '...')->stripTags()->replace('&nbsp;', '') }}
 						@else
