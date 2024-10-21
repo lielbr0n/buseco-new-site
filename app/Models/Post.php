@@ -47,6 +47,12 @@ class Post extends Model
         return $posts;
     }
 
+    public static function getPostTitleById($postId){
+        $postTitle = Post::findOrFail($postId);
+
+        return $postTitle->post_title;
+    }
+
     public static function getLatestPostNewsAndJobOpp($limit = 4){
         $latestPosts = Post::latest()
         ->where('post_type', 'post')
