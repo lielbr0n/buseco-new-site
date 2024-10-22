@@ -32,7 +32,7 @@
                 selector: 'textarea.post_content',
                 relative_urls: false,
                 plugins: [
-                    'code', 'table', 'lists', 'codesample', 'image', 'file', 'wordcount', 'media', 'link', 'anchor', 'searchreplace', 'help'
+                    'code', 'table', 'lists', 'codesample', 'image', 'wordcount', 'media', 'link', 'anchor', 'searchreplace', 'help'
                 ],
                 menubar: 'file edit view insert format tools table help',
                 toolbar: 'undo redo |  blocks fontsizeinput fontinput  | bold italic underline strikethrough | alignleft aligncenter alignright | indent outdent | bullist numlist | table | link image media | code',
@@ -77,49 +77,68 @@
                     <!-- Side Bar Menu -->
                     <div class="bg-white h-[92vh] hidden sm:block"> <!-- Set the height to 92 vh(view height) -->
                         <ul class="px-2">
-                            <li @class([
-                                'my-1 py-1 hover:bg-[#0a961d] hover:text-white',
-                                'bg-[#0a961d]' => request()->routeIs('dashboard'),
-                            ])>
-                                <a href="{{route('dashboard')}}" @class([
-                                    'block text-base font-medium hover:text-white pl-1',
-                                    'text-white' => request()->routeIs('dashboard'),
-                                    'text-black' => !request()->routeIs('dashboard'),
-                                ])>Dashboard</a>
-                            </li>
-                            <li @class([
-                                'my-1 py-1 hover:bg-[#0a961d]',
-                                'bg-[#0a961d]' => request()->routeIs('post.*'), 
-                            ]) >
-                                <a href="{{route('post.index')}}" @class([
-                                    'block text-base font-medium hover:text-white pl-1',
-                                    'text-white' => request()->routeIs('post.*'),
-                                    'text-black' => !request()->routeIs('post.*'),
-                                ])>Post</a>
-                            </li>
+                            <div class="group">
+                                <li @class([
+                                    'my-1 py-1 group-hover:bg-[#0a961d] hover:text-white',
+                                    'bg-[#0a961d]' => request()->routeIs('dashboard'),
+                                ])>
+                                    <a href="{{route('dashboard')}}" @class([
+                                        'block text-base font-medium group-hover:text-white group-hover:bg-[#0a961d] pl-1',
+                                        'text-white' => request()->routeIs('dashboard'),
+                                        'text-black' => !request()->routeIs('dashboard'),
+                                    ])>Dashboard</a>
+                                </li>
+                            </div>
+                            <div class="group">
+                                <li @class([
+                                    'my-1 py-1 group-hover:bg-[#0a961d]',
+                                    'bg-[#0a961d]' => request()->routeIs('post.*'), 
+                                ]) >
+                                    <a href="{{route('post.index')}}" @class([
+                                        'block text-base font-medium group-hover:text-white group-hover:bg-[#0a961d] pl-1',
+                                        'text-white' => request()->routeIs('post.*'),
+                                        'text-black' => !request()->routeIs('post.*'),
+                                    ])>Post</a>
+                                </li>
+                            </div>
                             
                             @if(Auth::user()->role === "admin" && Auth::user()->status === 1)
-                                <li @class([
-                                    'my-1 py-1 hover:bg-[#0a961d]',
-                                    'bg-[#0a961d]' => request()->routeIs('page.*'),
-                                ]) >
-                                    <a href="{{route('page.index')}}" @class([
-                                        'block text-base font-medium hover:text-white pl-1',
-                                        'text-white' => request()->routeIs('page.*'),
-                                        'text-black' => !request()->routeIs('page.*'),
-                                    ])>Page</a>
-                                </li>
-
-                                <li @class([
-                                    'my-1 py-1 hover:bg-[#0a961d]',
-                                    'bg-[#0a961d]' => request()->routeIs('user.*'),
-                                ]) >
-                                    <a href="{{route('user.index')}}" @class([
-                                        'block text-base font-medium hover:text-white pl-1',
-                                        'text-white' => request()->routeIs('user.*'),
-                                        'text-black' => !request()->routeIs('user.*'),
-                                    ])>Users</a>
-                                </li>
+                                <div class="group">
+                                    <li @class([
+                                        'my-1 py-1 group-hover:bg-[#0a961d]',
+                                        'bg-[#0a961d]' => request()->routeIs('page.*'),
+                                    ]) >
+                                        <a href="{{route('page.index')}}" @class([
+                                            'block text-base font-medium group-hover:text-white group-hover:bg-[#0a961d] pl-1',
+                                            'text-white' => request()->routeIs('page.*'),
+                                            'text-black' => !request()->routeIs('page.*'),
+                                        ])>Page</a>
+                                    </li>
+                                </div>
+                                <div class="group">
+                                    <li @class([
+                                        'my-1 py-1 p group-hover:bg-[#0a961d]',
+                                        'bg-[#0a961d]' => request()->routeIs('user.*'),
+                                    ]) >
+                                        <a href="{{route('user.index')}}" @class([
+                                            'block text-base font-medium group-hover:text-white group-hover:bg-[#0a961d] pl-1',
+                                            'text-white' => request()->routeIs('user.*'),
+                                            'text-black' => !request()->routeIs('user.*'),
+                                        ])>Users</a>
+                                    </li>
+                                </div>
+                                <div class="group">
+                                    <li @class([
+                                        'my-1 py-1 p group-hover:bg-[#0a961d]',
+                                        'bg-[#0a961d]' => request()->routeIs('userpostlogs.*'),
+                                    ]) >
+                                        <a href="{{route('userpostlogs.index')}}" @class([
+                                            'block text-base font-medium group-hover:text-white group-hover:bg-[#0a961d] pl-1',
+                                            'text-white' => request()->routeIs('userpostlogs.*'),
+                                            'text-black' => !request()->routeIs('userpostlogs.*'),
+                                        ])>Logs</a>
+                                    </li>
+                                </div>
                             @endif
                         </ul>
                     </div>

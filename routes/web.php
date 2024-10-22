@@ -7,6 +7,7 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CustomProfileController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\UserPostLogsController;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -65,6 +66,8 @@ Route::middleware(['auth', 'checkUserRoleandIsActive'])->controller(PostControll
     Route::get('/post/edit/{postId}', 'editpost')->name('post.edit');
     Route::patch('/post/update/{postId}', 'updatePost')->name('post.update');
     Route::get('/post/delete/{postId}', 'deletePost')->name('post.delete');
+    Route::get('/post/revision/{postId}', 'postRevisions')->name('post.revisions');
+    Route::get('/post/revisions/modified-fields/{postLogId}', 'postRevisionsModifiedFields')->name('post.revisions.modified.fields');
 });
 
 //admin user routes
@@ -77,6 +80,11 @@ Route::middleware(['auth', 'checkUserRoleandIsActive'])->group(function () {
     Route::get('/userprofile/{userId}', [CustomProfileController::class, 'edit'])->name('user.profile.edit');
     Route::patch('/userprofile/{userId}', [CustomProfileController::class, 'update'])->name('user.profile.update');
     Route::delete('/userprofile/{userId}', [CustomProfileController::class, 'destroy'])->name('user.profile.destroy');
+});
+
+//User post logs
+Route::middleware(['auth', 'checkUserRoleandIsActive'])->group(function () {
+    Route::get('/userpostlogs', [UserPostLogsController::class, 'index'])->name('userpostlogs.index');
 });
 
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {

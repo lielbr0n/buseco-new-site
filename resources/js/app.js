@@ -31,7 +31,7 @@ function filterSlugByPostTitleChange() {
   let postSLug = document.getElementById("post_slug").value;
   let removeCharacters = x.value.replaceAll(/[.,'"=<>%!&:;*+?^${}()|[\]\\]/g, "").toLowerCase(); //remove all characters in the string
   let toSlugVal= removeCharacters.replaceAll(/\s+/g, ' ').replaceAll(' ', '-').toLowerCase(); //first replaceAll is to remove double space, second is to replace all space with "-"
-
+  
   if(!postSLug){
     document.getElementById("post_slug").value = toSlugVal;
   }

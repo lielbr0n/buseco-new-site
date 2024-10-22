@@ -35,7 +35,8 @@ class PostRequest extends FormRequest
         }
         
         return [
-            'post_title' => ['required','max:150'], 
+           // 'post_title' => ['required','max:150'], 
+            'post_title' => ['required'],  //set to no limit 255 
             'post_slug' =>  $post_slug_validation,
             'post_content' => ['required'],
             'post_category' => ['required', 'max:50'],
@@ -45,6 +46,7 @@ class PostRequest extends FormRequest
     }
 
     public function validated($key = null, $default = null){
+        //dd($this->post());
         $validated = parent::validated($key, $default);
         
         $user = $this->user();
@@ -56,21 +58,58 @@ class PostRequest extends FormRequest
         $removedCharacters = Str::of($this->post_slug)->replaceMatches('/[.,"=<>%!&:;*+?^${}()|[\]]++/', ''); //remove characters in the string
         $post_slug = Str::of($removedCharacters)->replaceMatches('!\s+!', ' ')->replace(' ', '-')->lower(); //first replaceMatches is to remove double space, second is to replace all space with "-"
         $finalPostSlug = Str::of($post_slug)->replaceEnd('-', '');
-      
-        return array_merge($validated, [
+
+        //if method is not patch(create post), there is post_author_id and post_author_name field.
+        //else patch(update post), then post_author_id and post_author_name field are removed.
+        $merge_validated_arr = $this->_method !== 'patch' ? 
+        //if create post array
+        array_merge($validated, [
             'post_title' => $this->post_title,
-            'post_slug' => $finalPostSlug,
+            'post_slug' => $finalPostSlug->value,
             'post_content' => $this->post_content,
             'post_author_id' => $user->id,
             'post_author_name' => $user->name,
             'post_excerpt' => $this->post_excerpt ? $this->post_excerpt : NULL,
             'post_category' => $this->post_category,
             'post_tags' => '',
-            // 'post_template' => $this->post_template,
             'post_status' => $this->post_status,
             'post_option' => $this->post_show_posttitle,
-            'post_feature_image' => $this->filepath ? $feature_img_path : NULL,
+            'post_feature_image' => $this->filepath ? $feature_img_path->value : NULL,
             'post_type' => 'post'
-        ]);
+        ]) : 
+        //if update post array
+        array_merge($validated, [
+            'post_title' => $this->post_title,
+            'post_slug' => $finalPostSlug->value,
+            'post_content' => $this->post_content,
+            'post_excerpt' => $this->post_excerpt ? $this->post_excerpt : NULL,
+            'post_category' => $this->post_category,
+            'post_tags' => '',
+            'post_status' => $this->post_status,
+            'post_option' => $this->post_show_posttitle,
+            'post_feature_image' => $this->filepath ? $feature_img_path->value : NULL,
+            'post_type' => 'post'
+        ]); 
+
+        return $merge_validated_arr;
+        // return array_merge($validated, [
+        //     'post_title' => $this->post_title,
+        //     'post_slug' => $finalPostSlug->value,
+        //     'post_content' => $this->post_content,
+        //     ($this->_method !== 'patch' ? "post_author_id" : "") => ($this->_method !== 'patch' ? $user->id : ""),
+        //     ($this->_method !== 'patch' ? "post_author_name" : "") => ($this->_method !== 'patch' ? $user->name : ""),
+        //     //'post_author_id' => $user->id,
+        //     //'post_author_name' => $user->name,
+        //     //'post_author_id' => !request()->postId { $this->post_author_id },
+        //     //'post_author_name' => $this->post_author_name,
+        //     'post_excerpt' => $this->post_excerpt ? $this->post_excerpt : NULL,
+        //     'post_category' => $this->post_category,
+        //     'post_tags' => '',
+        //     // 'post_template' => $this->post_template,
+        //     'post_status' => $this->post_status,
+        //     'post_option' => $this->post_show_posttitle,
+        //     'post_feature_image' => $this->filepath ? $feature_img_path : NULL,
+        //     'post_type' => 'post'
+        // ]);
     }
 }
