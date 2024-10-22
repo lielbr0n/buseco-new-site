@@ -35,7 +35,8 @@ class PostRequest extends FormRequest
         }
         
         return [
-            'post_title' => ['required','max:150'], 
+           // 'post_title' => ['required','max:150'], 
+            'post_title' => ['required'],  //set to no limit 255 
             'post_slug' =>  $post_slug_validation,
             'post_content' => ['required'],
             'post_category' => ['required', 'max:50'],
