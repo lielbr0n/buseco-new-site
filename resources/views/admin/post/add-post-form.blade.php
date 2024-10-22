@@ -54,7 +54,7 @@
                     <path d="M14.25 5.25a5.23 5.23 0 0 0-1.279-3.434 9.768 9.768 0 0 1 6.963 6.963A5.23 5.23 0 0 0 16.5 7.5h-1.875a.375.375 0 0 1-.375-.375V5.25Z" />
                 </svg>   
                 Add Post
-            </a>
+            </a> 
         </div>
     </x-slot>
 
@@ -68,6 +68,17 @@
                         <!-- if there is pageId, method patch is added because it is update -->
                         @if(request()->postId)
                             @method('patch')
+                        @endif
+                        
+                        @if(request()->postId && count($postLogsInfo))
+                            <div class="flex">
+                                <a href="{{route('post.revisions', ['postId' => request()->postId])}}" class="flex items-center ml-auto font-semibold text-base text-[#0000ff] hover:underline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 mr-[4px]">
+                                        <path fill-rule="evenodd" d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z" clip-rule="evenodd" />
+                                    </svg>
+                                    Revisions
+                                </a>
+                            </div>
                         @endif
 
                         <div>
