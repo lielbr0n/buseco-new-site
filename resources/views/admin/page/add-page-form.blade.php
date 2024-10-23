@@ -36,7 +36,6 @@
         'erc' => 'ERC',
         'publication' => 'Publication',
         'services' => 'Services',
-        'institute_advisory' => 'Institutional Advisory',
         'bids_awards' => 'Bids & Awards',
         'rcoa' => 'RCOA',
         'monthly-generation-mix-under-oath' => 'Monthly Generation Mix Under Oath',
