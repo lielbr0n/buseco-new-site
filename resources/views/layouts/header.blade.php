@@ -64,7 +64,7 @@
                             <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -right-[185px] -top-[1px] bottom-[33px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
-                                <li><a href="/bids-awards-committee" class="block w-full ">BIDS & AWARDS</a></li>
+                                <li><a href="/bids-&-awards" class="block w-full ">BIDS & AWARDS</a></li>
                                 <li><a href="/csp" class="block w-full ">CSP</a></li>
                                 <li><a href="/district-election" class="block w-full ">DISTRICT ELECTION</a></li>
                                 <li><a href="/agma" class="block w-full ">AGMA</a></li>
@@ -341,7 +341,7 @@
                                     x-transition:leave-start="opacity-100 scale-100"
                                     x-transition:leave-end="opacity-0 scale-95"
                                 >
-                                    <a href="/bids-awards-committee" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">BIDS & AWARDS</a>
+                                    <a href="/bids-&-awards" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">BIDS & AWARDS</a>
                                     <a href="/csp" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">CSP</a>
                                     
                                     <a href="/district-election" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">DISTRICT ELECTION</a>
