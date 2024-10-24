@@ -38,7 +38,7 @@ class PageRequest extends FormRequest
         return [
             'post_title' => ['required','max:255'], 
             'post_slug' =>  $post_slug_validation,
-            'post_content' => ['required'],
+            'post_content',
             'post_category' => ['required'],
             'post_template' => ['required'],
             'post_status' => ['required']
@@ -66,6 +66,7 @@ class PageRequest extends FormRequest
             'post_status' => $this->post_status,
             'post_option' => $this->post_show_pagetitle,
             'post_type' => 'page'
-        ]);
+        ]); 
     }
+    
 }
