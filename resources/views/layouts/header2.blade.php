@@ -178,7 +178,7 @@
                 </a>
 
                 <ul class="dropdown-content absolute hidden text-gray-700 pl-5 ml-24 -mt-10">
-                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/bids-&-awards">BIDS & AWARDS</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/bids-awards-committee">BIDS & AWARDS</a>
                     <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/district-election">DISTRICT ELECTION</a>
                     <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/agma">AGMA</a>
                 </ul>
@@ -427,7 +427,7 @@
                             <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -bottom-4 hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
-                                <li><a href="/bids-&-awards" class="block w-full ">BIDS & AWARDS</a></li>
+                                <li><a href="/bids-awards-committee" class="block w-full ">BIDS & AWARDS</a></li>
                                 <li><a href="/district-election" class="block w-full ">DISTRCIT ELECTION</a></li>
                                 <li><a href="/agma" class="block w-full ">AGMA</a></li>
                             </div>
