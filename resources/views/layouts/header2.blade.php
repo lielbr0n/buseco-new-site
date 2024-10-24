@@ -178,7 +178,7 @@
                 </a>
 
                 <ul class="dropdown-content absolute hidden text-gray-700 pl-5 ml-24 -mt-10">
-                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/bids-&-awards">BIDS & AWARDS</a>
+                    <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/bids-awards-committee">BIDS & AWARDS</a>
                     <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/district-election">DISTRICT ELECTION</a>
                     <li><a class="bg-gray-200 hover:bg-[#2C8D0A] hover:text-[#ffffff] text-sm font-medium text-neutral-700 py-2 px-4 block whitespace-no-wrap" href="/agma">AGMA</a>
                 </ul>
@@ -207,11 +207,7 @@
                     >JOB OPPORTUNITIES</a>
                 </li>
                 <li>
-                <a
-                    class="block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-medium text-neutral-700 hover:bg-[#2C8D0A] hover:text-[#ffffff] focus:bg-zinc-200/60 focus:bg-zinc-200/60 focus:outline-none active:bg-zinc-200/60 active:no-underline dark:bg-surface-dark dark:text-white dark:hover:bg-neutral-800/25 dark:focus:bg-neutral-800/25 dark:active:bg-neutral-800/25"
-                    href="/institutional-advisories"
-                    data-twe-dropdown-item-ref
-                    >INSTITUTIONAL ADVISORIES</a>
+                
                 </li>
                 <li class="dropdown">
                 <a
@@ -431,7 +427,7 @@
                             <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -bottom-4 hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
-                                <li><a href="/bids-&-awards" class="block w-full ">BIDS & AWARDS</a></li>
+                                <li><a href="/bids-awards-committee" class="block w-full ">BIDS & AWARDS</a></li>
                                 <li><a href="/district-election" class="block w-full ">DISTRCIT ELECTION</a></li>
                                 <li><a href="/agma" class="block w-full ">AGMA</a></li>
                             </div>
@@ -439,7 +435,6 @@
                             <li><a href="/erc" class="block w-full ">ERC</a></li>
                             <li><a href="/coop-news" class="block w-full ">COOP NEWS</a></li>
                             <li><a href="/job-opportunities" class="block w-full ">JOB OPPORTUNITIES</a></li>
-                            <li><a href="/institutional-advisories" class="block w-full ">INSTITUTIONAL ADVISORIES</a></li>
 
                             <li class="flex items-center justify-between" 
                                 x-on:click="servicesMenu = ! servicesMenu" 
@@ -522,7 +517,6 @@
                             <a href="/erc" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">ERC</a>
                             <a href="/coop-news" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">COOP NEWS</a>
                             <a href="job-opportunities" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">JOB OPPORTUNITIES</a>
-                            <a href="institutional-advisories" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">INSTITUTIONAL ADVISORIES</a>
                             <a href="/services" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">SERVICES</a>
                             
                         </div> 
