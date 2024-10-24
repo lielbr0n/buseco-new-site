@@ -19,7 +19,7 @@
         <div class="img-wrapper h-[130px]">
             <a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">
                 {{--<img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />--}}
-                <img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-300px h-117px" />
+                <img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-150px h-150px" />
 
             </a>
         </div>
