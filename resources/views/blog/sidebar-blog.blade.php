@@ -18,7 +18,9 @@
     <div class="bg-[#e9e8e8] p-[8px] mt-[10px] first:mt-0" style="box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 5px 0 rgba(0, 0, 0, 0.19);">
         <div class="img-wrapper h-[130px]">
             <a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">
-                <img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />
+                {{--<img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />--}}
+                <img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-300px h-117px" />
+
             </a>
         </div>
         <div class="mt-1 flex items-center">
