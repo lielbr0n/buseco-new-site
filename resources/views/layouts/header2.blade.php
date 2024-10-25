@@ -349,7 +349,7 @@
                 aria-expanded="false"
                 data-twe-ripple-init
                 data-twe-ripple-color="light">
-            ABOUT BUSECO
+            ABOUT US
             <span class="ms-1 w-2 [&>svg]:h-5 [&>svg]:w-5">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -571,7 +571,7 @@
 
                 <div class="-mx-3" x-data="{ isOpen: false }">
                         <button type="button" @click="isOpen = !isOpen" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-gray-900 hover:bg-[#2C8D0A] active:bg-[#2C8D0A] active:text-[#ffffff]  focus:text-[#ffffff] " aria-controls="disclosure-1" aria-expanded="false">
-                ABOUT BUSECO
+                ABOUT US
                 <svg class="h-5 w-5 flex-none " viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" :class="{ 'rotate-180': isOpen }">
                             <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
                         </svg>
