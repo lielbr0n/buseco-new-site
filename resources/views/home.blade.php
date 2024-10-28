@@ -180,7 +180,7 @@
 				<div class="col-span-3 md:col-span-1 my-auto md:pl-4">
 					<h2 class="text-2xl font-medium text-center md:text-left">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
 					<br />
-					<p class="text-justify mb-4">
+					<p class="text-justify mb-4"> 
 					Bukidnon II Electric Cooperative, Inc. (BUSECO) is a non-stock, non-profit electric cooperative duly organized and existing under and by virtue of the provisions of P.D. 269 and the laws of the Republic of the Philippines. </p>
 					<p class="text-justify mb-4">It was registered with the National Electrification Administration on July 28, 1977. Its franchise was granted permanent on June 10, 1981. </p>
 					<p class="text-justify mb-4">Operations started on February 2, 1970 when BUSECO took over Manolo Fortich Municipal Electrical System, even if the first energization was on June 29, 1979. </p>
@@ -189,6 +189,29 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="advisories py-16 px-5" id="advisories">
+		<div class="grid grid-cols-1 sm:grid-cols-2 mx-auto gap-4 border-2 border-[#2C8D0A]">
+			<div class="flex justify-center items-center">
+				<h2 class="text-5xl font-bold">BUSECO Advisory!</h2>
+				<img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" />
+			</div>
+			<div @class(['flex' => count($latestPublicAdvisories) === 0])>
+				<ul @class([
+					'mx-auto my-auto' => count($latestPublicAdvisories) === 0, //hidden if null
+				])>
+					@forelse($latestPublicAdvisories as $advisory)
+						<li class="border-b border-gray-500 my-1 py-2">
+							<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="{{route('blog.single', ['postSlug' => $advisory->post_slug] )}}">{{$advisory->post_title}}</a>
+							<p class="text-sm">{{ date_format($advisory->created_at,"F d, Y h:i:s a") }}</p>
+						</li> 
+					@empty
+						<li class="text-xl font-medium text-red-600">No advisory as of the moment.</li>
+					@endforelse
+				</ul>
+			</div>
+		</div>
+	</div> <br>
 
 	<div class="membership pl-6 pr-6 pb-6" id="membership">
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
@@ -303,7 +326,7 @@
 		</div>
 	</div>
 
-	<div class="advisories py-16 px-5" id="advisories">
+	{{--<div class="advisories py-16 px-5" id="advisories">
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 			<div class="flex justify-center items-center">
 				<h2 class="text-5xl font-bold">BUSECO Advisory!</h2>
@@ -324,7 +347,7 @@
 				</ul>
 			</div>
 		</div>
-	</div>
+	</div>--}}
 </x-home-layout>
   
   
