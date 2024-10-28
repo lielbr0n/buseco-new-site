@@ -59,7 +59,8 @@
         'rates-2022' => 'Rates 2022',
         'rates-2023' => 'Rates 2023',
         'rates-2024' => 'Rates 2024',
-        'rates-2025' => 'Rates 2025'
+        'rates-2025' => 'Rates 2025',
+        'rates-2026' => 'Rates 2026'
 
     ];
 @endphp
