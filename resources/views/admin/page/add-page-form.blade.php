@@ -36,7 +36,8 @@
         'erc' => 'ERC',
         'publication' => 'Publication',
         'services' => 'Services',
-        'bids_awards' => 'Bids & Awards',
+        '_awards' => 'Bids & Awards',
+        'faq' => 'FAQs',
         'rcoa' => 'RCOA',
         'monthly-generation-mix-under-oath' => 'Monthly Generation Mix Under Oath',
         'district-election' => 'District Election',
@@ -57,7 +58,8 @@
         'rates-2021' => 'Rates 2021',
         'rates-2022' => 'Rates 2022',
         'rates-2023' => 'Rates 2023',
-        'rates-2024' => 'Rates 2024'
+        'rates-2024' => 'Rates 2024',
+        'rates-2025' => 'Rates 2025'
 
     ];
 @endphp

@@ -88,9 +88,9 @@
             <p>Manolo Fortich Branch: 7:00AM-5:00PM</p>
             <p>Malaybalay City Branch: 7:00AM-5:00PM</p>
         <br>
-            <h2 class="branch-title"><b>SATURDAY</b></h2>
-            <p>Manolo Fortich Branch: 7:00AM-12:00PM</p>
-            <p>Malaybalay City Branch: 7:00AM-12:00PM</p>
+            <h2 class="branch-title"><b>SATURDAYS and HOLIDAYS</b></h2>
+            <p>Manolo Fortich Branch: 8:00AM-12:00PM</p>
+            <p>Malaybalay City Branch: 8:00AM-12:00PM</p>
         </div>
          <!--footer4 -->      
         <div class="links-info">
