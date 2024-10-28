@@ -60,7 +60,7 @@
 				data-twe-carousel-fade
 				data-twe-carousel-item>
 				<img
-					src="{{url('/images/mco.png')}}"
+					src="{{url('/images/MCOS.png')}}"
 					class="block w-full"
 					alt="buseco" />
 				</div>
@@ -190,29 +190,6 @@
 		</div>
 	</div>
 
-	<div class="advisories py-16 px-5" id="advisories">
-		<div class="grid grid-cols-1 sm:grid-cols-2 mx-auto gap-4 border-2 border-[#2C8D0A]">
-			<div class="flex justify-center items-center">
-				<h2 class="text-5xl font-bold">BUSECO Advisory!</h2>
-				<img class="h-20 w-auto" src="{{url('/images/advisory.png')}}" alt="advisory" />
-			</div>
-			<div @class(['flex' => count($latestPublicAdvisories) === 0])>
-				<ul @class([
-					'mx-auto my-auto' => count($latestPublicAdvisories) === 0, //hidden if null
-				])>
-					@forelse($latestPublicAdvisories as $advisory)
-						<li class="border-b border-gray-500 my-1 py-2">
-							<a class="text-lg font-medium text-red-600 hover:text-red-400 advisory-links" href="{{route('blog.single', ['postSlug' => $advisory->post_slug] )}}">{{$advisory->post_title}}</a>
-							<p class="text-sm">{{ date_format($advisory->created_at,"F d, Y h:i:s a") }}</p>
-						</li> 
-					@empty
-						<li class="text-xl font-medium text-red-600">No advisory as of the moment.</li>
-					@endforelse
-				</ul>
-			</div>
-		</div>
-	</div> <br>
-
 	<div class="membership pl-6 pr-6 pb-6" id="membership">
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<h2 class="text-center font-medium text-[32px] mt-6 mb-2">APPLYING FOR MEMBERSHIP</h2>
@@ -326,7 +303,7 @@
 		</div>
 	</div>
 
-	{{--<div class="advisories py-16 px-5" id="advisories">
+	<div class="advisories py-16 px-5" id="advisories">
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 			<div class="flex justify-center items-center">
 				<h2 class="text-5xl font-bold">BUSECO Advisory!</h2>
@@ -347,7 +324,7 @@
 				</ul>
 			</div>
 		</div>
-	</div>--}}
+	</div>
 </x-home-layout>
   
   

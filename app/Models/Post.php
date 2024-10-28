@@ -88,7 +88,7 @@ class Post extends Model
         return $latestPosts;
     }
 
-    public static function getPostAdvisories($limit = 3){
+    public static function getPostAdvisories($limit = 4){
         $latestAdvisory = Post::latest()
         ->where('post_type', 'post')
         ->where('post_category', 'public-advisory')
