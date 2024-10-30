@@ -79,18 +79,18 @@
         <!--footer3 -->
         <div class="branch-info">
             <h2 class="footer-title mb-2 lg:mb-6 border-b w-full md:w-11/12">OFFICE HOURS</h2>
-            <h2 class="branch-title"><b>MONDAY - FRIDAY</b></h2>
-            <p>Manolo Fortich Branch: 8:00AM-5:00PM</p>
-            <p>Malaybalay City Branch: 8:00AM-5:00PM</p>
+            <h2 class="branch-title"><b>MONDAY - FRIDAY 8:00AM-5:00PM</b></h2>
+            <!--<p>Manolo Fortich Branch: 8:00AM-5:00PM</p>-->
+            <!--<p>Malaybalay City Branch: 8:00AM-5:00PM</p>-->
         <br>
             <h2 class="footer-title mb-2 lg:mb-6 border-b w-full md:w-11/12">COLLECTION HOURS</h2>
-            <h2 class="branch-title"><b>MONDAY - FRIDAY</b></h2>
-            <p>Manolo Fortich Branch: 7:00AM-5:00PM</p>
-            <p>Malaybalay City Branch: 7:00AM-5:00PM</p>
-        <br>
+            <h2 class="branch-title"><b>MONDAY - FRIDAY 7:00AM-5:00PM</b></h2>
+            <!--<p>Manolo Fortich Branch: 7:00AM-5:00PM</p>-->
+            <!--<p>Malaybalay City Branch: 7:00AM-5:00PM</p>-->
             <h2 class="branch-title"><b>SATURDAYS and HOLIDAYS</b></h2>
-            <p>Manolo Fortich Branch: 8:00AM-12:00PM</p>
-            <p>Malaybalay City Branch: 8:00AM-12:00PM</p>
+            <p><b>8:00AM-12:00PM</b></p>
+            <!--<p>Manolo Fortich Branch: 8:00AM-12:00PM</p>-->
+            <!--<p>Malaybalay City Branch: 8:00AM-12:00PM</p>-->
         </div>
          <!--footer4 -->      
         <div class="links-info">
