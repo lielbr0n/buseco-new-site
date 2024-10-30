@@ -40,6 +40,7 @@
                                         </div>
                                     @endforeach
                                 </div>
+                                {{ $postInfo->links() }}  
                             </div>
                         </div>
                     @else
