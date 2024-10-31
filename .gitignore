@@ -4,6 +4,7 @@
 /public/hot
 /public/storage
 /public/.htaccess
+/public
 /storage/*.key
 /vendor
 bootstrap/cache
