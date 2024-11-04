@@ -462,7 +462,7 @@
             </div>
 
             <a href="{{route('contactus')}}" class="nav-link text-sm font-semibold leading-6 text-gray-900 active:text-[#2C8D0A]">CONTACT US</a>
-            <a href="https://buseco.coop/my-account-login/" class="account-button">MY ACCOUNT</a>
+            <a href="https://myaccount.buseco.coop/" class="account-button">MY ACCOUNT</a>
         </div>
     </nav>
     <!-- Mobile menu, show/hide based on menu open state. -->
@@ -595,7 +595,7 @@
 
                 <a href="/contact-us" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900  hover:text-[#ffffff]  hover:bg-[#2C8D0A]">CONTACT US</a>
                 <br>
-                <a href="/my-account" class="account-button">MY ACCOUNT</a>
+                <a href="https://myaccount.buseco.coop/" class="account-button">MY ACCOUNT</a>
                 {{-- <div class="py-6">
                 <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log in</a>
                 </div> --}}
