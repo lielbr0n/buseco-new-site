@@ -98,7 +98,7 @@
 
             <a href="https://online.buseco.coop/" class="link-footer">Membership Application</a><br />
             <a href="https://reconnect.buseco.coop/" class="link-footer">Reconnection Application</a><br />
-            <a href="https://buseco.coop/my-account-login/" class="link-footer">My Account</a><br />
+            <a href="https://myaccount.buseco.coop/" class="link-footer">My Account</a><br />
             <a href="/coop-news" class="link-footer">News and Updates</a><br />
             <a href="/privacy" class="link-footer">Privacy</a><br />
         </div>
