@@ -91,7 +91,7 @@
                     <div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
                         <div class="grid grid-cols-2 px-6 py-8 gap-4">             
                             <div class="col-span-2">
-                                    <img src="{{url('/images/contact-numbers.png')}}" class="w-full h-auto" />
+                                    <img src="{{url('/images/contact-banner.png')}}" class="w-full h-auto" />
                             </div>
                         </div>
                     </div>
