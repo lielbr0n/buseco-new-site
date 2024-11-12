@@ -50,7 +50,7 @@
 				data-twe-carousel-item
 				data-twe-carousel-active>
 				<img
-					src="{{url('/images/obb.png')}}"
+					src="{{url('/images/bw.png')}}"
 					class="block w-full"
 					alt="buseco" />
 				</div>
@@ -80,7 +80,7 @@
 				data-twe-carousel-fade
 				data-twe-carousel-item>
 				<img
-					src="{{url('/images/cb.png')}}"
+					src="{{url('/images/contact-banner.png')}}"
 					class="block w-full"
 					alt="buseco" />
 				</div>
@@ -175,7 +175,7 @@
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<div class="grid grid-cols-3 px-6 py-8 gap-4">
 				<div class="col-span-3 md:col-span-2 my-auto">
-					<img src="{{url('/images/obb.png')}}" class="w-full h-auto" />
+					<img src="{{url('/images/bw.png')}}" class="w-full h-auto" />
 				</div>
 				<div class="col-span-3 md:col-span-1 my-auto md:pl-4">
 					<h2 class="text-2xl font-medium text-center md:text-left">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
@@ -297,7 +297,7 @@
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<div class="grid grid-cols-3 px-6 py-8 gap-2">
 				<div class="col-span-3">
-					<img src="{{url('/images/payment-method.png')}}" class="w-full h-auto" />
+					<img src="{{url('/images/payment-options.png')}}" class="w-full h-auto" />
 				</div>
 			</div>
 		</div>
