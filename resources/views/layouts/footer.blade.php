@@ -9,7 +9,7 @@
         <a href="https://www.napocor.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/npr-150.png')}}" alt="" /></a>
         <a href="https://tinyurl.com/BSTCorp/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/bstclogo-150.png')}}" alt="" /></a>
         <a href="https://psalm.gov.ph/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/PSALMlogo-150.png')}}" alt="" /></a>
-        <a href="https://test.buseco.coop/privacy/" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/CORSeal-150.png')}}" alt="" /></a>
+        <a href="https://buseco.coop/privacy" class="hover:scale-110"><img class="h-auto sm:h-20 w-auto" src="{{url('/images/CORSeal-150.png')}}" alt="" /></a>
     </div>
 </div>
 <!--end logos-->
