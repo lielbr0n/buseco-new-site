@@ -50,7 +50,7 @@
 				data-twe-carousel-item
 				data-twe-carousel-active>
 				<img
-					src="{{url('/images/bw.png')}}"
+					src="{{url('/images/obb.png')}}"
 					class="block w-full"
 					alt="buseco" />
 				</div>
