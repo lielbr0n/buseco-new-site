@@ -16,4 +16,4 @@ Message:
 
 <br/>
 <br/>
-<img src="https://buseco.coop/wp-content/uploads/2018/09/cropped-buseco_png-1-1.png" height="59" width="150" alt="BUSECO" />
+<img src="https://buseco.coop/images/buseco.png" height="59" width="150" alt="BUSECO" />
