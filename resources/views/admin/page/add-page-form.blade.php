@@ -65,6 +65,20 @@
     ];
 @endphp
 
+@php 
+    function addAltToImages($content) {
+        // Use regex to find all <img> tags and add alt attributes if they are missing
+        return preg_replace_callback('/<img[^>]+src=["\']([^"\']+)["\'][^>]*>/', function($matches) {
+            // Extract the src attribute
+            $src = $matches[1];
+            // Define a default alt text or generate it based on the src
+            $altText = 'Image related to ' . basename($src); // Example: using the image filename as part of the alt text
+            // Return the modified img tag with the alt attribute
+            return str_replace('>', ' alt="' . htmlspecialchars($altText) . '">', $matches[0]);
+        }, $content);
+    }
+@endphp
+
 <x-app-layout>
     <x-slot name="header">
         <div class="flex items-center">

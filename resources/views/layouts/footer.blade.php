@@ -93,7 +93,7 @@
         </div>
          <!--footer4 -->      
         <div class="links-info">
-            <h2 class="footer-title mb-2 lg:mb-6 border-b w-full md:w-11/12">LINKS</h2>
+            <h2 class="footer-title mb-4 lg:mb-6 border-b w-full md:w-11/12">LINKS</h2>
 
             <a href="https://online.buseco.coop/" class="link-footer">Membership Application</a><br />
             <a href="https://reconnect.buseco.coop/" class="link-footer">Reconnection Application</a><br />

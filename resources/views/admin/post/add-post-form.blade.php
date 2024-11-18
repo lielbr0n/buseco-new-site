@@ -154,7 +154,8 @@
                            
                             <div class="w-3/12">
                                 <div id="holder" style="margin-top:15px"></div>
-                                <img id="preview_fromDb" class="w-full" src="{{ old('filepath', $postInfo->post_feature_image ?? null) }}">
+                                <img id="preview_fromDb" class="w-full" src="{{ old('filepath', $postInfo->post_feature_image ?? null) }}"
+                                alt="{{ old('filename', 'Feature Image Preview') }}">
                             </div>
                         </div>
                     
