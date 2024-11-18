@@ -158,6 +158,9 @@ footer{
         .link-footer{
             text-decoration: underline;
             font-size: 17px;
+            min-width: 48px;
+            min-height: 48px;
+            transition: color 0.3s ease;
 
             &:hover{
                 color: #ffffff;

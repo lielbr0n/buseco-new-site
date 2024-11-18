@@ -175,7 +175,7 @@
 		<div class="mx-auto max-w-screen-xl border-2 border-[#2C8D0A]">
 			<div class="grid grid-cols-3 px-6 py-8 gap-4">
 				<div class="col-span-3 md:col-span-2 my-auto">
-					<img src="{{url('/images/bw.png')}}" class="w-full h-auto" />
+					<img src="{{url('/images/bw.png')}}" alt="oldbuseco" class="w-full h-auto" />
 				</div>
 				<div class="col-span-3 md:col-span-1 my-auto md:pl-4">
 					<h2 class="text-2xl font-medium text-center md:text-left">BUKIDNON II ELECTRIC COOPERATIVE, INC.</h2>
@@ -195,28 +195,28 @@
 			<h2 class="text-center font-medium text-[32px] mt-6 mb-2">APPLYING FOR MEMBERSHIP</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-6 py-8 gap-8 lg:gap-4">
 				<div class="group">
-					<a href="/applying-for-membership"><img src="{{url('/images/step-1.png')}}" class="w-full h-auto" /></a>
+					<a href="/applying-for-membership"><img src="{{url('/images/step-1.png')}}" alt="Step 1: Applying for Membership" class="w-full h-auto" /></a>
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 1: COMPLETE THE APPLICATION</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6">Applicants will be required to submit application.</p>
 					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small group-hover:bg-[#ffffff] group-hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div class="group">
-					<a href="/applying-for-membership"><img src="{{url('/images/step-2.png')}}" class="w-full h-auto" /></a>
+					<a href="/applying-for-membership"><img src="{{url('/images/step-2.png')}}" alt="Step 2: Applying for Membership" class="w-full h-auto" /></a>
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 2: PAYMENT</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to pay.</p>
 					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small group-hover:bg-[#ffffff] group-hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div class="group">
-					<a href="/applying-for-membership"><img src="{{url('/images/step-3.png')}}" class="w-full h-auto" /></a>
+					<a href="/applying-for-membership"><img src="{{url('/images/step-3.png')}}" alt="Step 3: Applying for Membership" class="w-full h-auto" /></a>
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 3: TAKE THE ONLINE EXAM</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6 my-auto">Applicants will be required to attend the online PMES and take the exam. </p>
 					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small group-hover:bg-[#ffffff] group-hover:text-black" role="button">READ MORE</a>
 				</div>
 				<div class="group">
-					<a href="/applying-for-membership"><img src="{{url('/images/step-4.png')}}" class="w-full h-auto" /></a>
+					<a href="/applying-for-membership"><img src="{{url('/images/step-4.png')}}" alt="Step 4: Applying for Membership" class="w-full h-auto" /></a>
 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 4: SUBMIT REQUIREMENTS</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-11/12 lg:w-36 font-medium mx-auto mt-6 my-auto">All applicants will be required to process and submit necessary requirements to the Buseco Office.</p>
