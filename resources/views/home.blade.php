@@ -254,7 +254,7 @@
 				<div class="group">
 					<div class="blog-img-container h-[200px] border-2 border-[#808080] group-hover:outline group-hover:outline-1 group-hover:outline-[#2F3C45]">
 						<a href="{{route('blog.single', ['postSlug' => $post->post_slug] )}}">
-							<img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full" />
+							<img src="{{url($post->post_feature_image ?? 'images/busecoborder.png')}}" class="object-cover w-full h-full alt="{{ $post->post_title }}" />
 						</a>
 					</div>
 					<div class="blog-date mt-1 flex items-center">

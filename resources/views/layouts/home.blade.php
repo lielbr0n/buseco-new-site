@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Buseco') }}</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
         <!-- Primary Meta Tags -->
             <title>Buseco Official Website</title>
             <meta name="title" content="Buseco Official Website" />
@@ -31,7 +31,7 @@
             BUSECO (Bukidnon Second Electric Cooperative, Inc.) is an electric cooperative dedicated to providing reliable and sustainable energy solutions to the communities of Bukidnon. Committed to innovation and environmental responsibility, BUSECO ensures access to affordable electricity while supporting the province’s growth and development." />
             <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
 
-            <!-- Meta Tags -->
+            <!-- Meta Tags-->
 
         <link rel="icon" href="{{ url('images/buseco.png') }}">
         
