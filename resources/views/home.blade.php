@@ -51,7 +51,7 @@
 				data-twe-carousel-active>
 				<img
 					src="{{url('/images/obb.png')}}"
-					class="block w-full"
+					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
 				<!--Second item-->
@@ -61,7 +61,7 @@
 				data-twe-carousel-item>
 				<img
 					src="{{url('/images/MCOS.png')}}"
-					class="block w-full"
+					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
 				<!--Third item-->
@@ -71,7 +71,7 @@
 				data-twe-carousel-item>
 				<img
 					src="{{url('/images/pob.png')}}"
-					class="block w-full"
+					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
 				<!--Fourth item-->
@@ -81,7 +81,7 @@
 				data-twe-carousel-item>
 				<img
 					src="{{url('/images/contact-banner.png')}}"
-					class="block w-full"
+					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
 			</div>
