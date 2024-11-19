@@ -11,6 +11,10 @@
     object-position: center;
 }
 
+.aspect-16-9{
+    aspect-ratio: 16/9;
+}
+
 .link-wrapper{
     li:hover{
         svg{
