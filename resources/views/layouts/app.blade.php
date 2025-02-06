@@ -17,6 +17,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <script>
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        </script>
 
         <!-- 
             tinymce js source from public/js/tinymce folder
