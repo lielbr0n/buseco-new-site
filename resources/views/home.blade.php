@@ -2,6 +2,18 @@
   	{{-- <div class="banner" id="banner">
 		<img src="{{url('/images/.png')}}" alt="buseco" class="img-banner"/>
 	</div> --}}
+	<script>
+		document.addEventListener('contextmenu', event => event.preventDefault());
+	</script>
+	<script>
+		document.addEventListener('keydown', function(event) {
+			if (event.key === "F12" || 
+				(event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) || 
+				(event.ctrlKey && event.key === 'U')) {
+				event.preventDefault();
+			}
+		});
+	</script>
 
 	<div
 		id="banner"
