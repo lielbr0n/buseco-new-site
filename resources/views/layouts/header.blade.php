@@ -61,13 +61,14 @@
                                     <path fill-rule="evenodd" d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z" clip-rule="evenodd" />
                                 </svg> 
                             </li>
-                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -right-[185px] -top-[1px] bottom-[33px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
+                            <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -right-[185px] -top-[1px] bottom-[-2px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/bids-awards-committee" class="block w-full ">BIDS & AWARDS</a></li>
                                 <li><a href="/csp" class="block w-full ">CSP</a></li>
                                 <li><a href="/district-election" class="block w-full ">DISTRICT ELECTION</a></li>
                                 <li><a href="/agma" class="block w-full ">AGMA</a></li>
+                                <li><a href="/pspp-2024" class="block w-full ">PSPP</a></li>
                             </div>
                             <li><a href="/erc" class="block w-full ">ERC</a></li>
                             <li><a href="/coop-news" class="block w-full ">COOP NEWS</a></li>
@@ -347,6 +348,7 @@
                                     
                                     <a href="/district-election" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">DISTRICT ELECTION</a>
                                     <a href="/agma" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">AGMA</a>
+                                    <a href="/pspp-2024" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">PSPP</a>
                                 </div> 
                             </div>
                             <a href="/erc" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">ERC</a>
