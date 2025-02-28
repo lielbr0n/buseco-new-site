@@ -21,6 +21,20 @@
             document.addEventListener('contextmenu', event => event.preventDefault());
         </script>
 
+        <script>
+            document.addEventListener('contextmenu', event => event.preventDefault());
+        </script>
+        <script>
+            document.addEventListener('keydown', function(event) {
+                if (event.key === "F12" || 
+                    (event.ctrlKey && event.shiftKey && (event.key === 'I' || event.key === 'J')) || 
+                    (event.ctrlKey && event.key === 'U')) {
+                    event.preventDefault();
+                }
+            });
+        </script>
+
+
         <!-- 
             tinymce js source from public/js/tinymce folder
             installation using self-hosted: https://www.tiny.cloud/docs/tinymce/latest/npm-projects/
