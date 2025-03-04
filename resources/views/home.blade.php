@@ -2,7 +2,7 @@
   	{{-- <div class="banner" id="banner">
 		<img src="{{url('/images/.png')}}" alt="buseco" class="img-banner"/>
 	</div> --}}
-	<script>
+	<!-- <script>
 		document.addEventListener('contextmenu', event => event.preventDefault());
 	</script>
 	<script>
@@ -13,7 +13,7 @@
 				event.preventDefault();
 			}
 		});
-	</script>
+	</script> -->
 
 	<div
 		id="banner"
@@ -208,7 +208,7 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-6 py-8 gap-8 lg:gap-4">
 				<div class="group">
 					<a href="/applying-for-membership"><img src="{{url('/images/step-1.png')}}" alt="Step 1: Applying for Membership" class="w-full h-auto" /></a>
-					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 1: COMPLETE THE APPLICATION</b></h2>
+ 					<h2 class="text-center text-[15px] font-medium mt-5 mb-1"><b>STEP 1: COMPLETE THE APPLICATION</b></h2>
 					<div class="w-48 border-b-2 border-[#2C8D0A] mx-auto"></div> <!-- border line -->
 					<p class="h-12 lg:h-36 text-center text-[15px] w-10/12 lg:w-36 font-medium mx-auto mt-6">Applicants will be required to submit application.</p>
 					<a href="/applying-for-membership" class="block text-center border-2 border-[#2C8D0A] bg-[#2C8D0A] text-[#ffffff] p-1 w-6/12 mx-auto mt-5 font-small group-hover:bg-[#ffffff] group-hover:text-black" role="button">READ MORE</a>
