@@ -23,7 +23,7 @@
                                 <div class="sm:col-span-2">
                                     <label for="phone" class="text-start block text-medium font-semibold leading-6 text-white">PHONE NUMBER <span class="text-[#ff0000]">*</span></label>
                                     <div class="mt-2.5">
-                                        <input type="tel" name="phone" id="phone" autocomplete="tel" value="{{ old('phone') }}" class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
+                                        <input type="tel" name="phone" id="phone" autocomplete="tel" value="{{ old('phone') }}" maxlength="11" placeholder="09123456789" class="block w-full rounded-md border-0 px-3.5 py-3 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" required>
                                         <x-input-error :messages="$errors->get('phone')" class="mt-2 text-[#ff3333] font-bold text-base" />
                                     </div>
                                 </div>
