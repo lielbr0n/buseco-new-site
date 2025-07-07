@@ -24,6 +24,7 @@ class ContactUs extends Mailable
         $this->municipality = $contactUsQuery['municipality'];
         $this->subjectBody = $contactUsQuery['subject'];
         $this->messageBody = $contactUsQuery['message'];
+        $this->phoneNo = $contactUsQuery['phone'];
     }
 
     /**
@@ -53,6 +54,7 @@ class ContactUs extends Mailable
                 'municipality' => $this->municipality,
                 'subjectBody' => strtoupper($this->subjectBody),
                 'messageBody' => strtoupper($this->messageBody),
+                'phoneNo' => strtoupper($this->phoneNo),
             ],
         );
     }

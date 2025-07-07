@@ -49,9 +49,9 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/css/homepage.css', 'resources/js/app.js'])
-        <script>
+        <!-- <script>
             document.addEventListener('contextmenu', event => event.preventDefault());
-        </script>
+        </script> -->
 
     </head>
     <body class="font-sans text-gray-900 antialiased">

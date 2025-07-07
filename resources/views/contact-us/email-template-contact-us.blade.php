@@ -4,6 +4,8 @@ From Contact Us Form
 <br/>
 Full Name: <b>{{ $fullname }}</b>
 <br/>
+Phone Number: <b>{{ $phoneNo }}</b>
+<br/>
 Email: <b>{{ $contactEmail }}</b>
 <br/>
 Municipality: <b>{{ $municipality == 'manolofortich' ? 'MANOLO FORTICH BRANCH' : "MALAYBALAY CITY BRANCH" }}</b>
@@ -16,4 +18,4 @@ Message:
 
 <br/>
 <br/>
-<img src="https://buseco.coop/images/buseco.png" height="59" width="150" alt="BUSECO" />
+<img src="https://buseco.coop/images/buseco.png" height="59" width="150" alt="BUSECO" /> 
