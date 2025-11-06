@@ -72,7 +72,7 @@
 				data-twe-carousel-fade
 				data-twe-carousel-item>
 				<img
-					src="{{url('/images/MCOS.png')}}"
+					src="{{url('/images/MCOSnew.png')}}"
 					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
@@ -82,7 +82,7 @@
 				data-twe-carousel-fade
 				data-twe-carousel-item>
 				<img
-					src="{{url('/images/pob.png')}}"
+					src="{{url('/images/pobnew.png')}}"
 					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
@@ -92,7 +92,7 @@
 				data-twe-carousel-fade
 				data-twe-carousel-item>
 				<img
-					src="{{url('/images/contact-banner.png')}}"
+					src="{{url('/images/contact-bannernew.png')}}"
 					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
