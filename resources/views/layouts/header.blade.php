@@ -154,6 +154,7 @@
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
                                 <li><a href="/rates-2025" class="block w-full ">2025</a></li>
+                                <li><a href="/rates-2025" class="block w-full ">2025</a></li>
                                 <li><a href="/rates-2024" class="block w-full ">2024</a></li>
                                 <li><a href="/rates-2023" class="block w-full ">2023</a></li>
                                 <li><a href="/rates-2022" class="block w-full ">2022</a></li>
@@ -166,6 +167,7 @@
                             </div>
                             
                             <li><a href="/monthly-generation-mix-under-oath" class="block w-full ">MONTHLY GENERATION MIX UNDER OATH</a></li>
+                            <li><a href="/breakdown-of-generation-charges" class="block w-full ">BREAKDOWN OF GENERATION CHARGES</a></li>
                             <li><a href="/daily-supply-and-load-outlook" class="block w-full ">DAILY SUPPLY AND LOAD OUTLOOK</a></li>
                         </ul>
                     </div>
@@ -478,6 +480,7 @@
                                 </div> 
                             </div>
                             <a href="/monthly-generation-mix-under-oath" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">MONTHLY GENERATION MIX UNDER OATH</a>
+                            <a href="/breakdown-of-generation-charges" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">BREAKDOWN OF GENERATION CHARGES</a>
                             <a href="/daily-supply-and-load-outlook" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">DAILY SUPPLY AND LOAD OUTLOOK</a>
                         </div> 
                     </div>

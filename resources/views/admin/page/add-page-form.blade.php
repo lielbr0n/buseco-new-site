@@ -40,6 +40,7 @@
         'faq' => 'FAQs',
         'rcoa' => 'RCOA',
         'monthly-generation-mix-under-oath' => 'Monthly Generation Mix Under Oath',
+        'breakdown-of-generation-charges' => 'Breakdown of Generation Charges',
         'district-election' => 'District Election',
         'agma' => 'AGMA',
         'daily-supply-and-load-outlook' => 'Daily Supply and Load Outlook',
