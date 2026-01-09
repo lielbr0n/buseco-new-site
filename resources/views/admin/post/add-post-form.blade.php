@@ -19,6 +19,7 @@
         'bids_awards' => 'Bids & Awards',
         'faq' => 'FAQs',
         'monthly-generation-mix-under-oath' => 'Monthly Generation Mix Under Oath',
+        'breakdown-of-generation-charges' => 'Breakdown of Generation Charges',
         'district-election' => 'District Election',
         'agma' => 'AGMA',
         'daily-supply-and-load-outlook' => 'Daily Supply and Load Outlook',
