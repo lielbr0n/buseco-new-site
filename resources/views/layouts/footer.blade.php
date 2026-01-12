@@ -103,6 +103,6 @@
         </div>
 
     </div>
-    <div class="all-rights-reserved py-4"><p class="all-rights-text text-center mt-5">&copy; 2024 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
+    <div class="all-rights-reserved py-4"><p class="all-rights-text text-center mt-5">&copy; 2026 BUKIDNON II ELECTRIC COOPERATIVE, INC. All Rights Reserved</p></div>
     <div class="madewithlove"><p class="all-rights-text text-center py-2">catscanc0de&trade;</p><br></div>
 </footer>
