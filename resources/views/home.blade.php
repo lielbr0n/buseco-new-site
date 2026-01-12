@@ -62,7 +62,7 @@
 				data-twe-carousel-item
 				data-twe-carousel-active>
 				<img
-					src="{{url('/images/obbnew.png')}}"
+					src="{{url('/images/obb.png')}}"
 					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
@@ -92,7 +92,7 @@
 				data-twe-carousel-fade
 				data-twe-carousel-item>
 				<img
-					src="{{url('/images/contact-bannernew.png')}}"
+					src="{{url('/images/contact-banner.png')}}"
 					class="block w-full h-auto aspect-[16/9] object-cover"
 					alt="buseco" />
 				</div>
