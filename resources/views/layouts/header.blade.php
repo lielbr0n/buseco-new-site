@@ -153,7 +153,7 @@
                             <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute  -right-[185px] -top-[1px] bottom-[-195px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="menu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
-                                <li><a href="/rates-2025" class="block w-full ">2025</a></li>
+                                <li><a href="/rates-2026" class="block w-full ">2026</a></li>
                                 <li><a href="/rates-2025" class="block w-full ">2025</a></li>
                                 <li><a href="/rates-2024" class="block w-full ">2024</a></li>
                                 <li><a href="/rates-2023" class="block w-full ">2023</a></li>
