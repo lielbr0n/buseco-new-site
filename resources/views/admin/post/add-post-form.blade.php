@@ -32,6 +32,7 @@
         'scheduled-unbundled-rates' => 'Scheduled Unbundled Rates',
         'pspp-2024' => 'PSPP 2024',
         'pspp-2025' => 'PSPP 2025',
+        'pspp-2026' => 'PSPP 2026',
         'rates-2016' => 'Rates 2016',
         'rates-2017' => 'Rates 2017',
         'rates-2018' => 'Rates 2018',

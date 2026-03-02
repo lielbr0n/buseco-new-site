@@ -83,8 +83,10 @@
                             <div class="bg-white rounded border-2 border-[#2C8D0A] max-w-[180px] w-full absolute -right-[185px] -top-[1px] bottom-[141px] hover:[&>li]:text-white [&>li]:text-neutral-700 [&>li]:text-sm [&>li]:font-medium [&>li]:cursor-pointer [&>li]:px-4 [&>li]:py-2 [&>li]:transition-all hover:[&>li]:bg-[#2C8D0A] active:[&>li]:bg-[#2C8D0A] active:[&>li]:scale-[0.99]"
                                 x-show="psppMenu" x-transition:enter="transition ease-out duration-100"
                                 x-transition:enter-start="transform opacity-0 scale-95">
+                                <li><a href="/pspp-2026" class="block w-full ">PSPP 2026</a></li>
                                 <li><a href="/pspp-2025" class="block w-full ">PSPP 2025</a></li>
                                 <li><a href="/pspp-2024" class="block w-full ">PSPP 2024</a></li>
+                                
                             </div>
 
                             <li><a href="/coop-news" class="block w-full ">COOP NEWS</a></li>
@@ -390,6 +392,7 @@
                                     x-transition:leave-start="opacity-100 scale-100"
                                     x-transition:leave-end="opacity-0 scale-95"
                                 >
+                                <a href="/pspp-2026" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">PSPP 2026</a> 
                                 <a href="/pspp-2025" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">PSPP 2025</a> 
                                     <a href="/pspp-2024" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">PSPP 2024</a>
                                 </div> 
@@ -467,6 +470,7 @@
                                     x-transition:leave-start="opacity-100 scale-100"
                                     x-transition:leave-end="opacity-0 scale-95"
                                 >
+                                    <a href="/rates-2026" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">2026</a>
                                     <a href="/rates-2025" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">2025</a>
                                     <a href="/rates-2024" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">2024</a>
                                     <a href="/rates-2023" class="block rounded-lg py-1 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:text-[#ffffff] hover:bg-[#2C8D0A]">2023</a>
