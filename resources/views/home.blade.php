@@ -475,19 +475,32 @@
 		</section>
 
 <style>
-    /* Lightweight Scrollbar for the feed */
-    .custom-scrollbar::-webkit-scrollbar {
-        width: 6px;
+    /* Corrected Nesting Syntax */
+    .custom-scrollbar {
+        &::-webkit-scrollbar {
+            width: 6px;
+        }
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #ef4444; /* red-500 */
+            border-radius: 10px;
+            
+            &:hover {
+                background: #dc2626; /* red-600 */
+            }
+        }
     }
-    .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #ef4444; /* red-500 */
-        border-radius: 10px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-        background: #dc2626; /* red-600 */
+
+    /* If you have any other nested rules like: */
+    .group {
+        & h3 { /* Add '&' before tag names */
+            transition: color 0.3s ease;
+        }
+        & p {
+            line-height: 1.6;
+        }
     }
 </style>
 </x-home-layout>
