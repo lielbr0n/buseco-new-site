@@ -19,7 +19,7 @@
         {{-- <div class="branch-info col-span-3 md:col-span-1"> --}}
         <div class="grid mx-auto max-w-7xl grid-cols-1 md:grid-cols-4 gap-8 lg:gap-4 py-10 px-10 md:px-0">
             <div class="branch-info">
-            <a href="{{ url('/') }}"><img class="h-20 w-auto mx-auto" src="{{url('/images/busecoborder.png')}}" alt="buseco" /></a>
+            <a href="{{ url('/') }}"><img class="h-20 w-auto mx-auto" src="{{url('/images/buseco.png')}}" alt="buseco" /></a>
             <div class="flex gap-3 justify-center mt-4">
                 <!--fbicon-->
                 <a href="https://www.facebook.com/BUSECOKasanagMCOs" target="facebook">
@@ -67,13 +67,13 @@
 
             <p>Tankulan, Manolo Fortich, Bukidnon</p>
             <p><b>Smart:</b> 0998-843-8334</p>
-            <p><b>Globe:</b> 0935-114-3095</p>
+            <p><b>Globe:</b> 0917-192-2461</p>
             <br />
 
             <h2 class="branch-title"><b>Malaybalay City Branch</b></h2>
             <p>Casisang, Malaybalay City, Bukidnon</p>
             <p><b>Smart:</b> 0998-843-8335</p>
-            <p><b>Globe:</b> 0935-114-2484</p>
+            <p><b>Globe:</b> 0917-192-2646</p>
         </div>
         <!--footer3 -->
         <div class="branch-info">

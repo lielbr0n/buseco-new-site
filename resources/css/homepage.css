@@ -138,7 +138,7 @@ header{
 }
 
 footer{
-    background-color: #01440d;
+    background-color: #dbd5d5;
 
     .footer-title{
         font-weight: bold;
@@ -146,7 +146,7 @@ footer{
     }
 
     .branch-info{
-        color: #cccccc;
+        color: #056c18;
 
         .branch-title{
             font-size: 17px;
@@ -157,7 +157,7 @@ footer{
     }
 
     .links-info{
-        color: #cccccc;
+        color: #026414;
 
         .link-footer{
             text-decoration: underline;
@@ -188,7 +188,7 @@ footer{
         }
     }
     .madewithlove{
-        color: #797171;
+        color: #908c8c;
         background-color: #026414;
     }
 }
