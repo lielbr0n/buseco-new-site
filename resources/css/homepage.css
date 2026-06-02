@@ -138,7 +138,7 @@ header{
 }
 
 footer{
-    background-color: #dbd5d5;
+    background-color: #f3f7fa;
 
     .footer-title{
         font-weight: bold;
@@ -157,7 +157,7 @@ footer{
     }
 
     .links-info{
-        color: #026414;
+        color: #076418;
 
         .link-footer{
             text-decoration: underline;
@@ -167,7 +167,7 @@ footer{
             transition: color 0.3s ease;
 
             &:hover{
-                color: #ffffff;
+                color: #08a01c;
             }
         }
     }
