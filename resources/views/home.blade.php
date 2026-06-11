@@ -363,6 +363,84 @@
 					overflow: hidden;
 				}
 			</style>
+
+			{{-- ==================== LIVE STREAM SECTION ==================== --}}
+			@if(config('livestream.enabled', true))
+			<section class="py-20 px-4 sm:px-6 lg:px-8 bg-white" id="livestream-section">
+				<div class="mx-auto max-w-screen-xl">
+
+					{{-- Section Header --}}
+					<div class="text-center mb-12">
+						<div class="inline-flex items-center gap-2.5 bg-red-50 border border-red-200 text-red-700 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-5">
+							<span class="relative flex h-2.5 w-2.5">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+							</span>
+							Live Broadcast
+						</div>
+						<h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight uppercase">
+							BUSECO <span class="text-[#2C8D0A]">LIVE STREAM</span>
+						</h2>
+						<div class="w-24 h-1.5 bg-[#2C8D0A] mx-auto mt-4 rounded-full"></div>
+						<p class="text-gray-500 mt-5 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+							Tune in to our live updates, public assemblies, and cooperative events on YouTube.
+						</p>
+					</div>
+
+					{{-- Player --}}
+					<div class="max-w-4xl mx-auto">
+						{{-- Video Player Wrapper --}}
+						<div class="relative bg-gray-950 p-2 sm:p-3 rounded-3xl shadow-2xl ring-1 ring-white/10 overflow-hidden mb-6">
+							{{-- Decorative top glow --}}
+							<div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-gradient-to-r from-transparent via-[#2C8D0A]/80 to-transparent rounded-full"></div>
+
+							{{-- YouTube Player --}}
+							<div class="relative w-full rounded-2xl overflow-hidden bg-black" style="padding-bottom: 56.25%; height: 0;">
+								<iframe
+									id="livestream-youtube-iframe"
+									src="{{ config('livestream.youtube_url') }}"
+									class="absolute top-0 left-0 w-full h-full border-0"
+									title="BUSECO YouTube Live Stream"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									allowfullscreen
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+
+						{{-- Fallback and Recorded links --}}
+						<div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+							<div>
+								<p class="text-sm font-bold text-gray-800">Missed the live broadcast?</p>
+								<p class="text-xs text-gray-500 mt-1">You can watch our previous assemblies and events on our YouTube channel.</p>
+							</div>
+							<div class="flex flex-col sm:flex-row items-center gap-4">
+								<a href="{{ config('livestream.youtube_recorded_url') }}"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-2 px-6 py-2.5 bg-gray-900 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-[#2C8D0A] transition-colors shadow-md">
+									<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+									</svg>
+									Watch Recorded Videos
+								</a>
+								
+								<a href="{{ config('livestream.youtube_page_url') }}"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-2 px-6 py-2.5 bg-[#FF0000] text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-red-700 transition-colors shadow-md">
+									<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.524 3.545 12 3.545 12 3.545s-7.525 0-9.388.51a3.003 3.003 0 0 0-2.11 2.108C0 8.029 0 12 0 12s0 3.971.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.475 20.455 12 20.455 12 20.455s7.525 0 9.388-.51a3.003 3.003 0 0 0 2.11-2.108C24 15.971 24 12 24 12s0-3.971-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+									YouTube Channel
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			@endif
+
 	{{-- payment method --}}
 	<section class="py-12 px-4 sm:px-6 lg:px-8 bg-white" id="payment-channels">
 			<div class="mx-auto max-w-screen-xl">
