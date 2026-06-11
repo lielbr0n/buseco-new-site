@@ -354,162 +354,92 @@
 				</div>
 			</section>
 
-		<style>
-			/* Legibility helpers */
-			.line-clamp-3 {
-				display: -webkit-box;
-				-webkit-line-clamp: 3;
-				-webkit-box-orient: vertical;
-				overflow: hidden;
-			}
-		</style>
+			<style>
+				/* Legibility helpers */
+				.line-clamp-3 {
+					display: -webkit-box;
+					-webkit-line-clamp: 3;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+				}
+			</style>
 
-		{{-- ==================== LIVE STREAM SECTION ==================== --}}
-		@if(config('livestream.enabled', true))
-		<section class="py-20 px-4 sm:px-6 lg:px-8 bg-white" id="livestream-section">
-			<div class="mx-auto max-w-screen-xl">
+			{{-- ==================== LIVE STREAM SECTION ==================== --}}
+			@if(config('livestream.enabled', true))
+			<section class="py-20 px-4 sm:px-6 lg:px-8 bg-white" id="livestream-section">
+				<div class="mx-auto max-w-screen-xl">
 
-				{{-- Section Header --}}
-				<div class="text-center mb-12">
-					<div class="inline-flex items-center gap-2.5 bg-red-50 border border-red-200 text-red-700 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-5">
-						<span class="relative flex h-2.5 w-2.5">
-							<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-							<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
-						</span>
-						Live Broadcast
-					</div>
-					<h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight uppercase">
-						BUSECO <span class="text-[#2C8D0A]">LIVE STREAM</span>
-					</h2>
-					<div class="w-24 h-1.5 bg-[#2C8D0A] mx-auto mt-4 rounded-full"></div>
-					<p class="text-gray-500 mt-5 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-						Tune in to our live updates, public assemblies, and cooperative events.
-						Choose your preferred streaming platform below.
-					</p>
-				</div>
-
-				{{-- Alpine.js Tabbed Player --}}
-				<div x-data="{ activeTab: 'youtube' }" class="max-w-5xl mx-auto">
-
-					{{-- Platform Toggle Buttons --}}
-					<div class="flex justify-center gap-3 mb-8">
-
-						{{-- YouTube Tab --}}
-						<button
-							id="livestream-tab-youtube"
-							@click="activeTab = 'youtube'"
-							:class="activeTab === 'youtube'
-								? 'bg-[#FF0000] text-white border-[#FF0000] shadow-lg shadow-red-200 scale-105'
-								: 'bg-white text-gray-600 border-gray-200 hover:bg-red-50 hover:border-red-300 hover:text-red-600'"
-							class="flex items-center gap-2.5 px-6 py-3.5 rounded-2xl border-2 font-bold text-sm tracking-wide transition-all duration-300 cursor-pointer">
-							<svg class="h-5 w-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-								<path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.524 3.545 12 3.545 12 3.545s-7.525 0-9.388.51a3.003 3.003 0 0 0-2.11 2.108C0 8.029 0 12 0 12s0 3.971.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.475 20.455 12 20.455 12 20.455s7.525 0 9.388-.51a3.003 3.003 0 0 0 2.11-2.108C24 15.971 24 12 24 12s0-3.971-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-							</svg>
-							YouTube Live
-						</button>
-
-						{{-- Facebook Tab --}}
-						<button
-							id="livestream-tab-facebook"
-							@click="activeTab = 'facebook'"
-							:class="activeTab === 'facebook'
-								? 'bg-[#1877F2] text-white border-[#1877F2] shadow-lg shadow-blue-200 scale-105'
-								: 'bg-white text-gray-600 border-gray-200 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600'"
-							class="flex items-center gap-2.5 px-6 py-3.5 rounded-2xl border-2 font-bold text-sm tracking-wide transition-all duration-300 cursor-pointer">
-							<svg class="h-5 w-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-								<path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-							</svg>
-							Facebook Live
-						</button>
-					</div>
-
-					{{-- Video Player Wrapper --}}
-					<div class="relative bg-gray-950 p-2 sm:p-3 rounded-3xl shadow-2xl ring-1 ring-white/10 overflow-hidden">
-
-						{{-- Decorative top glow --}}
-						<div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-gradient-to-r from-transparent via-[#2C8D0A]/80 to-transparent rounded-full"></div>
-
-						{{-- YouTube Player --}}
-						<div
-							x-show="activeTab === 'youtube'"
-							x-transition:enter="transition ease-out duration-300"
-							x-transition:enter-start="opacity-0 scale-95"
-							x-transition:enter-end="opacity-100 scale-100"
-							x-transition:leave="transition ease-in duration-200"
-							x-transition:leave-start="opacity-100 scale-100"
-							x-transition:leave-end="opacity-0 scale-95"
-							class="relative w-full rounded-2xl overflow-hidden bg-black"
-							style="padding-bottom: 56.25%; height: 0;">
-							<iframe
-								id="livestream-youtube-iframe"
-								src="{{ config('livestream.youtube_url') }}"
-								class="absolute top-0 left-0 w-full h-full border-0"
-								title="BUSECO YouTube Live Stream"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen
-								loading="lazy">
-							</iframe>
+					{{-- Section Header --}}
+					<div class="text-center mb-12">
+						<div class="inline-flex items-center gap-2.5 bg-red-50 border border-red-200 text-red-700 px-5 py-2 rounded-full text-xs font-black uppercase tracking-widest mb-5">
+							<span class="relative flex h-2.5 w-2.5">
+								<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+								<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-red-600"></span>
+							</span>
+							Live Broadcast
 						</div>
-
-						{{-- Facebook Player --}}
-						<div
-							x-show="activeTab === 'facebook'"
-							x-transition:enter="transition ease-out duration-300"
-							x-transition:enter-start="opacity-0 scale-95"
-							x-transition:enter-end="opacity-100 scale-100"
-							x-transition:leave="transition ease-in duration-200"
-							x-transition:leave-start="opacity-100 scale-100"
-							x-transition:leave-end="opacity-0 scale-95"
-							class="relative w-full rounded-2xl overflow-hidden bg-black"
-							style="padding-bottom: 56.25%; height: 0;">
-							<iframe
-								id="livestream-facebook-iframe"
-								src="{{ config('livestream.facebook_url') }}"
-								class="absolute top-0 left-0 w-full h-full border-0"
-								title="BUSECO Facebook Live Stream"
-								scrolling="no"
-								frameborder="0"
-								allowfullscreen="true"
-								allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-								loading="lazy">
-							</iframe>
-						</div>
-					</div>
-
-					{{-- Fallback links and note --}}
-					<div class="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-						<p class="text-xs font-semibold text-gray-400 flex items-center gap-2">
-							<svg class="h-4 w-4 text-[#2C8D0A] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-							</svg>
-							Not playing? Open the stream directly on the platform.
+						<h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight uppercase">
+							BUSECO <span class="text-[#2C8D0A]">LIVE STREAM</span>
+						</h2>
+						<div class="w-24 h-1.5 bg-[#2C8D0A] mx-auto mt-4 rounded-full"></div>
+						<p class="text-gray-500 mt-5 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+							Tune in to our live updates, public assemblies, and cooperative events on YouTube.
 						</p>
-						<div class="flex items-center gap-4">
-							<a href="{{ config('livestream.youtube_page_url') }}"
-								id="livestream-open-youtube"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-red-600 hover:text-red-800 transition-colors py-1.5 border-b-2 border-transparent hover:border-red-500">
-								<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.524 3.545 12 3.545 12 3.545s-7.525 0-9.388.51a3.003 3.003 0 0 0-2.11 2.108C0 8.029 0 12 0 12s0 3.971.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.475 20.455 12 20.455 12 20.455s7.525 0 9.388-.51a3.003 3.003 0 0 0 2.11-2.108C24 15.971 24 12 24 12s0-3.971-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-								Open YouTube
-							</a>
-							<span class="h-4 w-px bg-gray-300"></span>
-							<a href="{{ config('livestream.facebook_page_url') }}"
-								id="livestream-open-facebook"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-widest text-blue-600 hover:text-blue-800 transition-colors py-1.5 border-b-2 border-transparent hover:border-blue-500">
-								<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-								Open Facebook
-							</a>
-						</div>
 					</div>
 
+					{{-- Player --}}
+					<div class="max-w-4xl mx-auto">
+						{{-- Video Player Wrapper --}}
+						<div class="relative bg-gray-950 p-2 sm:p-3 rounded-3xl shadow-2xl ring-1 ring-white/10 overflow-hidden mb-6">
+							{{-- Decorative top glow --}}
+							<div class="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-1 bg-gradient-to-r from-transparent via-[#2C8D0A]/80 to-transparent rounded-full"></div>
+
+							{{-- YouTube Player --}}
+							<div class="relative w-full rounded-2xl overflow-hidden bg-black" style="padding-bottom: 56.25%; height: 0;">
+								<iframe
+									id="livestream-youtube-iframe"
+									src="{{ config('livestream.youtube_url') }}"
+									class="absolute top-0 left-0 w-full h-full border-0"
+									title="BUSECO YouTube Live Stream"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									allowfullscreen
+									loading="lazy">
+								</iframe>
+							</div>
+						</div>
+
+						{{-- Fallback and Recorded links --}}
+						<div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-gray-50 p-6 rounded-2xl border border-gray-100 shadow-sm">
+							<div>
+								<p class="text-sm font-bold text-gray-800">Missed the live broadcast?</p>
+								<p class="text-xs text-gray-500 mt-1">You can watch our previous assemblies and events on our YouTube channel.</p>
+							</div>
+							<div class="flex flex-col sm:flex-row items-center gap-4">
+								<a href="{{ config('livestream.youtube_recorded_url') }}"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-2 px-6 py-2.5 bg-gray-900 text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-[#2C8D0A] transition-colors shadow-md">
+									<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+									</svg>
+									Watch Recorded Videos
+								</a>
+								
+								<a href="{{ config('livestream.youtube_page_url') }}"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-2 px-6 py-2.5 bg-[#FF0000] text-white rounded-xl text-xs font-black uppercase tracking-widest hover:bg-red-700 transition-colors shadow-md">
+									<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.108C19.524 3.545 12 3.545 12 3.545s-7.525 0-9.388.51a3.003 3.003 0 0 0-2.11 2.108C0 8.029 0 12 0 12s0 3.971.502 5.837a3.003 3.003 0 0 0 2.11 2.108C4.475 20.455 12 20.455 12 20.455s7.525 0 9.388-.51a3.003 3.003 0 0 0 2.11-2.108C24 15.971 24 12 24 12s0-3.971-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+									YouTube Channel
+								</a>
+							</div>
+						</div>
+
+					</div>
 				</div>
-			</div>
-		</section>
-		@endif
-		{{-- ==================== END LIVE STREAM SECTION ==================== --}}
+			</section>
+			@endif
 
 	{{-- payment method --}}
 	<section class="py-12 px-4 sm:px-6 lg:px-8 bg-white" id="payment-channels">
